@@ -1,0 +1,33 @@
+mysql -u root -p
+Enter password:
+
+mysql>
+
+CREATE DATABASE sinh;
+GRANT ALL ON sinh.* TO 'sinh'@'localhost' IDENTIFIED BY 'sinhpass';
+exit
+
+mysql -u sinh -p
+
+mysql>
+
+USE sinh;
+source ./doc/sql/mysql.sql; #only if you are running from root directory of sinh
+exit
+
+
+
+
+
+****Mandatory****
+- Install apache2 & phpmyadmin
+	apt-get install apache2
+	apt-get install phpmyadmin
+
+- Now execute below commands
+	sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+	sudo a2enconf phpmyadmin.conf
+	sudo systemctl reload apache2.service
+
+	alternative______
+	sudo sed -i '$ a\Include /etc/phpmyadmin/apache.conf' /etc/apache2/apache2.conf && sudo service apache2 restart && sudo apt-get install php-gettext`
