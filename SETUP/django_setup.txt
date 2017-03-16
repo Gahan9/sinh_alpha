@@ -1,0 +1,29 @@
+*****FROM INITIAL********
+
+django-admin startproject <project-name>
+
+/path/to/<project-name>$
+
+python manage.py startapp <app-name>
+
+python manage.py migrate
+
+python manage.py createsuperuser
+
+
+*****FROM EXISTING PROJECT*********
+-go to root directory of django project where manage.py exist
+
+/path/to/project$ 
+
+python manage.py migrate
+
+python manage.py createsuperuser
+
+
+
+-----IF you change anything in models.py then run beelow commands---------
+
+python manage.py makemigrations <app-name>
+
+python manage.py migrate
