@@ -1,0 +1,1330 @@
+2017-01-18 23:22:35+0530 [-] Log opened.
+2017-01-18 23:22:35+0530 [-] twistd 12.2.0 (/usr/bin/python 2.7.12) starting up.
+2017-01-18 23:22:35+0530 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2017-01-18 23:22:35+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-01-18 23:22:35+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f1bdc29bd88>
+2017-01-18 23:22:35+0530 [-] Factory starting on 5123
+2017-01-18 23:22:35+0530 [-] Starting factory <twisted.internet.protocol.Factory instance at 0x7f1bda934a28>
+2017-01-18 23:22:39+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.1.4:49647 (192.168.1.5:2222) [session: 0]
+2017-01-18 23:22:39+0530 [HoneyPotTransport,0,192.168.1.4] Remote SSH version: SSH-2.0-PuTTY_Release_0.67
+2017-01-18 23:22:39+0530 [HoneyPotTransport,0,192.168.1.4] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-01-18 23:22:39+0530 [HoneyPotTransport,0,192.168.1.4] outgoing: aes256-ctr hmac-sha1 none
+2017-01-18 23:22:39+0530 [HoneyPotTransport,0,192.168.1.4] incoming: aes256-ctr hmac-sha1 none
+2017-01-18 23:22:39+0530 [HoneyPotTransport,0,192.168.1.4] NEW KEYS
+2017-01-18 23:22:39+0530 [HoneyPotTransport,0,192.168.1.4] starting service ssh-userauth
+2017-01-18 23:22:46+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.1.4] admin trying auth none
+2017-01-18 23:22:48+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.1.4] admin trying auth password
+2017-01-18 23:22:48+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.1.4] login attempt [admin/admin] succeeded
+2017-01-18 23:22:48+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.1.4] admin authenticated with password
+2017-01-18 23:22:48+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.1.4] starting service ssh-connection
+2017-01-18 23:22:48+0530 [SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] got channel session request
+2017-01-18 23:22:48+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] channel open
+2017-01-18 23:22:48+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] pty request: xterm (24, 80, 0, 0)
+2017-01-18 23:22:48+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] Terminal size: 24 80
+2017-01-18 23:22:48+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] getting shell
+2017-01-18 23:22:48+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] Opening TTY log: log/tty/20170118-232248-5666.log
+2017-01-18 23:22:49+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] /etc/motd resolved into /etc/motd
+2017-01-18 23:22:56+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] CMD: shutdown
+2017-01-18 23:22:56+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] Command found: shutdown
+2017-01-18 23:23:04+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] CMD: reboot
+2017-01-18 23:23:04+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] Command found: reboot
+2017-01-18 23:24:36+0530 [HoneyPotTransport,0,192.168.1.4] connection lost
+2017-01-18 23:24:40+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.1.4:46553 (192.168.1.5:2222) [session: 1]
+2017-01-18 23:24:40+0530 [HoneyPotTransport,1,192.168.1.4] Remote SSH version: SSH-2.0-PuTTY_Release_0.67
+2017-01-18 23:24:40+0530 [HoneyPotTransport,1,192.168.1.4] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-01-18 23:24:40+0530 [HoneyPotTransport,1,192.168.1.4] outgoing: aes256-ctr hmac-sha1 none
+2017-01-18 23:24:40+0530 [HoneyPotTransport,1,192.168.1.4] incoming: aes256-ctr hmac-sha1 none
+2017-01-18 23:24:40+0530 [HoneyPotTransport,1,192.168.1.4] NEW KEYS
+2017-01-18 23:24:40+0530 [HoneyPotTransport,1,192.168.1.4] starting service ssh-userauth
+2017-01-18 23:24:43+0530 [SSHService ssh-userauth on HoneyPotTransport,1,192.168.1.4] user trying auth none
+2017-01-18 23:24:44+0530 [SSHService ssh-userauth on HoneyPotTransport,1,192.168.1.4] user trying auth password
+2017-01-18 23:24:44+0530 [SSHService ssh-userauth on HoneyPotTransport,1,192.168.1.4] login attempt [user/assdd] failed
+2017-01-18 23:24:44+0530 [-] SQL Error: (1364, "Field 'ip' doesn't have a default value")
+2017-01-18 23:24:45+0530 [-] user failed auth password
+2017-01-18 23:24:45+0530 [-] unauthorized login: 
+2017-01-18 23:27:03+0530 [-] Received SIGTERM, shutting down.
+2017-01-18 23:27:03+0530 [-] (TCP Port 5123 Closed)
+2017-01-18 23:27:03+0530 [-] Stopping factory <twisted.internet.protocol.Factory instance at 0x7f1bda934a28>
+2017-01-18 23:27:03+0530 [-] (TCP Port 2222 Closed)
+2017-01-18 23:27:03+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f1bdc29bd88>
+2017-01-18 23:27:03+0530 [HoneyPotTransport,1,192.168.1.4] connection lost
+2017-01-18 23:27:03+0530 [-] Main loop terminated.
+2017-01-18 23:27:03+0530 [-] Server Shut Down.
+2017-01-18 23:27:22+0530 [-] Log opened.
+2017-01-18 23:27:22+0530 [-] twistd 12.2.0 (/usr/bin/python 2.7.12) starting up.
+2017-01-18 23:27:22+0530 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2017-01-18 23:27:22+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-01-18 23:27:22+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7fe880df1d88>
+2017-01-18 23:27:22+0530 [-] Factory starting on 5123
+2017-01-18 23:27:22+0530 [-] Starting factory <twisted.internet.protocol.Factory instance at 0x7fe87f48a680>
+2017-01-18 23:27:38+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.1.4:42890 (192.168.1.5:2222) [session: 0]
+2017-01-18 23:27:38+0530 [HoneyPotTransport,0,192.168.1.4] Remote SSH version: SSH-2.0-PuTTY_Release_0.67
+2017-01-18 23:27:38+0530 [HoneyPotTransport,0,192.168.1.4] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-01-18 23:27:38+0530 [HoneyPotTransport,0,192.168.1.4] outgoing: aes256-ctr hmac-sha1 none
+2017-01-18 23:27:38+0530 [HoneyPotTransport,0,192.168.1.4] incoming: aes256-ctr hmac-sha1 none
+2017-01-18 23:27:38+0530 [HoneyPotTransport,0,192.168.1.4] NEW KEYS
+2017-01-18 23:27:38+0530 [HoneyPotTransport,0,192.168.1.4] starting service ssh-userauth
+2017-01-18 23:27:43+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.1.4] admin trying auth none
+2017-01-18 23:27:45+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.1.4] admin trying auth password
+2017-01-18 23:27:45+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.1.4] login attempt [admin/admin] succeeded
+2017-01-18 23:27:45+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.1.4] admin authenticated with password
+2017-01-18 23:27:45+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.1.4] starting service ssh-connection
+2017-01-18 23:27:45+0530 [SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] got channel session request
+2017-01-18 23:27:45+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] channel open
+2017-01-18 23:27:45+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] pty request: xterm (24, 80, 0, 0)
+2017-01-18 23:27:45+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] Terminal size: 24 80
+2017-01-18 23:27:45+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] getting shell
+2017-01-18 23:27:45+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] Opening TTY log: log/tty/20170118-232745-8742.log
+2017-01-18 23:27:45+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] /etc/motd resolved into /etc/motd
+2017-01-18 23:27:54+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] CMD: aa
+2017-01-18 23:27:54+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] Command not found: aa
+2017-01-18 23:28:01+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] CMD: topa avyu
+2017-01-18 23:28:01+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.1.4] Command not found: topa avyu
+2017-01-18 23:34:23+0530 [-] Received SIGTERM, shutting down.
+2017-01-18 23:34:23+0530 [-] (TCP Port 5123 Closed)
+2017-01-18 23:34:23+0530 [-] Stopping factory <twisted.internet.protocol.Factory instance at 0x7fe87f48a680>
+2017-01-18 23:34:23+0530 [-] (TCP Port 2222 Closed)
+2017-01-18 23:34:23+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7fe880df1d88>
+2017-01-18 23:34:23+0530 [HoneyPotTransport,0,192.168.1.4] connection lost
+2017-01-18 23:34:23+0530 [-] Main loop terminated.
+2017-01-18 23:34:23+0530 [-] Server Shut Down.
+2017-01-19 17:06:39+0530 [-] Log opened.
+2017-01-19 17:06:39+0530 [-] twistd 12.2.0 (/usr/bin/python 2.7.12) starting up.
+2017-01-19 17:06:39+0530 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2017-01-19 17:06:39+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-01-19 17:06:39+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f64691addd0>
+2017-01-19 17:06:39+0530 [-] Factory starting on 5123
+2017-01-19 17:06:39+0530 [-] Starting factory <twisted.internet.protocol.Factory instance at 0x7f64677c9dd0>
+2017-01-19 19:33:29+0530 [-] Received SIGTERM, shutting down.
+2017-01-19 19:33:29+0530 [-] (TCP Port 5123 Closed)
+2017-01-19 19:33:29+0530 [-] Stopping factory <twisted.internet.protocol.Factory instance at 0x7f64677c9dd0>
+2017-01-19 19:33:29+0530 [-] (TCP Port 2222 Closed)
+2017-01-19 19:33:29+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f64691addd0>
+2017-01-19 19:33:29+0530 [-] Main loop terminated.
+2017-01-19 19:33:29+0530 [-] Server Shut Down.
+2017-01-20 12:13:53+0530 [-] Log opened.
+2017-01-20 12:13:53+0530 [-] twistd 12.2.0 (/usr/bin/python 2.7.12) starting up.
+2017-01-20 12:13:53+0530 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2017-01-20 12:13:53+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-01-20 12:13:53+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f58a8f8edd0>
+2017-01-20 12:13:53+0530 [-] Factory starting on 5123
+2017-01-20 12:13:53+0530 [-] Starting factory <twisted.internet.protocol.Factory instance at 0x7f58a69b7dd0>
+2017-01-20 12:14:17+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.0.102:42257 (192.168.0.103:2222) [session: 0]
+2017-01-20 12:14:17+0530 [HoneyPotTransport,0,192.168.0.102] Remote SSH version: SSH-2.0-PuTTY_Release_0.67
+2017-01-20 12:14:17+0530 [HoneyPotTransport,0,192.168.0.102] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-01-20 12:14:17+0530 [HoneyPotTransport,0,192.168.0.102] outgoing: aes256-ctr hmac-sha1 none
+2017-01-20 12:14:17+0530 [HoneyPotTransport,0,192.168.0.102] incoming: aes256-ctr hmac-sha1 none
+2017-01-20 12:14:18+0530 [HoneyPotTransport,0,192.168.0.102] NEW KEYS
+2017-01-20 12:14:18+0530 [HoneyPotTransport,0,192.168.0.102] starting service ssh-userauth
+2017-01-20 12:14:24+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.0.102] admin trying auth none
+2017-01-20 12:14:27+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.0.102] admin trying auth password
+2017-01-20 12:14:27+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.0.102] login attempt [admin/admin] succeeded
+2017-01-20 12:14:27+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.0.102] admin authenticated with password
+2017-01-20 12:14:27+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.0.102] starting service ssh-connection
+2017-01-20 12:14:27+0530 [-] SQL Error: (1364, "Field 'ip' doesn't have a default value")
+2017-01-20 12:14:28+0530 [SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] got channel session request
+2017-01-20 12:14:28+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] channel open
+2017-01-20 12:14:28+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] pty request: xterm (24, 80, 0, 0)
+2017-01-20 12:14:28+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] Terminal size: 24 80
+2017-01-20 12:14:28+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] getting shell
+2017-01-20 12:14:28+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] Opening TTY log: log/tty/20170120-121428-3655.log
+2017-01-20 12:14:28+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] /etc/motd resolved into /etc/motd
+2017-01-20 12:14:32+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] CMD: Hello..
+2017-01-20 12:14:32+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] Command not found: Hello..
+2017-01-20 12:14:34+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] CMD: top
+2017-01-20 12:14:34+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] Command found: top
+2017-01-20 12:14:34+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] Reading txtcmd from "/home/indra/Desktop/honeypot/sinh/txtcmds/usr/bin/top"
+2017-01-20 12:14:35+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] CMD: ls
+2017-01-20 12:14:35+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] Command found: ls
+2017-01-20 12:20:55+0530 [-] Received SIGTERM, shutting down.
+2017-01-20 12:20:55+0530 [-] (TCP Port 5123 Closed)
+2017-01-20 12:20:55+0530 [-] Stopping factory <twisted.internet.protocol.Factory instance at 0x7f58a69b7dd0>
+2017-01-20 12:20:55+0530 [-] (TCP Port 2222 Closed)
+2017-01-20 12:20:55+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f58a8f8edd0>
+2017-01-20 12:20:55+0530 [HoneyPotTransport,0,192.168.0.102] connection lost
+2017-01-20 12:20:55+0530 [-] Main loop terminated.
+2017-01-20 12:20:55+0530 [-] Server Shut Down.
+2017-01-20 12:21:51+0530 [-] Log opened.
+2017-01-20 12:21:51+0530 [-] twistd 12.2.0 (/usr/bin/python 2.7.12) starting up.
+2017-01-20 12:21:51+0530 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2017-01-20 12:21:51+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-01-20 12:21:51+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f6e5d582dd0>
+2017-01-20 12:21:51+0530 [-] Factory starting on 5123
+2017-01-20 12:21:51+0530 [-] Starting factory <twisted.internet.protocol.Factory instance at 0x7f6e5afabdd0>
+2017-01-20 12:21:55+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.0.102:52415 (192.168.0.103:2222) [session: 0]
+2017-01-20 12:21:55+0530 [HoneyPotTransport,0,192.168.0.102] Remote SSH version: SSH-2.0-PuTTY_Release_0.67
+2017-01-20 12:21:55+0530 [HoneyPotTransport,0,192.168.0.102] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-01-20 12:21:55+0530 [HoneyPotTransport,0,192.168.0.102] outgoing: aes256-ctr hmac-sha1 none
+2017-01-20 12:21:55+0530 [HoneyPotTransport,0,192.168.0.102] incoming: aes256-ctr hmac-sha1 none
+2017-01-20 12:21:55+0530 [HoneyPotTransport,0,192.168.0.102] NEW KEYS
+2017-01-20 12:21:55+0530 [HoneyPotTransport,0,192.168.0.102] starting service ssh-userauth
+2017-01-20 12:21:59+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.0.102] admin trying auth none
+2017-01-20 12:22:01+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.0.102] admin trying auth password
+2017-01-20 12:22:01+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.0.102] login attempt [admin/admin] succeeded
+2017-01-20 12:22:01+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.0.102] admin authenticated with password
+2017-01-20 12:22:01+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.0.102] starting service ssh-connection
+2017-01-20 12:22:01+0530 [SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] got channel session request
+2017-01-20 12:22:01+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] channel open
+2017-01-20 12:22:01+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] pty request: xterm (24, 80, 0, 0)
+2017-01-20 12:22:01+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] Terminal size: 24 80
+2017-01-20 12:22:01+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] getting shell
+2017-01-20 12:22:01+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] Opening TTY log: log/tty/20170120-122201-2951.log
+2017-01-20 12:22:02+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] /etc/motd resolved into /etc/motd
+2017-01-20 12:22:04+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] CMD: lss
+2017-01-20 12:22:04+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] Command not found: lss
+2017-01-20 12:23:58+0530 [HoneyPotTransport,0,192.168.0.102] connection lost
+2017-01-20 12:45:09+0530 [-] Received SIGTERM, shutting down.
+2017-01-20 12:45:09+0530 [-] (TCP Port 5123 Closed)
+2017-01-20 12:45:09+0530 [-] Stopping factory <twisted.internet.protocol.Factory instance at 0x7f6e5afabdd0>
+2017-01-20 12:45:09+0530 [-] (TCP Port 2222 Closed)
+2017-01-20 12:45:09+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f6e5d582dd0>
+2017-01-20 12:45:09+0530 [-] Main loop terminated.
+2017-01-20 12:45:09+0530 [-] Server Shut Down.
+2017-01-20 16:32:44+0530 [-] Log opened.
+2017-01-20 16:32:44+0530 [-] twistd 12.2.0 (/usr/bin/python 2.7.12) starting up.
+2017-01-20 16:32:44+0530 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2017-01-20 16:32:44+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-01-20 16:32:44+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f7a57782dd0>
+2017-01-20 16:32:44+0530 [-] Factory starting on 5123
+2017-01-20 16:32:44+0530 [-] Starting factory <twisted.internet.protocol.Factory instance at 0x7f7a55d9dab8>
+2017-01-20 18:19:48+0530 [-] Received SIGTERM, shutting down.
+2017-01-20 18:19:48+0530 [-] (TCP Port 5123 Closed)
+2017-01-20 18:19:48+0530 [-] Stopping factory <twisted.internet.protocol.Factory instance at 0x7f7a55d9dab8>
+2017-01-20 18:19:48+0530 [-] (TCP Port 2222 Closed)
+2017-01-20 18:19:48+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f7a57782dd0>
+2017-01-20 18:19:48+0530 [-] Main loop terminated.
+2017-01-20 18:19:48+0530 [-] Server Shut Down.
+2017-01-21 11:29:51+0530 [-] Log opened.
+2017-01-21 11:29:51+0530 [-] twistd 12.2.0 (/usr/bin/python 2.7.12) starting up.
+2017-01-21 11:29:51+0530 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2017-01-21 11:29:51+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-01-21 11:29:51+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f2b6998cdd0>
+2017-01-21 11:29:51+0530 [-] Factory starting on 5123
+2017-01-21 11:29:51+0530 [-] Starting factory <twisted.internet.protocol.Factory instance at 0x7f2b67fa7ab8>
+2017-01-21 13:52:34+0530 [-] Received SIGTERM, shutting down.
+2017-01-21 13:52:34+0530 [-] (TCP Port 5123 Closed)
+2017-01-21 13:52:34+0530 [-] Stopping factory <twisted.internet.protocol.Factory instance at 0x7f2b67fa7ab8>
+2017-01-21 13:52:34+0530 [-] (TCP Port 2222 Closed)
+2017-01-21 13:52:34+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f2b6998cdd0>
+2017-01-21 13:52:34+0530 [-] Main loop terminated.
+2017-01-21 13:52:34+0530 [-] Server Shut Down.
+2017-01-23 14:29:27+0530 [-] Log opened.
+2017-01-23 14:29:27+0530 [-] twistd 12.2.0 (/usr/bin/python 2.7.12) starting up.
+2017-01-23 14:29:27+0530 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2017-01-23 14:29:27+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-01-23 14:29:27+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f58edf87dd0>
+2017-01-23 14:29:27+0530 [-] Factory starting on 5123
+2017-01-23 14:29:27+0530 [-] Starting factory <twisted.internet.protocol.Factory instance at 0x7f58ec5a2ab8>
+2017-01-23 14:29:54+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.0.102:35459 (192.168.0.2:2222) [session: 0]
+2017-01-23 14:29:54+0530 [HoneyPotTransport,0,192.168.0.102] Remote SSH version: SSH-2.0-PuTTY_Release_0.67
+2017-01-23 14:29:54+0530 [HoneyPotTransport,0,192.168.0.102] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-01-23 14:29:54+0530 [HoneyPotTransport,0,192.168.0.102] outgoing: aes256-ctr hmac-sha1 none
+2017-01-23 14:29:54+0530 [HoneyPotTransport,0,192.168.0.102] incoming: aes256-ctr hmac-sha1 none
+2017-01-23 14:29:55+0530 [HoneyPotTransport,0,192.168.0.102] NEW KEYS
+2017-01-23 14:29:55+0530 [HoneyPotTransport,0,192.168.0.102] starting service ssh-userauth
+2017-01-23 14:29:59+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.0.102] user trying auth none
+2017-01-23 14:30:01+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.0.102] user trying auth password
+2017-01-23 14:30:01+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.0.102] login attempt [user/user] succeeded
+2017-01-23 14:30:01+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.0.102] user authenticated with password
+2017-01-23 14:30:01+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.0.102] starting service ssh-connection
+2017-01-23 14:30:01+0530 [SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] got channel session request
+2017-01-23 14:30:01+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] channel open
+2017-01-23 14:30:01+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] pty request: xterm (24, 80, 0, 0)
+2017-01-23 14:30:01+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] Terminal size: 24 80
+2017-01-23 14:30:01+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] getting shell
+2017-01-23 14:30:01+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] Opening TTY log: log/tty/20170123-143001-9188.log
+2017-01-23 14:30:02+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] /etc/motd resolved into /etc/motd
+2017-01-23 14:30:17+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] CMD: Ls
+2017-01-23 14:30:17+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] Command not found: Ls
+2017-01-23 14:30:21+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] CMD: ls
+2017-01-23 14:30:21+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] Command found: ls
+2017-01-23 14:30:30+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] CMD: top
+2017-01-23 14:30:30+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] Command found: top
+2017-01-23 14:30:30+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] Reading txtcmd from "/home/indra/Desktop/honeypot/sinh/txtcmds/usr/bin/top"
+2017-01-23 14:30:33+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] CMD: reboot
+2017-01-23 14:30:33+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] Command found: reboot
+2017-01-23 14:48:20+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] CMD: exit
+2017-01-23 14:48:20+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] Command found: exit
+2017-01-23 14:48:20+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] sending close 0
+2017-01-23 14:48:20+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.0.102] remote close
+2017-01-23 14:48:20+0530 [HoneyPotTransport,0,192.168.0.102] connection lost
+2017-01-23 15:16:30+0530 [-] Received SIGTERM, shutting down.
+2017-01-23 15:16:30+0530 [-] (TCP Port 5123 Closed)
+2017-01-23 15:16:30+0530 [-] Stopping factory <twisted.internet.protocol.Factory instance at 0x7f58ec5a2ab8>
+2017-01-23 15:16:30+0530 [-] (TCP Port 2222 Closed)
+2017-01-23 15:16:30+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f58edf87dd0>
+2017-01-23 15:16:30+0530 [-] Main loop terminated.
+2017-01-23 15:16:30+0530 [-] Server Shut Down.
+2017-01-26 22:25:39+0530 [-] Log opened.
+2017-01-26 22:25:39+0530 [-] twistd 12.2.0 (/usr/bin/python 2.7.12) starting up.
+2017-01-26 22:25:39+0530 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2017-01-26 22:25:39+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-01-26 22:25:39+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f861ae8ddd0>
+2017-01-26 22:25:39+0530 [-] Factory starting on 5123
+2017-01-26 22:25:39+0530 [-] Starting factory <twisted.internet.protocol.Factory instance at 0x7f86194a8ab8>
+2017-02-15 13:17:02+0530 [-] Log opened.
+2017-02-15 13:17:02+0530 [-] twistd 12.2.0 (/usr/bin/python 2.7.12) starting up.
+2017-02-15 13:17:02+0530 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2017-02-15 13:17:02+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-02-15 13:17:02+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7fb9311f5cb0>
+2017-02-15 13:17:02+0530 [-] Factory starting on 5123
+2017-02-15 13:17:02+0530 [-] Starting factory <twisted.internet.protocol.Factory instance at 0x7fb92f88f998>
+2017-02-15 15:46:22+0530 [-] Received SIGTERM, shutting down.
+2017-02-15 15:46:22+0530 [-] (TCP Port 5123 Closed)
+2017-02-15 15:46:22+0530 [-] Stopping factory <twisted.internet.protocol.Factory instance at 0x7fb92f88f998>
+2017-02-15 15:46:22+0530 [-] (TCP Port 2222 Closed)
+2017-02-15 15:46:22+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7fb9311f5cb0>
+2017-02-15 15:46:22+0530 [-] Main loop terminated.
+2017-02-15 15:46:22+0530 [-] Server Shut Down.
+2017-02-15 15:46:23+0530 [-] Log opened.
+2017-02-15 15:46:23+0530 [-] twistd 12.2.0 (/usr/bin/python 2.7.12) starting up.
+2017-02-15 15:46:23+0530 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2017-02-15 15:46:23+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-02-15 15:46:23+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f54802a4cb0>
+2017-02-15 15:46:23+0530 [-] Factory starting on 5123
+2017-02-15 15:46:23+0530 [-] Starting factory <twisted.internet.protocol.Factory instance at 0x7f547e93e998>
+2017-02-15 15:52:02+0530 [-] Received SIGTERM, shutting down.
+2017-02-15 15:52:02+0530 [-] (TCP Port 5123 Closed)
+2017-02-15 15:52:02+0530 [-] Stopping factory <twisted.internet.protocol.Factory instance at 0x7f547e93e998>
+2017-02-15 15:52:02+0530 [-] (TCP Port 2222 Closed)
+2017-02-15 15:52:02+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f54802a4cb0>
+2017-02-15 15:52:02+0530 [-] Main loop terminated.
+2017-02-15 15:52:02+0530 [-] Server Shut Down.
+2017-02-15 15:52:03+0530 [-] Log opened.
+2017-02-15 15:52:03+0530 [-] twistd 12.2.0 (/usr/bin/python 2.7.12) starting up.
+2017-02-15 15:52:03+0530 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2017-02-15 15:52:03+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-02-15 15:52:03+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f126d5b1cb0>
+2017-02-15 15:52:03+0530 [-] Factory starting on 5123
+2017-02-15 15:52:03+0530 [-] Starting factory <twisted.internet.protocol.Factory instance at 0x7f126bc4b998>
+2017-02-15 15:52:31+0530 [-] Received SIGTERM, shutting down.
+2017-02-15 15:52:31+0530 [-] (TCP Port 5123 Closed)
+2017-02-15 15:52:31+0530 [-] Stopping factory <twisted.internet.protocol.Factory instance at 0x7f126bc4b998>
+2017-02-15 15:52:31+0530 [-] (TCP Port 2222 Closed)
+2017-02-15 15:52:31+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f126d5b1cb0>
+2017-02-15 15:52:31+0530 [-] Main loop terminated.
+2017-02-15 15:52:31+0530 [-] Server Shut Down.
+2017-02-15 15:52:32+0530 [-] Log opened.
+2017-02-15 15:52:32+0530 [-] twistd 12.2.0 (/usr/bin/python 2.7.12) starting up.
+2017-02-15 15:52:32+0530 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2017-02-15 15:52:32+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-02-15 15:52:32+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f665d71bcb0>
+2017-02-15 15:52:32+0530 [-] Factory starting on 5123
+2017-02-15 15:52:32+0530 [-] Starting factory <twisted.internet.protocol.Factory instance at 0x7f665bdb5998>
+2017-02-15 16:26:45+0530 [-] Received SIGTERM, shutting down.
+2017-02-15 16:26:45+0530 [-] (TCP Port 5123 Closed)
+2017-02-15 16:26:45+0530 [-] Stopping factory <twisted.internet.protocol.Factory instance at 0x7f665bdb5998>
+2017-02-15 16:26:45+0530 [-] (TCP Port 2222 Closed)
+2017-02-15 16:26:45+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f665d71bcb0>
+2017-02-15 16:26:45+0530 [-] Main loop terminated.
+2017-02-15 16:26:45+0530 [-] Server Shut Down.
+2017-02-15 16:26:46+0530 [-] Log opened.
+2017-02-15 16:26:46+0530 [-] twistd 12.2.0 (/usr/bin/python 2.7.12) starting up.
+2017-02-15 16:26:46+0530 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2017-02-15 16:26:46+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-02-15 16:26:46+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f7a622f6cb0>
+2017-02-15 16:26:46+0530 [-] Factory starting on 5123
+2017-02-15 16:26:46+0530 [-] Starting factory <twisted.internet.protocol.Factory instance at 0x7f7a60990998>
+2017-02-15 16:38:30+0530 [-] Received SIGTERM, shutting down.
+2017-02-15 16:38:30+0530 [-] (TCP Port 5123 Closed)
+2017-02-15 16:38:30+0530 [-] Stopping factory <twisted.internet.protocol.Factory instance at 0x7f7a60990998>
+2017-02-15 16:38:30+0530 [-] (TCP Port 2222 Closed)
+2017-02-15 16:38:30+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f7a622f6cb0>
+2017-02-15 16:38:30+0530 [-] Main loop terminated.
+2017-02-15 16:38:30+0530 [-] Server Shut Down.
+2017-02-17 11:28:33+0530 [-] Log opened.
+2017-02-17 11:28:33+0530 [-] twistd 12.2.0 (/usr/bin/python 2.7.12) starting up.
+2017-02-17 11:28:33+0530 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2017-02-17 11:28:33+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-02-17 11:28:33+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7efc262cacb0>
+2017-02-17 11:28:33+0530 [-] Factory starting on 5123
+2017-02-17 11:28:33+0530 [-] Starting factory <twisted.internet.protocol.Factory instance at 0x7efc24964998>
+2017-02-17 11:39:35+0530 [-] Received SIGTERM, shutting down.
+2017-02-17 11:39:35+0530 [-] (TCP Port 5123 Closed)
+2017-02-17 11:39:35+0530 [-] Stopping factory <twisted.internet.protocol.Factory instance at 0x7efc24964998>
+2017-02-17 11:39:35+0530 [-] (TCP Port 2222 Closed)
+2017-02-17 11:39:35+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7efc262cacb0>
+2017-02-17 11:39:35+0530 [-] Main loop terminated.
+2017-02-17 11:39:35+0530 [-] Server Shut Down.
+2017-02-17 11:39:36+0530 [-] Log opened.
+2017-02-17 11:39:36+0530 [-] twistd 12.2.0 (/usr/bin/python 2.7.12) starting up.
+2017-02-17 11:39:36+0530 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2017-02-17 11:39:36+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-02-17 11:39:36+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f3c0851acb0>
+2017-02-17 11:39:36+0530 [-] Factory starting on 5123
+2017-02-17 11:39:36+0530 [-] Starting factory <twisted.internet.protocol.Factory instance at 0x7f3c06bb4998>
+2017-02-17 12:23:25+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.5:52712 (200.200.200.4:2222) [session: 0]
+2017-02-17 12:23:25+0530 [HoneyPotTransport,0,200.200.200.5] Remote SSH version: SSH-2.0-PuTTY_Release_0.67
+2017-02-17 12:23:25+0530 [HoneyPotTransport,0,200.200.200.5] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:23:25+0530 [HoneyPotTransport,0,200.200.200.5] outgoing: aes256-ctr hmac-sha1 none
+2017-02-17 12:23:25+0530 [HoneyPotTransport,0,200.200.200.5] incoming: aes256-ctr hmac-sha1 none
+2017-02-17 12:23:26+0530 [HoneyPotTransport,0,200.200.200.5] NEW KEYS
+2017-02-17 12:23:26+0530 [HoneyPotTransport,0,200.200.200.5] starting service ssh-userauth
+2017-02-17 12:23:30+0530 [SSHService ssh-userauth on HoneyPotTransport,0,200.200.200.5] root trying auth none
+2017-02-17 12:23:44+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.5:51003 (200.200.200.4:2222) [session: 1]
+2017-02-17 12:23:44+0530 [HoneyPotTransport,1,200.200.200.5] Remote SSH version: SSH-2.0-PuTTY_Release_0.67
+2017-02-17 12:23:44+0530 [HoneyPotTransport,1,200.200.200.5] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:23:44+0530 [HoneyPotTransport,1,200.200.200.5] outgoing: aes256-ctr hmac-sha1 none
+2017-02-17 12:23:44+0530 [HoneyPotTransport,1,200.200.200.5] incoming: aes256-ctr hmac-sha1 none
+2017-02-17 12:23:45+0530 [HoneyPotTransport,1,200.200.200.5] NEW KEYS
+2017-02-17 12:23:45+0530 [HoneyPotTransport,1,200.200.200.5] starting service ssh-userauth
+2017-02-17 12:23:48+0530 [SSHService ssh-userauth on HoneyPotTransport,1,200.200.200.5] admin trying auth none
+2017-02-17 12:23:50+0530 [SSHService ssh-userauth on HoneyPotTransport,1,200.200.200.5] admin trying auth password
+2017-02-17 12:23:50+0530 [SSHService ssh-userauth on HoneyPotTransport,1,200.200.200.5] login attempt [admin/admin] succeeded
+2017-02-17 12:23:50+0530 [SSHService ssh-userauth on HoneyPotTransport,1,200.200.200.5] admin authenticated with password
+2017-02-17 12:23:50+0530 [SSHService ssh-userauth on HoneyPotTransport,1,200.200.200.5] starting service ssh-connection
+2017-02-17 12:23:50+0530 [SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] got channel session request
+2017-02-17 12:23:50+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] channel open
+2017-02-17 12:23:50+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] pty request: xterm (24, 80, 0, 0)
+2017-02-17 12:23:50+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] Terminal size: 24 80
+2017-02-17 12:23:50+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] getting shell
+2017-02-17 12:23:50+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] Opening TTY log: log/tty/20170217-122350-6992.log
+2017-02-17 12:23:51+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] /etc/motd resolved into /etc/motd
+2017-02-17 12:23:59+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] CMD: ifconfig
+2017-02-17 12:23:59+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] Command found: ifconfig
+2017-02-17 12:23:59+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] Reading txtcmd from "/home/indra/honeypot/sinh/txtcmds/sbin/ifconfig"
+2017-02-17 12:24:35+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] CMD: top
+2017-02-17 12:24:35+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] Command found: top
+2017-02-17 12:24:35+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] Reading txtcmd from "/home/indra/honeypot/sinh/txtcmds/usr/bin/top"
+2017-02-17 12:24:43+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] CMD: top
+2017-02-17 12:24:43+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] Command found: top
+2017-02-17 12:24:43+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] Reading txtcmd from "/home/indra/honeypot/sinh/txtcmds/usr/bin/top"
+2017-02-17 12:24:43+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] CMD: top
+2017-02-17 12:24:43+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] Command found: top
+2017-02-17 12:24:43+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] Reading txtcmd from "/home/indra/honeypot/sinh/txtcmds/usr/bin/top"
+2017-02-17 12:24:43+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] CMD: reboot
+2017-02-17 12:24:43+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] Command found: reboot
+2017-02-17 12:24:43+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] INPUT: reboot
+2017-02-17 12:24:45+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] INPUT: reboot
+2017-02-17 12:24:45+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] INPUT: reboot
+2017-02-17 12:24:45+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] INPUT: reboot
+2017-02-17 12:24:45+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] INPUT: reboot
+2017-02-17 12:24:46+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] CMD: reboot
+2017-02-17 12:24:46+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] Command found: reboot
+2017-02-17 12:24:47+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] INPUT: reboot
+2017-02-17 12:24:47+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] INPUT: reboot
+2017-02-17 12:24:48+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.5] INPUT: reboot
+2017-02-17 12:25:04+0530 [HoneyPotTransport,1,200.200.200.5] connection lost
+2017-02-17 12:25:36+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:38252 (200.200.200.4:2222) [session: 2]
+2017-02-17 12:25:37+0530 [HoneyPotTransport,2,200.200.200.3] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 12:25:37+0530 [HoneyPotTransport,2,200.200.200.3] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:25:37+0530 [HoneyPotTransport,2,200.200.200.3] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 12:25:37+0530 [HoneyPotTransport,2,200.200.200.3] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 12:25:37+0530 [HoneyPotTransport,2,200.200.200.3] Got remote error, code 3
+	reason: com.jcraft.jsch.JSchException: reject HostKey: 200.200.200.4
+2017-02-17 12:25:37+0530 [HoneyPotTransport,2,200.200.200.3] connection lost
+2017-02-17 12:25:39+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:45264 (200.200.200.4:2222) [session: 3]
+2017-02-17 12:25:39+0530 [HoneyPotTransport,3,200.200.200.3] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 12:25:39+0530 [HoneyPotTransport,3,200.200.200.3] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:25:39+0530 [HoneyPotTransport,3,200.200.200.3] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 12:25:39+0530 [HoneyPotTransport,3,200.200.200.3] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 12:25:40+0530 [HoneyPotTransport,3,200.200.200.3] NEW KEYS
+2017-02-17 12:25:40+0530 [HoneyPotTransport,3,200.200.200.3] starting service ssh-userauth
+2017-02-17 12:25:40+0530 [SSHService ssh-userauth on HoneyPotTransport,3,200.200.200.3] admin trying auth none
+2017-02-17 12:25:40+0530 [SSHService ssh-userauth on HoneyPotTransport,3,200.200.200.3] admin trying auth password
+2017-02-17 12:25:40+0530 [SSHService ssh-userauth on HoneyPotTransport,3,200.200.200.3] login attempt [admin/admin] succeeded
+2017-02-17 12:25:40+0530 [SSHService ssh-userauth on HoneyPotTransport,3,200.200.200.3] admin authenticated with password
+2017-02-17 12:25:40+0530 [SSHService ssh-userauth on HoneyPotTransport,3,200.200.200.3] starting service ssh-connection
+2017-02-17 12:25:40+0530 [SSHService ssh-connection on HoneyPotTransport,3,200.200.200.3] got channel session request
+2017-02-17 12:25:40+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,3,200.200.200.3] channel open
+2017-02-17 12:25:40+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,3,200.200.200.3] unhandled request for auth-agent-req@openssh.com
+2017-02-17 12:25:40+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,3,200.200.200.3] pty request: linux (24, 80, 640, 480)
+2017-02-17 12:25:40+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,3,200.200.200.3] Terminal size: 24 80
+2017-02-17 12:25:40+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,3,200.200.200.3] getting shell
+2017-02-17 12:25:40+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,3,200.200.200.3] Opening TTY log: log/tty/20170217-122540-9524.log
+2017-02-17 12:25:40+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,3,200.200.200.3] /etc/motd resolved into /etc/motd
+2017-02-17 12:25:47+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,3,200.200.200.3] CMD: reboot
+2017-02-17 12:25:47+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,3,200.200.200.3] Command found: reboot
+2017-02-17 12:26:13+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,3,200.200.200.3] CMD: ifconfig
+2017-02-17 12:26:13+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,3,200.200.200.3] Command found: ifconfig
+2017-02-17 12:26:13+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,3,200.200.200.3] Reading txtcmd from "/home/indra/honeypot/sinh/txtcmds/sbin/ifconfig"
+2017-02-17 12:26:13+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,3,200.200.200.3] CMD: 
+2017-02-17 12:36:30+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:41505 (200.200.200.4:2222) [session: 4]
+2017-02-17 12:36:31+0530 [HoneyPotTransport,4,200.200.200.3] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 12:36:31+0530 [HoneyPotTransport,4,200.200.200.3] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:36:31+0530 [HoneyPotTransport,4,200.200.200.3] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 12:36:31+0530 [HoneyPotTransport,4,200.200.200.3] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 12:36:31+0530 [HoneyPotTransport,4,200.200.200.3] NEW KEYS
+2017-02-17 12:36:31+0530 [HoneyPotTransport,4,200.200.200.3] starting service ssh-userauth
+2017-02-17 12:36:31+0530 [SSHService ssh-userauth on HoneyPotTransport,4,200.200.200.3] admin trying auth none
+2017-02-17 12:36:31+0530 [SSHService ssh-userauth on HoneyPotTransport,4,200.200.200.3] admin trying auth password
+2017-02-17 12:36:32+0530 [-] admin failed auth password
+2017-02-17 12:36:32+0530 [-] Traceback (most recent call last):
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 180, in ssh_USERAUTH_REQUEST
+	    d = self.tryAuth(method, user, rest)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 154, in tryAuth
+	    ret = f(data)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 302, in auth_password
+	    return self.portal.login(c, None, interfaces.IConchUser).addErrback(
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/cred/portal.py", line 115, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/internet/defer.py", line 134, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 110, in requestAvatarId
+	    if self.checkUserPass(credentials.username, credentials.password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 130, in checkUserPass
+	    if UserDB().checklogin(username, password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 19, in __init__
+	    self.load()
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 37, in load
+	    (login, uid_str, passwd) = line.split(':', 2)
+	exceptions.ValueError: need more than 2 values to unpack
+	
+2017-02-17 12:36:32+0530 [HoneyPotTransport,4,200.200.200.3] Got remote error, code 3
+	reason: com.jcraft.jsch.JSchException: Auth cancel
+2017-02-17 12:36:32+0530 [HoneyPotTransport,4,200.200.200.3] connection lost
+2017-02-17 12:36:55+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:45408 (200.200.200.4:2222) [session: 5]
+2017-02-17 12:36:55+0530 [HoneyPotTransport,5,200.200.200.3] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 12:36:55+0530 [HoneyPotTransport,5,200.200.200.3] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:36:55+0530 [HoneyPotTransport,5,200.200.200.3] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 12:36:55+0530 [HoneyPotTransport,5,200.200.200.3] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 12:36:56+0530 [HoneyPotTransport,5,200.200.200.3] NEW KEYS
+2017-02-17 12:36:56+0530 [HoneyPotTransport,5,200.200.200.3] starting service ssh-userauth
+2017-02-17 12:36:56+0530 [SSHService ssh-userauth on HoneyPotTransport,5,200.200.200.3] admin trying auth none
+2017-02-17 12:36:56+0530 [SSHService ssh-userauth on HoneyPotTransport,5,200.200.200.3] admin trying auth password
+2017-02-17 12:36:57+0530 [-] admin failed auth password
+2017-02-17 12:36:57+0530 [-] Traceback (most recent call last):
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 180, in ssh_USERAUTH_REQUEST
+	    d = self.tryAuth(method, user, rest)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 154, in tryAuth
+	    ret = f(data)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 302, in auth_password
+	    return self.portal.login(c, None, interfaces.IConchUser).addErrback(
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/cred/portal.py", line 115, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/internet/defer.py", line 134, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 110, in requestAvatarId
+	    if self.checkUserPass(credentials.username, credentials.password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 130, in checkUserPass
+	    if UserDB().checklogin(username, password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 19, in __init__
+	    self.load()
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 37, in load
+	    (login, uid_str, passwd) = line.split(':', 2)
+	exceptions.ValueError: need more than 2 values to unpack
+	
+2017-02-17 12:36:57+0530 [HoneyPotTransport,5,200.200.200.3] Got remote error, code 3
+	reason: com.jcraft.jsch.JSchException: Auth cancel
+2017-02-17 12:36:57+0530 [HoneyPotTransport,5,200.200.200.3] connection lost
+2017-02-17 12:37:11+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:39458 (200.200.200.4:2222) [session: 6]
+2017-02-17 12:37:11+0530 [HoneyPotTransport,6,200.200.200.3] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 12:37:11+0530 [HoneyPotTransport,6,200.200.200.3] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:37:11+0530 [HoneyPotTransport,6,200.200.200.3] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 12:37:11+0530 [HoneyPotTransport,6,200.200.200.3] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 12:37:12+0530 [HoneyPotTransport,6,200.200.200.3] NEW KEYS
+2017-02-17 12:37:12+0530 [HoneyPotTransport,6,200.200.200.3] starting service ssh-userauth
+2017-02-17 12:37:12+0530 [SSHService ssh-userauth on HoneyPotTransport,6,200.200.200.3] ip trying auth none
+2017-02-17 12:37:12+0530 [SSHService ssh-userauth on HoneyPotTransport,6,200.200.200.3] ip trying auth password
+2017-02-17 12:37:13+0530 [-] ip failed auth password
+2017-02-17 12:37:13+0530 [-] Traceback (most recent call last):
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 180, in ssh_USERAUTH_REQUEST
+	    d = self.tryAuth(method, user, rest)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 154, in tryAuth
+	    ret = f(data)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 302, in auth_password
+	    return self.portal.login(c, None, interfaces.IConchUser).addErrback(
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/cred/portal.py", line 115, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/internet/defer.py", line 134, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 110, in requestAvatarId
+	    if self.checkUserPass(credentials.username, credentials.password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 130, in checkUserPass
+	    if UserDB().checklogin(username, password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 19, in __init__
+	    self.load()
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 37, in load
+	    (login, uid_str, passwd) = line.split(':', 2)
+	exceptions.ValueError: need more than 2 values to unpack
+	
+2017-02-17 12:37:13+0530 [HoneyPotTransport,6,200.200.200.3] Got remote error, code 3
+	reason: com.jcraft.jsch.JSchException: Auth cancel
+2017-02-17 12:37:13+0530 [HoneyPotTransport,6,200.200.200.3] connection lost
+2017-02-17 12:37:18+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:47563 (200.200.200.4:2222) [session: 7]
+2017-02-17 12:37:18+0530 [HoneyPotTransport,7,200.200.200.3] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 12:37:18+0530 [HoneyPotTransport,7,200.200.200.3] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:37:18+0530 [HoneyPotTransport,7,200.200.200.3] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 12:37:18+0530 [HoneyPotTransport,7,200.200.200.3] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 12:37:19+0530 [HoneyPotTransport,7,200.200.200.3] NEW KEYS
+2017-02-17 12:37:19+0530 [HoneyPotTransport,7,200.200.200.3] starting service ssh-userauth
+2017-02-17 12:37:19+0530 [SSHService ssh-userauth on HoneyPotTransport,7,200.200.200.3] ip trying auth none
+2017-02-17 12:37:19+0530 [SSHService ssh-userauth on HoneyPotTransport,7,200.200.200.3] ip trying auth password
+2017-02-17 12:37:20+0530 [-] ip failed auth password
+2017-02-17 12:37:20+0530 [-] Traceback (most recent call last):
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 180, in ssh_USERAUTH_REQUEST
+	    d = self.tryAuth(method, user, rest)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 154, in tryAuth
+	    ret = f(data)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 302, in auth_password
+	    return self.portal.login(c, None, interfaces.IConchUser).addErrback(
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/cred/portal.py", line 115, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/internet/defer.py", line 134, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 110, in requestAvatarId
+	    if self.checkUserPass(credentials.username, credentials.password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 130, in checkUserPass
+	    if UserDB().checklogin(username, password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 19, in __init__
+	    self.load()
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 37, in load
+	    (login, uid_str, passwd) = line.split(':', 2)
+	exceptions.ValueError: need more than 2 values to unpack
+	
+2017-02-17 12:37:20+0530 [HoneyPotTransport,7,200.200.200.3] Got remote error, code 3
+	reason: com.jcraft.jsch.JSchException: Auth cancel
+2017-02-17 12:37:20+0530 [HoneyPotTransport,7,200.200.200.3] connection lost
+2017-02-17 12:37:24+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:47967 (200.200.200.4:2222) [session: 8]
+2017-02-17 12:37:24+0530 [HoneyPotTransport,8,200.200.200.3] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 12:37:24+0530 [HoneyPotTransport,8,200.200.200.3] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:37:24+0530 [HoneyPotTransport,8,200.200.200.3] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 12:37:24+0530 [HoneyPotTransport,8,200.200.200.3] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 12:37:25+0530 [HoneyPotTransport,8,200.200.200.3] NEW KEYS
+2017-02-17 12:37:25+0530 [HoneyPotTransport,8,200.200.200.3] starting service ssh-userauth
+2017-02-17 12:37:25+0530 [SSHService ssh-userauth on HoneyPotTransport,8,200.200.200.3] ip trying auth none
+2017-02-17 12:37:25+0530 [SSHService ssh-userauth on HoneyPotTransport,8,200.200.200.3] ip trying auth password
+2017-02-17 12:37:26+0530 [-] ip failed auth password
+2017-02-17 12:37:26+0530 [-] Traceback (most recent call last):
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 180, in ssh_USERAUTH_REQUEST
+	    d = self.tryAuth(method, user, rest)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 154, in tryAuth
+	    ret = f(data)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 302, in auth_password
+	    return self.portal.login(c, None, interfaces.IConchUser).addErrback(
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/cred/portal.py", line 115, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/internet/defer.py", line 134, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 110, in requestAvatarId
+	    if self.checkUserPass(credentials.username, credentials.password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 130, in checkUserPass
+	    if UserDB().checklogin(username, password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 19, in __init__
+	    self.load()
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 37, in load
+	    (login, uid_str, passwd) = line.split(':', 2)
+	exceptions.ValueError: need more than 2 values to unpack
+	
+2017-02-17 12:37:26+0530 [HoneyPotTransport,8,200.200.200.3] Got remote error, code 3
+	reason: com.jcraft.jsch.JSchException: Auth cancel
+2017-02-17 12:37:26+0530 [HoneyPotTransport,8,200.200.200.3] connection lost
+2017-02-17 12:38:00+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:44832 (200.200.200.4:2222) [session: 9]
+2017-02-17 12:38:00+0530 [HoneyPotTransport,9,200.200.200.3] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 12:38:00+0530 [HoneyPotTransport,9,200.200.200.3] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:38:00+0530 [HoneyPotTransport,9,200.200.200.3] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 12:38:00+0530 [HoneyPotTransport,9,200.200.200.3] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 12:38:01+0530 [HoneyPotTransport,9,200.200.200.3] NEW KEYS
+2017-02-17 12:38:01+0530 [HoneyPotTransport,9,200.200.200.3] starting service ssh-userauth
+2017-02-17 12:38:01+0530 [SSHService ssh-userauth on HoneyPotTransport,9,200.200.200.3] indra trying auth none
+2017-02-17 12:38:01+0530 [SSHService ssh-userauth on HoneyPotTransport,9,200.200.200.3] indra trying auth password
+2017-02-17 12:38:02+0530 [-] indra failed auth password
+2017-02-17 12:38:02+0530 [-] Traceback (most recent call last):
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 180, in ssh_USERAUTH_REQUEST
+	    d = self.tryAuth(method, user, rest)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 154, in tryAuth
+	    ret = f(data)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 302, in auth_password
+	    return self.portal.login(c, None, interfaces.IConchUser).addErrback(
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/cred/portal.py", line 115, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/internet/defer.py", line 134, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 110, in requestAvatarId
+	    if self.checkUserPass(credentials.username, credentials.password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 130, in checkUserPass
+	    if UserDB().checklogin(username, password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 19, in __init__
+	    self.load()
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 37, in load
+	    (login, uid_str, passwd) = line.split(':', 2)
+	exceptions.ValueError: need more than 2 values to unpack
+	
+2017-02-17 12:38:04+0530 [HoneyPotTransport,9,200.200.200.3] Got remote error, code 3
+	reason: com.jcraft.jsch.JSchException: Auth cancel
+2017-02-17 12:38:04+0530 [HoneyPotTransport,9,200.200.200.3] connection lost
+2017-02-17 12:38:15+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:40652 (200.200.200.4:2222) [session: 10]
+2017-02-17 12:38:16+0530 [HoneyPotTransport,10,200.200.200.3] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 12:38:16+0530 [HoneyPotTransport,10,200.200.200.3] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:38:16+0530 [HoneyPotTransport,10,200.200.200.3] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 12:38:16+0530 [HoneyPotTransport,10,200.200.200.3] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 12:38:21+0530 [HoneyPotTransport,10,200.200.200.3] NEW KEYS
+2017-02-17 12:38:21+0530 [HoneyPotTransport,10,200.200.200.3] starting service ssh-userauth
+2017-02-17 12:38:21+0530 [SSHService ssh-userauth on HoneyPotTransport,10,200.200.200.3] indra trying auth none
+2017-02-17 12:38:21+0530 [SSHService ssh-userauth on HoneyPotTransport,10,200.200.200.3] indra trying auth password
+2017-02-17 12:38:22+0530 [-] indra failed auth password
+2017-02-17 12:38:22+0530 [-] Traceback (most recent call last):
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 180, in ssh_USERAUTH_REQUEST
+	    d = self.tryAuth(method, user, rest)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 154, in tryAuth
+	    ret = f(data)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 302, in auth_password
+	    return self.portal.login(c, None, interfaces.IConchUser).addErrback(
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/cred/portal.py", line 115, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/internet/defer.py", line 134, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 110, in requestAvatarId
+	    if self.checkUserPass(credentials.username, credentials.password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 130, in checkUserPass
+	    if UserDB().checklogin(username, password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 19, in __init__
+	    self.load()
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 37, in load
+	    (login, uid_str, passwd) = line.split(':', 2)
+	exceptions.ValueError: need more than 2 values to unpack
+	
+2017-02-17 12:38:22+0530 [HoneyPotTransport,10,200.200.200.3] Got remote error, code 3
+	reason: com.jcraft.jsch.JSchException: Auth cancel
+2017-02-17 12:38:22+0530 [HoneyPotTransport,10,200.200.200.3] connection lost
+2017-02-17 12:38:28+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:40434 (200.200.200.4:2222) [session: 11]
+2017-02-17 12:38:28+0530 [HoneyPotTransport,11,200.200.200.3] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 12:38:28+0530 [HoneyPotTransport,11,200.200.200.3] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:38:28+0530 [HoneyPotTransport,11,200.200.200.3] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 12:38:28+0530 [HoneyPotTransport,11,200.200.200.3] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 12:38:30+0530 [HoneyPotTransport,11,200.200.200.3] NEW KEYS
+2017-02-17 12:38:30+0530 [HoneyPotTransport,11,200.200.200.3] starting service ssh-userauth
+2017-02-17 12:38:30+0530 [SSHService ssh-userauth on HoneyPotTransport,11,200.200.200.3] indra trying auth none
+2017-02-17 12:38:30+0530 [SSHService ssh-userauth on HoneyPotTransport,11,200.200.200.3] indra trying auth password
+2017-02-17 12:38:31+0530 [-] indra failed auth password
+2017-02-17 12:38:31+0530 [-] Traceback (most recent call last):
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 180, in ssh_USERAUTH_REQUEST
+	    d = self.tryAuth(method, user, rest)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 154, in tryAuth
+	    ret = f(data)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 302, in auth_password
+	    return self.portal.login(c, None, interfaces.IConchUser).addErrback(
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/cred/portal.py", line 115, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/internet/defer.py", line 134, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 110, in requestAvatarId
+	    if self.checkUserPass(credentials.username, credentials.password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 130, in checkUserPass
+	    if UserDB().checklogin(username, password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 19, in __init__
+	    self.load()
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 37, in load
+	    (login, uid_str, passwd) = line.split(':', 2)
+	exceptions.ValueError: need more than 2 values to unpack
+	
+2017-02-17 12:38:31+0530 [HoneyPotTransport,11,200.200.200.3] Got remote error, code 3
+	reason: com.jcraft.jsch.JSchException: Auth cancel
+2017-02-17 12:38:31+0530 [HoneyPotTransport,11,200.200.200.3] connection lost
+2017-02-17 12:38:38+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:40162 (200.200.200.4:2222) [session: 12]
+2017-02-17 12:38:38+0530 [HoneyPotTransport,12,200.200.200.3] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 12:38:38+0530 [HoneyPotTransport,12,200.200.200.3] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:38:38+0530 [HoneyPotTransport,12,200.200.200.3] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 12:38:38+0530 [HoneyPotTransport,12,200.200.200.3] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 12:38:39+0530 [HoneyPotTransport,12,200.200.200.3] NEW KEYS
+2017-02-17 12:38:39+0530 [HoneyPotTransport,12,200.200.200.3] starting service ssh-userauth
+2017-02-17 12:38:39+0530 [SSHService ssh-userauth on HoneyPotTransport,12,200.200.200.3] indra trying auth none
+2017-02-17 12:38:39+0530 [SSHService ssh-userauth on HoneyPotTransport,12,200.200.200.3] indra trying auth password
+2017-02-17 12:38:40+0530 [-] indra failed auth password
+2017-02-17 12:38:40+0530 [-] Traceback (most recent call last):
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 180, in ssh_USERAUTH_REQUEST
+	    d = self.tryAuth(method, user, rest)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 154, in tryAuth
+	    ret = f(data)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 302, in auth_password
+	    return self.portal.login(c, None, interfaces.IConchUser).addErrback(
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/cred/portal.py", line 115, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/internet/defer.py", line 134, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 110, in requestAvatarId
+	    if self.checkUserPass(credentials.username, credentials.password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 130, in checkUserPass
+	    if UserDB().checklogin(username, password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 19, in __init__
+	    self.load()
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 37, in load
+	    (login, uid_str, passwd) = line.split(':', 2)
+	exceptions.ValueError: need more than 2 values to unpack
+	
+2017-02-17 12:38:41+0530 [HoneyPotTransport,12,200.200.200.3] Got remote error, code 3
+	reason: com.jcraft.jsch.JSchException: Auth cancel
+2017-02-17 12:38:41+0530 [HoneyPotTransport,12,200.200.200.3] connection lost
+2017-02-17 12:38:48+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:47380 (200.200.200.4:2222) [session: 13]
+2017-02-17 12:38:49+0530 [HoneyPotTransport,13,200.200.200.3] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 12:38:49+0530 [HoneyPotTransport,13,200.200.200.3] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:38:49+0530 [HoneyPotTransport,13,200.200.200.3] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 12:38:49+0530 [HoneyPotTransport,13,200.200.200.3] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 12:38:52+0530 [HoneyPotTransport,13,200.200.200.3] NEW KEYS
+2017-02-17 12:38:52+0530 [HoneyPotTransport,13,200.200.200.3] starting service ssh-userauth
+2017-02-17 12:38:52+0530 [SSHService ssh-userauth on HoneyPotTransport,13,200.200.200.3] ip trying auth none
+2017-02-17 12:38:52+0530 [SSHService ssh-userauth on HoneyPotTransport,13,200.200.200.3] ip trying auth password
+2017-02-17 12:38:53+0530 [-] ip failed auth password
+2017-02-17 12:38:53+0530 [-] Traceback (most recent call last):
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 180, in ssh_USERAUTH_REQUEST
+	    d = self.tryAuth(method, user, rest)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 154, in tryAuth
+	    ret = f(data)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 302, in auth_password
+	    return self.portal.login(c, None, interfaces.IConchUser).addErrback(
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/cred/portal.py", line 115, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/internet/defer.py", line 134, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 110, in requestAvatarId
+	    if self.checkUserPass(credentials.username, credentials.password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 130, in checkUserPass
+	    if UserDB().checklogin(username, password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 19, in __init__
+	    self.load()
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 37, in load
+	    (login, uid_str, passwd) = line.split(':', 2)
+	exceptions.ValueError: need more than 2 values to unpack
+	
+2017-02-17 12:38:53+0530 [HoneyPotTransport,13,200.200.200.3] Got remote error, code 3
+	reason: com.jcraft.jsch.JSchException: Auth cancel
+2017-02-17 12:38:53+0530 [HoneyPotTransport,13,200.200.200.3] connection lost
+2017-02-17 12:39:04+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:45354 (200.200.200.4:2222) [session: 14]
+2017-02-17 12:39:04+0530 [HoneyPotTransport,14,200.200.200.3] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 12:39:04+0530 [HoneyPotTransport,14,200.200.200.3] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:39:04+0530 [HoneyPotTransport,14,200.200.200.3] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 12:39:04+0530 [HoneyPotTransport,14,200.200.200.3] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 12:39:07+0530 [HoneyPotTransport,14,200.200.200.3] NEW KEYS
+2017-02-17 12:39:07+0530 [HoneyPotTransport,14,200.200.200.3] starting service ssh-userauth
+2017-02-17 12:39:07+0530 [SSHService ssh-userauth on HoneyPotTransport,14,200.200.200.3] admin trying auth none
+2017-02-17 12:39:07+0530 [SSHService ssh-userauth on HoneyPotTransport,14,200.200.200.3] admin trying auth password
+2017-02-17 12:39:08+0530 [-] admin failed auth password
+2017-02-17 12:39:08+0530 [-] Traceback (most recent call last):
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 180, in ssh_USERAUTH_REQUEST
+	    d = self.tryAuth(method, user, rest)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 154, in tryAuth
+	    ret = f(data)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 302, in auth_password
+	    return self.portal.login(c, None, interfaces.IConchUser).addErrback(
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/cred/portal.py", line 115, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/internet/defer.py", line 134, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 110, in requestAvatarId
+	    if self.checkUserPass(credentials.username, credentials.password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 130, in checkUserPass
+	    if UserDB().checklogin(username, password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 19, in __init__
+	    self.load()
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 37, in load
+	    (login, uid_str, passwd) = line.split(':', 2)
+	exceptions.ValueError: need more than 2 values to unpack
+	
+2017-02-17 12:39:08+0530 [HoneyPotTransport,14,200.200.200.3] Got remote error, code 3
+	reason: com.jcraft.jsch.JSchException: Auth cancel
+2017-02-17 12:39:08+0530 [HoneyPotTransport,14,200.200.200.3] connection lost
+2017-02-17 12:40:44+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:46732 (200.200.200.4:2222) [session: 15]
+2017-02-17 12:40:45+0530 [HoneyPotTransport,15,200.200.200.3] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 12:40:45+0530 [HoneyPotTransport,15,200.200.200.3] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:40:45+0530 [HoneyPotTransport,15,200.200.200.3] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 12:40:45+0530 [HoneyPotTransport,15,200.200.200.3] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 12:40:45+0530 [HoneyPotTransport,15,200.200.200.3] NEW KEYS
+2017-02-17 12:40:45+0530 [HoneyPotTransport,15,200.200.200.3] starting service ssh-userauth
+2017-02-17 12:40:45+0530 [SSHService ssh-userauth on HoneyPotTransport,15,200.200.200.3] admin trying auth none
+2017-02-17 12:40:45+0530 [SSHService ssh-userauth on HoneyPotTransport,15,200.200.200.3] admin trying auth password
+2017-02-17 12:40:46+0530 [-] admin failed auth password
+2017-02-17 12:40:46+0530 [-] Traceback (most recent call last):
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 180, in ssh_USERAUTH_REQUEST
+	    d = self.tryAuth(method, user, rest)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 154, in tryAuth
+	    ret = f(data)
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/conch/ssh/userauth.py", line 302, in auth_password
+	    return self.portal.login(c, None, interfaces.IConchUser).addErrback(
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/cred/portal.py", line 115, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/internet/defer.py", line 134, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 110, in requestAvatarId
+	    if self.checkUserPass(credentials.username, credentials.password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 130, in checkUserPass
+	    if UserDB().checklogin(username, password):
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 19, in __init__
+	    self.load()
+	  File "/home/indra/honeypot/sinh/sinh/core/auth.py", line 37, in load
+	    (login, uid_str, passwd) = line.split(':', 2)
+	exceptions.ValueError: need more than 2 values to unpack
+	
+2017-02-17 12:40:47+0530 [HoneyPotTransport,15,200.200.200.3] Got remote error, code 3
+	reason: com.jcraft.jsch.JSchException: Auth cancel
+2017-02-17 12:40:47+0530 [HoneyPotTransport,15,200.200.200.3] connection lost
+2017-02-17 12:41:07+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:44572 (200.200.200.4:2222) [session: 16]
+2017-02-17 12:41:07+0530 [HoneyPotTransport,16,200.200.200.3] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 12:41:07+0530 [HoneyPotTransport,16,200.200.200.3] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:41:07+0530 [HoneyPotTransport,16,200.200.200.3] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 12:41:07+0530 [HoneyPotTransport,16,200.200.200.3] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 12:41:08+0530 [HoneyPotTransport,16,200.200.200.3] NEW KEYS
+2017-02-17 12:41:08+0530 [HoneyPotTransport,16,200.200.200.3] starting service ssh-userauth
+2017-02-17 12:41:08+0530 [SSHService ssh-userauth on HoneyPotTransport,16,200.200.200.3] admin trying auth none
+2017-02-17 12:41:08+0530 [SSHService ssh-userauth on HoneyPotTransport,16,200.200.200.3] admin trying auth password
+2017-02-17 12:41:08+0530 [SSHService ssh-userauth on HoneyPotTransport,16,200.200.200.3] login attempt [admin/admin] succeeded
+2017-02-17 12:41:08+0530 [SSHService ssh-userauth on HoneyPotTransport,16,200.200.200.3] admin authenticated with password
+2017-02-17 12:41:08+0530 [SSHService ssh-userauth on HoneyPotTransport,16,200.200.200.3] starting service ssh-connection
+2017-02-17 12:41:08+0530 [SSHService ssh-connection on HoneyPotTransport,16,200.200.200.3] got channel session request
+2017-02-17 12:41:08+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,16,200.200.200.3] channel open
+2017-02-17 12:41:08+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,16,200.200.200.3] unhandled request for auth-agent-req@openssh.com
+2017-02-17 12:41:08+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,16,200.200.200.3] pty request: linux (24, 80, 640, 480)
+2017-02-17 12:41:08+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,16,200.200.200.3] Terminal size: 24 80
+2017-02-17 12:41:08+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,16,200.200.200.3] getting shell
+2017-02-17 12:41:08+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,16,200.200.200.3] Opening TTY log: log/tty/20170217-124108-7360.log
+2017-02-17 12:41:09+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,16,200.200.200.3] /etc/motd resolved into /etc/motd
+2017-02-17 12:41:24+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,16,200.200.200.3] remote close
+2017-02-17 12:41:24+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,16,200.200.200.3] sending close 0
+2017-02-17 12:41:24+0530 [HoneyPotTransport,16,200.200.200.3] connection lost
+2017-02-17 12:41:27+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:44157 (200.200.200.4:2222) [session: 17]
+2017-02-17 12:41:27+0530 [HoneyPotTransport,17,200.200.200.3] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 12:41:27+0530 [HoneyPotTransport,17,200.200.200.3] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:41:27+0530 [HoneyPotTransport,17,200.200.200.3] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 12:41:27+0530 [HoneyPotTransport,17,200.200.200.3] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 12:41:28+0530 [HoneyPotTransport,17,200.200.200.3] NEW KEYS
+2017-02-17 12:41:28+0530 [HoneyPotTransport,17,200.200.200.3] starting service ssh-userauth
+2017-02-17 12:41:28+0530 [SSHService ssh-userauth on HoneyPotTransport,17,200.200.200.3] admin trying auth none
+2017-02-17 12:41:28+0530 [SSHService ssh-userauth on HoneyPotTransport,17,200.200.200.3] admin trying auth password
+2017-02-17 12:41:28+0530 [SSHService ssh-userauth on HoneyPotTransport,17,200.200.200.3] login attempt [admin/admin] succeeded
+2017-02-17 12:41:28+0530 [SSHService ssh-userauth on HoneyPotTransport,17,200.200.200.3] admin authenticated with password
+2017-02-17 12:41:28+0530 [SSHService ssh-userauth on HoneyPotTransport,17,200.200.200.3] starting service ssh-connection
+2017-02-17 12:41:28+0530 [SSHService ssh-connection on HoneyPotTransport,17,200.200.200.3] got channel session request
+2017-02-17 12:41:28+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,17,200.200.200.3] channel open
+2017-02-17 12:41:28+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,17,200.200.200.3] unhandled request for auth-agent-req@openssh.com
+2017-02-17 12:41:28+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,17,200.200.200.3] pty request: linux (24, 80, 640, 480)
+2017-02-17 12:41:28+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,17,200.200.200.3] Terminal size: 24 80
+2017-02-17 12:41:28+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,17,200.200.200.3] getting shell
+2017-02-17 12:41:28+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,17,200.200.200.3] Opening TTY log: log/tty/20170217-124128-7628.log
+2017-02-17 12:41:28+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,17,200.200.200.3] /etc/motd resolved into /etc/motd
+2017-02-17 12:41:32+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,17,200.200.200.3] remote close
+2017-02-17 12:41:32+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,17,200.200.200.3] sending close 0
+2017-02-17 12:41:32+0530 [HoneyPotTransport,17,200.200.200.3] connection lost
+2017-02-17 12:41:45+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:44818 (200.200.200.4:2222) [session: 18]
+2017-02-17 12:41:46+0530 [HoneyPotTransport,18,200.200.200.3] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 12:41:46+0530 [HoneyPotTransport,18,200.200.200.3] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:41:46+0530 [HoneyPotTransport,18,200.200.200.3] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 12:41:46+0530 [HoneyPotTransport,18,200.200.200.3] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 12:41:46+0530 [HoneyPotTransport,18,200.200.200.3] NEW KEYS
+2017-02-17 12:41:46+0530 [HoneyPotTransport,18,200.200.200.3] starting service ssh-userauth
+2017-02-17 12:41:46+0530 [SSHService ssh-userauth on HoneyPotTransport,18,200.200.200.3] indra trying auth none
+2017-02-17 12:41:46+0530 [SSHService ssh-userauth on HoneyPotTransport,18,200.200.200.3] indra trying auth password
+2017-02-17 12:41:46+0530 [SSHService ssh-userauth on HoneyPotTransport,18,200.200.200.3] login attempt [indra/indra123] succeeded
+2017-02-17 12:41:46+0530 [SSHService ssh-userauth on HoneyPotTransport,18,200.200.200.3] indra authenticated with password
+2017-02-17 12:41:46+0530 [SSHService ssh-userauth on HoneyPotTransport,18,200.200.200.3] starting service ssh-connection
+2017-02-17 12:41:46+0530 [SSHService ssh-connection on HoneyPotTransport,18,200.200.200.3] got channel session request
+2017-02-17 12:41:46+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,18,200.200.200.3] channel open
+2017-02-17 12:41:46+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,18,200.200.200.3] unhandled request for auth-agent-req@openssh.com
+2017-02-17 12:41:46+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,18,200.200.200.3] pty request: linux (24, 80, 640, 480)
+2017-02-17 12:41:46+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,18,200.200.200.3] Terminal size: 24 80
+2017-02-17 12:41:46+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,18,200.200.200.3] getting shell
+2017-02-17 12:41:46+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,18,200.200.200.3] Opening TTY log: log/tty/20170217-124146-9258.log
+2017-02-17 12:41:47+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,18,200.200.200.3] /etc/motd resolved into /etc/motd
+2017-02-17 12:42:33+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.5:55315 (200.200.200.4:2222) [session: 19]
+2017-02-17 12:42:37+0530 [HoneyPotTransport,19,200.200.200.5] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 12:42:37+0530 [HoneyPotTransport,19,200.200.200.5] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:42:37+0530 [HoneyPotTransport,19,200.200.200.5] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 12:42:37+0530 [HoneyPotTransport,19,200.200.200.5] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 12:42:38+0530 [HoneyPotTransport,19,200.200.200.5] Got remote error, code 3
+	reason: com.jcraft.jsch.JSchException: reject HostKey: 200.200.200.4
+2017-02-17 12:42:38+0530 [HoneyPotTransport,19,200.200.200.5] connection lost
+2017-02-17 12:42:40+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.5:48401 (200.200.200.4:2222) [session: 20]
+2017-02-17 12:42:43+0530 [HoneyPotTransport,20,200.200.200.5] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 12:42:43+0530 [HoneyPotTransport,20,200.200.200.5] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 12:42:43+0530 [HoneyPotTransport,20,200.200.200.5] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 12:42:43+0530 [HoneyPotTransport,20,200.200.200.5] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 12:42:44+0530 [HoneyPotTransport,20,200.200.200.5] NEW KEYS
+2017-02-17 12:42:44+0530 [HoneyPotTransport,20,200.200.200.5] starting service ssh-userauth
+2017-02-17 12:42:44+0530 [SSHService ssh-userauth on HoneyPotTransport,20,200.200.200.5] admin trying auth none
+2017-02-17 12:42:44+0530 [SSHService ssh-userauth on HoneyPotTransport,20,200.200.200.5] admin trying auth password
+2017-02-17 12:42:44+0530 [SSHService ssh-userauth on HoneyPotTransport,20,200.200.200.5] login attempt [admin/admin] succeeded
+2017-02-17 12:42:44+0530 [SSHService ssh-userauth on HoneyPotTransport,20,200.200.200.5] admin authenticated with password
+2017-02-17 12:42:44+0530 [SSHService ssh-userauth on HoneyPotTransport,20,200.200.200.5] starting service ssh-connection
+2017-02-17 12:42:44+0530 [SSHService ssh-connection on HoneyPotTransport,20,200.200.200.5] got channel session request
+2017-02-17 12:42:44+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,20,200.200.200.5] channel open
+2017-02-17 12:42:44+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,20,200.200.200.5] unhandled request for auth-agent-req@openssh.com
+2017-02-17 12:42:44+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,20,200.200.200.5] pty request: linux (24, 80, 640, 480)
+2017-02-17 12:42:44+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,20,200.200.200.5] Terminal size: 24 80
+2017-02-17 12:42:44+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,20,200.200.200.5] getting shell
+2017-02-17 12:42:44+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,20,200.200.200.5] Opening TTY log: log/tty/20170217-124244-4851.log
+2017-02-17 12:42:44+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,20,200.200.200.5] /etc/motd resolved into /etc/motd
+2017-02-17 12:43:26+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,20,200.200.200.5] CMD: mkdir hutyapaaa
+2017-02-17 12:43:26+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,20,200.200.200.5] Command found: mkdir hutyapaaa
+2017-02-17 12:43:28+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,18,200.200.200.3] CMD: mkdir 000
+2017-02-17 12:43:28+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,18,200.200.200.3] Command found: mkdir 000
+2017-02-17 12:43:29+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,20,200.200.200.5] CMD: 
+2017-02-17 12:43:49+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,18,200.200.200.3] remote close
+2017-02-17 12:43:49+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,18,200.200.200.3] sending close 0
+2017-02-17 12:43:49+0530 [HoneyPotTransport,18,200.200.200.3] connection lost
+2017-02-17 12:43:53+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,20,200.200.200.5] Received unhandled keyID: [PGUP]
+2017-02-17 12:44:13+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,20,200.200.200.5] Received unhandled keyID: [PGUP]
+2017-02-17 12:44:20+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,20,200.200.200.5] CMD: 
+2017-02-17 12:44:34+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,20,200.200.200.5] CMD: tpop
+2017-02-17 12:44:34+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,20,200.200.200.5] Command not found: tpop
+2017-02-17 12:44:47+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,20,200.200.200.5] CMD: op
+2017-02-17 12:44:47+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,20,200.200.200.5] Command not found: op
+2017-02-17 12:44:54+0530 [HoneyPotTransport,20,200.200.200.5] connection lost
+2017-02-17 13:07:02+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:37775 (200.200.200.4:2222) [session: 21]
+2017-02-17 13:07:09+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:42171 (200.200.200.4:2222) [session: 22]
+2017-02-17 13:07:32+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:44059 (200.200.200.4:2222) [session: 23]
+2017-02-17 13:10:00+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:44643 (200.200.200.4:2222) [session: 24]
+2017-02-17 13:10:19+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:39580 (200.200.200.4:2222) [session: 25]
+2017-02-17 13:11:04+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.9:54892 (200.200.200.4:2222) [session: 26]
+2017-02-17 13:11:04+0530 [HoneyPotTransport,26,200.200.200.9] connection lost
+2017-02-17 13:11:44+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.9:55538 (200.200.200.4:2222) [session: 27]
+2017-02-17 13:11:54+0530 [HoneyPotTransport,27,200.200.200.9] connection lost
+2017-02-17 13:12:02+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.5:37241 (200.200.200.4:2222) [session: 28]
+2017-02-17 13:12:03+0530 [HoneyPotTransport,28,200.200.200.5] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 13:12:03+0530 [HoneyPotTransport,28,200.200.200.5] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 13:12:03+0530 [HoneyPotTransport,28,200.200.200.5] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 13:12:03+0530 [HoneyPotTransport,28,200.200.200.5] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 13:12:04+0530 [HoneyPotTransport,28,200.200.200.5] NEW KEYS
+2017-02-17 13:12:04+0530 [HoneyPotTransport,28,200.200.200.5] starting service ssh-userauth
+2017-02-17 13:12:04+0530 [SSHService ssh-userauth on HoneyPotTransport,28,200.200.200.5] admin trying auth none
+2017-02-17 13:12:04+0530 [SSHService ssh-userauth on HoneyPotTransport,28,200.200.200.5] admin trying auth password
+2017-02-17 13:12:04+0530 [SSHService ssh-userauth on HoneyPotTransport,28,200.200.200.5] login attempt [admin/admin] succeeded
+2017-02-17 13:12:04+0530 [SSHService ssh-userauth on HoneyPotTransport,28,200.200.200.5] admin authenticated with password
+2017-02-17 13:12:04+0530 [SSHService ssh-userauth on HoneyPotTransport,28,200.200.200.5] starting service ssh-connection
+2017-02-17 13:12:04+0530 [SSHService ssh-connection on HoneyPotTransport,28,200.200.200.5] got channel session request
+2017-02-17 13:12:04+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,28,200.200.200.5] channel open
+2017-02-17 13:12:04+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,28,200.200.200.5] unhandled request for auth-agent-req@openssh.com
+2017-02-17 13:12:04+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,28,200.200.200.5] pty request: linux (24, 80, 640, 480)
+2017-02-17 13:12:04+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,28,200.200.200.5] Terminal size: 24 80
+2017-02-17 13:12:04+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,28,200.200.200.5] getting shell
+2017-02-17 13:12:04+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,28,200.200.200.5] Opening TTY log: log/tty/20170217-131204-1079.log
+2017-02-17 13:12:04+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,28,200.200.200.5] /etc/motd resolved into /etc/motd
+2017-02-17 13:12:32+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.5:53602 (200.200.200.4:2222) [session: 29]
+2017-02-17 13:12:33+0530 [HoneyPotTransport,29,200.200.200.5] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 13:12:33+0530 [HoneyPotTransport,29,200.200.200.5] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 13:12:33+0530 [HoneyPotTransport,29,200.200.200.5] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 13:12:33+0530 [HoneyPotTransport,29,200.200.200.5] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 13:12:34+0530 [HoneyPotTransport,29,200.200.200.5] NEW KEYS
+2017-02-17 13:12:34+0530 [HoneyPotTransport,29,200.200.200.5] starting service ssh-userauth
+2017-02-17 13:12:34+0530 [SSHService ssh-userauth on HoneyPotTransport,29,200.200.200.5] admin trying auth none
+2017-02-17 13:13:46+0530 [SSHService ssh-userauth on HoneyPotTransport,29,200.200.200.5] admin trying auth password
+2017-02-17 13:13:46+0530 [SSHService ssh-userauth on HoneyPotTransport,29,200.200.200.5] login attempt [admin/admin] succeeded
+2017-02-17 13:13:46+0530 [SSHService ssh-userauth on HoneyPotTransport,29,200.200.200.5] admin authenticated with password
+2017-02-17 13:13:46+0530 [SSHService ssh-userauth on HoneyPotTransport,29,200.200.200.5] starting service ssh-connection
+2017-02-17 13:13:54+0530 [SSHService ssh-connection on HoneyPotTransport,29,200.200.200.5] got channel session request
+2017-02-17 13:13:54+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,29,200.200.200.5] channel open
+2017-02-17 13:13:54+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,29,200.200.200.5] unhandled request for auth-agent-req@openssh.com
+2017-02-17 13:13:54+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,29,200.200.200.5] pty request: linux (24, 80, 640, 480)
+2017-02-17 13:13:54+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,29,200.200.200.5] Terminal size: 24 80
+2017-02-17 13:13:54+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,29,200.200.200.5] getting shell
+2017-02-17 13:13:54+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,29,200.200.200.5] Opening TTY log: log/tty/20170217-131354-3606.log
+2017-02-17 13:13:54+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,29,200.200.200.5] /etc/motd resolved into /etc/motd
+2017-02-17 13:21:38+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.5:46202 (200.200.200.4:2222) [session: 30]
+2017-02-17 13:21:39+0530 [HoneyPotTransport,30,200.200.200.5] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 13:21:39+0530 [HoneyPotTransport,30,200.200.200.5] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 13:21:39+0530 [HoneyPotTransport,30,200.200.200.5] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 13:21:39+0530 [HoneyPotTransport,30,200.200.200.5] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 13:21:40+0530 [HoneyPotTransport,30,200.200.200.5] NEW KEYS
+2017-02-17 13:21:40+0530 [HoneyPotTransport,30,200.200.200.5] starting service ssh-userauth
+2017-02-17 13:21:40+0530 [SSHService ssh-userauth on HoneyPotTransport,30,200.200.200.5] admin trying auth none
+2017-02-17 13:21:46+0530 [SSHService ssh-userauth on HoneyPotTransport,30,200.200.200.5] admin trying auth password
+2017-02-17 13:21:46+0530 [SSHService ssh-userauth on HoneyPotTransport,30,200.200.200.5] login attempt [admin/admin] succeeded
+2017-02-17 13:21:46+0530 [SSHService ssh-userauth on HoneyPotTransport,30,200.200.200.5] admin authenticated with password
+2017-02-17 13:21:46+0530 [SSHService ssh-userauth on HoneyPotTransport,30,200.200.200.5] starting service ssh-connection
+2017-02-17 13:21:46+0530 [SSHService ssh-connection on HoneyPotTransport,30,200.200.200.5] got channel session request
+2017-02-17 13:21:46+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,30,200.200.200.5] channel open
+2017-02-17 13:21:46+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,30,200.200.200.5] unhandled request for auth-agent-req@openssh.com
+2017-02-17 13:21:46+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,30,200.200.200.5] pty request: linux (24, 80, 640, 480)
+2017-02-17 13:21:46+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,30,200.200.200.5] Terminal size: 24 80
+2017-02-17 13:21:46+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,30,200.200.200.5] getting shell
+2017-02-17 13:21:46+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,30,200.200.200.5] Opening TTY log: log/tty/20170217-132146-2674.log
+2017-02-17 13:21:46+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,30,200.200.200.5] /etc/motd resolved into /etc/motd
+2017-02-17 13:22:41+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,30,200.200.200.5] CMD: Ahey
+2017-02-17 13:22:41+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,30,200.200.200.5] Command not found: Ahey
+2017-02-17 13:22:47+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.5:51149 (200.200.200.4:2222) [session: 31]
+2017-02-17 13:22:48+0530 [HoneyPotTransport,31,200.200.200.5] Remote SSH version: SSH-2.0-JuiceSSH
+2017-02-17 13:22:48+0530 [HoneyPotTransport,31,200.200.200.5] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-02-17 13:22:48+0530 [HoneyPotTransport,31,200.200.200.5] outgoing: aes128-ctr hmac-md5 zlib
+2017-02-17 13:22:48+0530 [HoneyPotTransport,31,200.200.200.5] incoming: aes128-ctr hmac-md5 zlib
+2017-02-17 13:22:49+0530 [HoneyPotTransport,31,200.200.200.5] NEW KEYS
+2017-02-17 13:22:49+0530 [HoneyPotTransport,31,200.200.200.5] starting service ssh-userauth
+2017-02-17 13:22:49+0530 [SSHService ssh-userauth on HoneyPotTransport,31,200.200.200.5] admin trying auth none
+2017-02-17 13:22:52+0530 [SSHService ssh-userauth on HoneyPotTransport,31,200.200.200.5] admin trying auth password
+2017-02-17 13:22:52+0530 [SSHService ssh-userauth on HoneyPotTransport,31,200.200.200.5] login attempt [admin/admin] succeeded
+2017-02-17 13:22:52+0530 [SSHService ssh-userauth on HoneyPotTransport,31,200.200.200.5] admin authenticated with password
+2017-02-17 13:22:52+0530 [SSHService ssh-userauth on HoneyPotTransport,31,200.200.200.5] starting service ssh-connection
+2017-02-17 13:22:53+0530 [SSHService ssh-connection on HoneyPotTransport,31,200.200.200.5] got channel session request
+2017-02-17 13:22:53+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,31,200.200.200.5] channel open
+2017-02-17 13:22:53+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,31,200.200.200.5] unhandled request for auth-agent-req@openssh.com
+2017-02-17 13:22:53+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,31,200.200.200.5] pty request: linux (24, 80, 640, 480)
+2017-02-17 13:22:53+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,31,200.200.200.5] Terminal size: 24 80
+2017-02-17 13:22:53+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,31,200.200.200.5] getting shell
+2017-02-17 13:22:53+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,31,200.200.200.5] Opening TTY log: log/tty/20170217-132253-8084.log
+2017-02-17 13:22:53+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,31,200.200.200.5] /etc/motd resolved into /etc/motd
+2017-02-17 13:22:56+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,31,200.200.200.5] remote close
+2017-02-17 13:22:56+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,31,200.200.200.5] sending close 0
+2017-02-17 13:22:56+0530 [HoneyPotTransport,31,200.200.200.5] connection lost
+2017-02-17 13:41:25+0530 [HoneyPotTransport,25,200.200.200.3] Got remote error, code 3
+	reason: java.net.SocketTimeoutException
+2017-02-17 13:41:25+0530 [HoneyPotTransport,21,200.200.200.3] Got remote error, code 3
+	reason: java.net.SocketTimeoutException
+2017-02-17 13:41:25+0530 [HoneyPotTransport,23,200.200.200.3] Got remote error, code 3
+	reason: java.net.SocketTimeoutException
+2017-02-17 13:41:25+0530 [HoneyPotTransport,22,200.200.200.3] Got remote error, code 3
+	reason: java.net.SocketTimeoutException
+2017-02-17 13:41:25+0530 [HoneyPotTransport,24,200.200.200.3] Got remote error, code 3
+	reason: java.net.SocketTimeoutException
+2017-02-17 13:41:25+0530 [HoneyPotTransport,25,200.200.200.3] connection lost
+2017-02-17 13:41:25+0530 [HoneyPotTransport,21,200.200.200.3] connection lost
+2017-02-17 13:41:25+0530 [HoneyPotTransport,23,200.200.200.3] connection lost
+2017-02-17 13:41:25+0530 [HoneyPotTransport,22,200.200.200.3] connection lost
+2017-02-17 13:41:25+0530 [HoneyPotTransport,24,200.200.200.3] connection lost
+2017-02-17 14:22:27+0530 [-] Received SIGTERM, shutting down.
+2017-02-17 14:22:27+0530 [-] (TCP Port 5123 Closed)
+2017-02-17 14:22:27+0530 [-] Stopping factory <twisted.internet.protocol.Factory instance at 0x7f3c06bb4998>
+2017-02-17 14:22:27+0530 [-] (TCP Port 2222 Closed)
+2017-02-17 14:22:27+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f3c0851acb0>
+5+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/scripts/twistd.py", line 23, in runApp
+2017-02-17 13:10:15+0530 [-]     _SomeApplicationRunner(config).run()
+2017-02-17 13:10:15+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 390, in run
+2017-02-17 13:10:15+0530 [-]     self.postApplication()
+2017-02-17 13:10:15+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/scripts/_twistd_unix.py", line 230, in postApplication
+2017-02-17 13:10:15+0530 [-]     self.startApplication(self.application)
+2017-02-17 13:10:15+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/scripts/_twistd_unix.py", line 340, in startApplication
+2017-02-17 13:10:15+0530 [-]     service.IService(application).privilegedStartService()
+2017-02-17 13:10:15+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/application/service.py", line 277, in privilegedStartService
+2017-02-17 13:10:15+0530 [-]     service.privilegedStartService()
+2017-02-17 13:10:15+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/application/internet.py", line 105, in privilegedStartService
+2017-02-17 13:10:15+0530 [-]     self._port = self._getPort()
+2017-02-17 13:10:15+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/application/internet.py", line 133, in _getPort
+2017-02-17 13:10:15+0530 [-]     'listen%s' % (self.method,))(*self.args, **self.kwargs)
+2017-02-17 13:10:15+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/internet/posixbase.py", line 476, in listenTCP
+2017-02-17 13:10:15+0530 [-]     p.startListening()
+2017-02-17 13:10:15+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/internet/tcp.py", line 969, in startListening
+2017-02-17 13:10:15+0530 [-]     raise CannotListenError, (self.interface, self.port, le)
+2017-02-17 13:10:15+0530 [-] twisted.internet.error.CannotListenError: Couldn't listen on 0.0.0.0:2222: [Errno 98] Address already in use.
+2017-02-17 14:11:53+0530 [-] Log opened.
+2017-02-17 14:11:53+0530 [-] twistd 12.2.0 (/usr/bin/python 2.7.12) starting up.
+2017-02-17 14:11:53+0530 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2017-02-17 14:11:53+0530 [-] Traceback (most recent call last):
+2017-02-17 14:11:53+0530 [-]   File "/usr/local/bin/twistd", line 4, in <module>
+2017-02-17 14:11:53+0530 [-]     __import__('pkg_resources').run_script('Twisted==12.2.0', 'twistd')
+2017-02-17 14:11:53+0530 [-]   File "/usr/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 719, in run_script
+2017-02-17 14:11:53+0530 [-]     self.require(requires)[0].run_script(script_name, ns)
+2017-02-17 14:11:53+0530 [-]   File "/usr/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 1504, in run_script
+2017-02-17 14:11:53+0530 [-]     exec(code, namespace, namespace)
+2017-02-17 14:11:53+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/EGG-INFO/scripts/twistd", line 14, in <module>
+2017-02-17 14:11:53+0530 [-]     run()
+2017-02-17 14:11:53+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/scripts/twistd.py", line 27, in run
+2017-02-17 14:11:53+0530 [-]     app.run(runApp, ServerOptions)
+2017-02-17 14:11:53+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 652, in run
+2017-02-17 14:11:53+0530 [-]     runApp(config)
+2017-02-17 14:11:53+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/scripts/twistd.py", line 23, in runApp
+2017-02-17 14:11:53+0530 [-]     _SomeApplicationRunner(config).run()
+2017-02-17 14:11:53+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 390, in run
+2017-02-17 14:11:53+0530 [-]     self.postApplication()
+2017-02-17 14:11:53+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/scripts/_twistd_unix.py", line 230, in postApplication
+2017-02-17 14:11:53+0530 [-]     self.startApplication(self.application)
+2017-02-17 14:11:53+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/scripts/_twistd_unix.py", line 340, in startApplication
+2017-02-17 14:11:53+0530 [-]     service.IService(application).privilegedStartService()
+2017-02-17 14:11:53+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/application/service.py", line 277, in privilegedStartService
+2017-02-17 14:11:53+0530 [-]     service.privilegedStartService()
+2017-02-17 14:11:53+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/application/internet.py", line 105, in privilegedStartService
+2017-02-17 14:11:53+0530 [-]     self._port = self._getPort()
+2017-02-17 14:11:53+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/application/internet.py", line 133, in _getPort
+2017-02-17 14:11:53+0530 [-]     'listen%s' % (self.method,))(*self.args, **self.kwargs)
+2017-02-17 14:11:53+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/internet/posixbase.py", line 476, in listenTCP
+2017-02-17 14:11:53+0530 [-]     p.startListening()
+2017-02-17 14:11:53+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/internet/tcp.py", line 969, in startListening
+2017-02-17 14:11:53+0530 [-]     raise CannotListenError, (self.interface, self.port, le)
+2017-02-17 14:11:53+0530 [-] twisted.internet.error.CannotListenError: Couldn't listen on 0.0.0.0:2222: [Errno 98] Address already in use.
+2017-02-17 14:19:25+0530 [-] Log opened.
+2017-02-17 14:19:25+0530 [-] twistd 12.2.0 (/usr/bin/python 2.7.12) starting up.
+2017-02-17 14:19:25+0530 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2017-02-17 14:19:25+0530 [-] Traceback (most recent call last):
+2017-02-17 14:19:25+0530 [-]   File "/usr/local/bin/twistd", line 4, in <module>
+2017-02-17 14:19:25+0530 [-]     __import__('pkg_resources').run_script('Twisted==12.2.0', 'twistd')
+2017-02-17 14:19:25+0530 [-]   File "/usr/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 719, in run_script
+2017-02-17 14:19:25+0530 [-]     self.require(requires)[0].run_script(script_name, ns)
+2017-02-17 14:19:25+0530 [-]   File "/usr/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 1504, in run_script
+2017-02-17 14:19:25+0530 [-]     exec(code, namespace, namespace)
+2017-02-17 14:19:25+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/EGG-INFO/scripts/twistd", line 14, in <module>
+2017-02-17 14:19:25+0530 [-]     run()
+2017-02-17 14:19:25+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/scripts/twistd.py", line 27, in run
+2017-02-17 14:19:25+0530 [-]     app.run(runApp, ServerOptions)
+2017-02-17 14:19:25+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 652, in run
+2017-02-17 14:19:25+0530 [-]     runApp(config)
+2017-02-17 14:19:25+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/scripts/twistd.py", line 23, in runApp
+2017-02-17 14:19:25+0530 [-]     _SomeApplicationRunner(config).run()
+2017-02-17 14:19:25+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/application/app.py", line 390, in run
+2017-02-17 14:19:25+0530 [-]     self.postApplication()
+2017-02-17 14:19:25+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/scripts/_twistd_unix.py", line 230, in postApplication
+2017-02-17 14:19:25+0530 [-]     self.startApplication(self.application)
+2017-02-17 14:19:25+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/scripts/_twistd_unix.py", line 340, in startApplication
+2017-02-17 14:19:25+0530 [-]     service.IService(application).privilegedStartService()
+2017-02-17 14:19:25+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/application/service.py", line 277, in privilegedStartService
+2017-02-17 14:19:25+0530 [-]     service.privilegedStartService()
+2017-02-17 14:19:25+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/application/internet.py", line 105, in privilegedStartService
+2017-02-17 14:19:25+0530 [-]     self._port = self._getPort()
+2017-02-17 14:19:25+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/application/internet.py", line 133, in _getPort
+2017-02-17 14:19:25+0530 [-]     'listen%s' % (self.method,))(*self.args, **self.kwargs)
+2017-02-17 14:19:25+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/internet/posixbase.py", line 476, in listenTCP
+2017-02-17 14:19:25+0530 [-]     p.startListening()
+2017-02-17 14:19:25+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/Twisted-12.2.0-py2.7-linux-x86_64.egg/twisted/internet/tcp.py", line 969, in startListening
+2017-02-17 14:19:25+0530 [-]     raise CannotListenError, (self.interface, self.port, le)
+2017-02-17 14:19:25+0530 [-] twisted.internet.error.CannotListenError: Couldn't listen on 0.0.0.0:2222: [Errno 98] Address already in use.
+2017-02-18 18:12:30+0530 [-] Log opened.
+2017-02-18 18:12:30+0530 [-] twistd 12.2.0 (/usr/bin/python 2.7.12) starting up.
+2017-02-18 18:12:30+0530 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2017-02-18 18:12:30+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-02-18 18:12:30+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f808715aea8>
+2017-03-02 13:16:50+0530 [-] Log opened.
+2017-03-02 13:16:50+0530 [-] twistd 12.2.0 (/usr/bin/python 2.7.12) starting up.
+2017-03-02 13:16:50+0530 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2017-03-02 13:16:50+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-03-02 13:16:50+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f0180ea4f38>
+2017-03-02 13:20:29+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.137.95:44210 (192.168.137.39:2222) [session: 0]
+2017-03-02 13:20:30+0530 [HoneyPotTransport,0,192.168.137.95] Remote SSH version: SSH-2.0-JuiceSSH
+2017-03-02 13:20:30+0530 [HoneyPotTransport,0,192.168.137.95] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-03-02 13:20:30+0530 [HoneyPotTransport,0,192.168.137.95] outgoing: aes128-ctr hmac-md5 zlib
+2017-03-02 13:20:30+0530 [HoneyPotTransport,0,192.168.137.95] incoming: aes128-ctr hmac-md5 zlib
+2017-03-02 13:20:31+0530 [HoneyPotTransport,0,192.168.137.95] Got remote error, code 3
+	reason: com.jcraft.jsch.JSchException: reject HostKey: 192.168.137.39
+2017-03-02 13:20:31+0530 [HoneyPotTransport,0,192.168.137.95] connection lost
+2017-03-02 13:20:32+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.137.95:47009 (192.168.137.39:2222) [session: 1]
+2017-03-02 13:20:32+0530 [HoneyPotTransport,1,192.168.137.95] Remote SSH version: SSH-2.0-JuiceSSH
+2017-03-02 13:20:32+0530 [HoneyPotTransport,1,192.168.137.95] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-03-02 13:20:32+0530 [HoneyPotTransport,1,192.168.137.95] outgoing: aes128-ctr hmac-md5 zlib
+2017-03-02 13:20:32+0530 [HoneyPotTransport,1,192.168.137.95] incoming: aes128-ctr hmac-md5 zlib
+2017-03-02 13:20:33+0530 [HoneyPotTransport,1,192.168.137.95] NEW KEYS
+2017-03-02 13:20:33+0530 [HoneyPotTransport,1,192.168.137.95] starting service ssh-userauth
+2017-03-02 13:20:33+0530 [SSHService ssh-userauth on HoneyPotTransport,1,192.168.137.95] admin trying auth none
+2017-03-02 13:20:36+0530 [SSHService ssh-userauth on HoneyPotTransport,1,192.168.137.95] admin trying auth password
+2017-03-02 13:20:36+0530 [SSHService ssh-userauth on HoneyPotTransport,1,192.168.137.95] login attempt [admin/admin] succeeded
+2017-03-02 13:20:36+0530 [SSHService ssh-userauth on HoneyPotTransport,1,192.168.137.95] admin authenticated with password
+2017-03-02 13:20:36+0530 [SSHService ssh-userauth on HoneyPotTransport,1,192.168.137.95] starting service ssh-connection
+2017-03-02 13:20:36+0530 [SSHService ssh-connection on HoneyPotTransport,1,192.168.137.95] got channel session request
+2017-03-02 13:20:36+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.137.95] channel open
+2017-03-02 13:20:36+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.137.95] unhandled request for auth-agent-req@openssh.com
+2017-03-02 13:20:36+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.137.95] pty request: linux (24, 80, 640, 480)
+2017-03-02 13:20:36+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.137.95] Terminal size: 24 80
+2017-03-02 13:20:36+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.137.95] getting shell
+2017-03-02 13:20:36+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.137.95] Opening TTY log: log/tty/20170302-132036-2498.log
+2017-03-02 13:20:37+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.137.95] /etc/motd resolved into /etc/motd
+2017-03-02 13:20:46+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.137.95] CMD: reboot
+2017-03-02 13:20:46+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.137.95] Command found: reboot
+2017-03-02 13:23:50+0530 [SSHService ssh-connection on HoneyPotTransport,1,192.168.137.95] got global keepalive@jcraft.com request
+2017-03-02 15:33:34+0530 [-] Received SIGTERM, shutting down.
+2017-03-02 15:33:34+0530 [-] (TCP Port 2222 Closed)
+2017-03-02 15:33:34+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f0180ea4f38>
+2017-03-02 15:33:34+0530 [HoneyPotTransport,1,192.168.137.95] connection lost
+2017-03-02 15:33:34+0530 [-] Main loop terminated.
+2017-03-02 15:33:34+0530 [-] Server Shut Down.
+2017-03-11 17:05:24+0530 [-] Log opened.
+2017-03-11 17:05:24+0530 [-] twistd 12.0.0 (/usr/bin/python 2.7.12) starting up.
+2017-03-11 17:05:24+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
+2017-03-11 17:05:24+0530 [-] Traceback (most recent call last):
+2017-03-11 17:05:24+0530 [-]   File "/usr/local/bin/twistd", line 14, in <module>
+2017-03-11 17:05:24+0530 [-]     run()
+2017-03-11 17:05:24+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/scripts/twistd.py", line 27, in run
+2017-03-11 17:05:24+0530 [-]     app.run(runApp, ServerOptions)
+2017-03-11 17:05:24+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/application/app.py", line 652, in run
+2017-03-11 17:05:24+0530 [-]     runApp(config)
+2017-03-11 17:05:24+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/scripts/twistd.py", line 23, in runApp
+2017-03-11 17:05:24+0530 [-]     _SomeApplicationRunner(config).run()
+2017-03-11 17:05:24+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/application/app.py", line 390, in run
+2017-03-11 17:05:24+0530 [-]     self.postApplication()
+2017-03-11 17:05:24+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/scripts/_twistd_unix.py", line 208, in postApplication
+2017-03-11 17:05:24+0530 [-]     self.startApplication(self.application)
+2017-03-11 17:05:24+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/scripts/_twistd_unix.py", line 317, in startApplication
+2017-03-11 17:05:24+0530 [-]     service.IService(application).privilegedStartService()
+2017-03-11 17:05:24+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/application/service.py", line 277, in privilegedStartService
+2017-03-11 17:05:24+0530 [-]     service.privilegedStartService()
+2017-03-11 17:05:24+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/application/internet.py", line 105, in privilegedStartService
+2017-03-11 17:05:24+0530 [-]     self._port = self._getPort()
+2017-03-11 17:05:24+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/application/internet.py", line 133, in _getPort
+2017-03-11 17:05:24+0530 [-]     'listen%s' % (self.method,))(*self.args, **self.kwargs)
+2017-03-11 17:05:24+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/internet/posixbase.py", line 436, in listenTCP
+2017-03-11 17:05:24+0530 [-]     p.startListening()
+2017-03-11 17:05:24+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/internet/tcp.py", line 641, in startListening
+2017-03-11 17:05:24+0530 [-]     raise CannotListenError, (self.interface, self.port, le)
+2017-03-11 17:05:24+0530 [-] twisted.internet.error.CannotListenError: Couldn't listen on 0.0.0.0:2222: [Errno 98] Address already in use.
+2017-03-11 17:14:51+0530 [-] Log opened.
+2017-03-11 17:14:51+0530 [-] twistd 12.0.0 (/usr/bin/python 2.7.12) starting up.
+2017-03-11 17:14:51+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
+2017-03-11 17:14:51+0530 [-] Traceback (most recent call last):
+2017-03-11 17:14:51+0530 [-]   File "/usr/local/bin/twistd", line 14, in <module>
+2017-03-11 17:14:51+0530 [-]     run()
+2017-03-11 17:14:51+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/scripts/twistd.py", line 27, in run
+2017-03-11 17:14:51+0530 [-]     app.run(runApp, ServerOptions)
+2017-03-11 17:14:51+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/application/app.py", line 652, in run
+2017-03-11 17:14:51+0530 [-]     runApp(config)
+2017-03-11 17:14:51+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/scripts/twistd.py", line 23, in runApp
+2017-03-11 17:14:51+0530 [-]     _SomeApplicationRunner(config).run()
+2017-03-11 17:14:51+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/application/app.py", line 390, in run
+2017-03-11 17:14:51+0530 [-]     self.postApplication()
+2017-03-11 17:14:51+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/scripts/_twistd_unix.py", line 208, in postApplication
+2017-03-11 17:14:51+0530 [-]     self.startApplication(self.application)
+2017-03-11 17:14:51+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/scripts/_twistd_unix.py", line 317, in startApplication
+2017-03-11 17:14:51+0530 [-]     service.IService(application).privilegedStartService()
+2017-03-11 17:14:51+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/application/service.py", line 277, in privilegedStartService
+2017-03-11 17:14:51+0530 [-]     service.privilegedStartService()
+2017-03-11 17:14:51+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/application/internet.py", line 105, in privilegedStartService
+2017-03-11 17:14:51+0530 [-]     self._port = self._getPort()
+2017-03-11 17:14:51+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/application/internet.py", line 133, in _getPort
+2017-03-11 17:14:51+0530 [-]     'listen%s' % (self.method,))(*self.args, **self.kwargs)
+2017-03-11 17:14:51+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/internet/posixbase.py", line 436, in listenTCP
+2017-03-11 17:14:51+0530 [-]     p.startListening()
+2017-03-11 17:14:51+0530 [-]   File "/usr/local/lib/python2.7/dist-packages/twisted/internet/tcp.py", line 641, in startListening
+2017-03-11 17:14:51+0530 [-]     raise CannotListenError, (self.interface, self.port, le)
+2017-03-11 17:14:51+0530 [-] twisted.internet.error.CannotListenError: Couldn't listen on 0.0.0.0:2222: [Errno 98] Address already in use.
+2017-03-16 16:45:42+0530 [-] Log opened.
+2017-03-16 16:45:42+0530 [-] twistd 12.0.0 (/usr/bin/python 2.7.12) starting up.
+2017-03-16 16:45:42+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
+2017-03-16 16:45:42+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-03-16 16:45:42+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f67d2b05440>
+2017-03-16 17:15:45+0530 [-] Received SIGTERM, shutting down.
+2017-03-16 17:15:45+0530 [-] (TCP Port 2222 Closed)
+2017-03-16 17:15:45+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f67d2b05440>
+2017-03-16 17:15:45+0530 [-] Main loop terminated.
+2017-03-16 17:15:45+0530 [-] Server Shut Down.
+2017-03-16 17:15:46+0530 [-] Log opened.
+2017-03-16 17:15:46+0530 [-] twistd 12.0.0 (/usr/bin/python 2.7.12) starting up.
+2017-03-16 17:15:46+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
+2017-03-16 17:15:46+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-03-16 17:15:46+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f046f785440>
+2017-03-16 17:19:24+0530 [-] Received SIGTERM, shutting down.
+2017-03-16 17:19:24+0530 [-] (TCP Port 2222 Closed)
+2017-03-16 17:19:24+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f046f785440>
+2017-03-16 17:19:24+0530 [-] Main loop terminated.
+2017-03-16 17:19:24+0530 [-] Server Shut Down.
+2017-03-16 17:19:25+0530 [-] Log opened.
+2017-03-16 17:19:25+0530 [-] twistd 12.0.0 (/usr/bin/python 2.7.12) starting up.
+2017-03-16 17:19:25+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
+2017-03-16 17:19:25+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-03-16 17:19:25+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7fde0245d440>
+2017-03-16 17:29:47+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.2:43034 (200.200.200.9:2222) [session: 0]
+2017-03-16 17:29:48+0530 [HoneyPotTransport,0,200.200.200.2] Remote SSH version: SSH-2.0-JuiceSSH
+2017-03-16 17:29:48+0530 [HoneyPotTransport,0,200.200.200.2] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-03-16 17:29:48+0530 [HoneyPotTransport,0,200.200.200.2] outgoing: aes128-ctr hmac-md5 zlib
+2017-03-16 17:29:48+0530 [HoneyPotTransport,0,200.200.200.2] incoming: aes128-ctr hmac-md5 zlib
+2017-03-16 17:29:48+0530 [HoneyPotTransport,0,200.200.200.2] NEW KEYS
+2017-03-16 17:29:48+0530 [HoneyPotTransport,0,200.200.200.2] starting service ssh-userauth
+2017-03-16 17:29:48+0530 [SSHService ssh-userauth on HoneyPotTransport,0,200.200.200.2] Banner file /home/indra/honeypot/sinh/popup.txt does not exist!
+2017-03-16 17:29:48+0530 [SSHService ssh-userauth on HoneyPotTransport,0,200.200.200.2] root trying auth none
+2017-03-16 17:29:48+0530 [SSHService ssh-userauth on HoneyPotTransport,0,200.200.200.2] Banner file /home/indra/honeypot/sinh/popup.txt does not exist!
+2017-03-16 17:29:48+0530 [SSHService ssh-userauth on HoneyPotTransport,0,200.200.200.2] root trying auth password
+2017-03-16 17:29:48+0530 [SSHService ssh-userauth on HoneyPotTransport,0,200.200.200.2] login attempt [root/root] succeeded
+2017-03-16 17:29:48+0530 [SSHService ssh-userauth on HoneyPotTransport,0,200.200.200.2] root authenticated with password
+2017-03-16 17:29:48+0530 [SSHService ssh-userauth on HoneyPotTransport,0,200.200.200.2] starting service ssh-connection
+2017-03-16 17:29:48+0530 [SSHService ssh-connection on HoneyPotTransport,0,200.200.200.2] got channel session request
+2017-03-16 17:29:48+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.2] channel open
+2017-03-16 17:29:48+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.2] unhandled request for auth-agent-req@openssh.com
+2017-03-16 17:29:48+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.2] pty request: linux (24, 80, 640, 480)
+2017-03-16 17:29:48+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.2] Terminal size: 24 80
+2017-03-16 17:29:48+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.2] getting shell
+2017-03-16 17:29:48+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.2] Opening TTY log: log/tty/20170316-172948-9731.log
+2017-03-16 17:29:48+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.2] /etc/motd resolved into /etc/motd
+2017-03-16 17:29:52+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.2] CMD: hi
+2017-03-16 17:29:52+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.2] Command not found: hi
+2017-03-16 17:30:03+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.2] CMD: ls
+2017-03-16 17:30:03+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.2] Command found: ls
