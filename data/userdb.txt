@@ -1,0 +1,4 @@
+root:0:root
+admin:0:admin
+user:0:user
+indra:0:indra123
