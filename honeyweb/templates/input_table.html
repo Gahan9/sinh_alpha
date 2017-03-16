@@ -1,0 +1,27 @@
+{% include 'head.html' %}
+<div class="tbl-header">
+    <table id="example" class="sortable" cellpadding="0" cellspacing="0" border="0">
+    <thead>
+		<tr>
+			<th>ID</th>
+			<th>Session</th>
+			<th>Timestamp</th>
+			<th>Success</th>
+			<th>Input</th>
+		</tr>
+	</thead> 
+	<tbody>
+	{% for val in input_data %}
+		<tr>
+			<td>{{val.id}}</td> 
+			<td>{{val.session}}</td> 
+			<td>{{val.timestamp}}</td> 
+			<td>{{val.success}}</td>
+			<td>{{val.input}}</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+	</table>
+</div>
+
+

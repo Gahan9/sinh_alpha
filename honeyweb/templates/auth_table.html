@@ -1,0 +1,29 @@
+{% include 'head.html' %}
+<div class="tbl-header">
+    <table id="example" class="sortable" cellspacing="0" width="100%">
+      <thead>
+		<tr>
+			<th>ID</th>
+			<th>Session</th>
+			<th>Success</th>
+			<th>UserName</th>
+			<th>Password</th>
+			<th>TimeStamp</th>
+			<th>IP</th>
+		</tr>
+	  </thead>
+	<tbody>
+		{% for val  in auth_data %}
+		<tr>
+			<td>{{val.id}}</td>
+			<td>{{val.session}}</td>
+			<td>{{val.success}}</td>
+			<td>{{val.username}}</td>
+			<td>{{val.password}}</td>
+			<td>{{val.timestamp}}</td>
+			<td>{{ val.ip }} </td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+</div>
