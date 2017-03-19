@@ -1,6 +1,7 @@
 ﻿from __future__ import print_function
 import ConfigParser, os
 
+
 def config():
     """Parsing the Config file stored in root directory"""
     cfg = ConfigParser.ConfigParser()
