@@ -541,3 +541,22 @@ e9a79c14ff1c11e6b019b88687461261 [2017-03-02 15:33:34]: Connection lost
 0d60e3260a4011e79ee15c93a2b3264b [2017-03-16 17:29:48]: Terminal size: 80x24
 0d60e3260a4011e79ee15c93a2b3264b [2017-03-16 17:29:52]: Unknown command [hi]
 0d60e3260a4011e79ee15c93a2b3264b [2017-03-16 17:30:03]: Command [ls]
+0d60e3260a4011e79ee15c93a2b3264b [2017-03-16 21:14:18]: Connection lost
+2eee224a0cd111e78f3c5c93a2b3264b [2017-03-19 23:53:43]: New connection: 200.200.200.2:45713
+2eee224a0cd111e78f3c5c93a2b3264b [2017-03-19 23:53:43]: Client version: [SSH-2.0-JuiceSSH]
+2eee224a0cd111e78f3c5c93a2b3264b [2017-03-19 23:53:44]: Login succeeded [root/root]
+2eee224a0cd111e78f3c5c93a2b3264b [2017-03-19 23:53:44]: Terminal size: 80x24
+2eee224a0cd111e78f3c5c93a2b3264b [2017-03-19 23:53:52]: Unknown command [hi]
+2eee224a0cd111e78f3c5c93a2b3264b [2017-03-19 23:54:01]: Command [reboot]
+2eee224a0cd111e78f3c5c93a2b3264b [2017-03-19 23:54:13]: Command [shutdown 00]
+2eee224a0cd111e78f3c5c93a2b3264b [2017-03-19 23:54:22]: Unknown command [ahutdown]
+2eee224a0cd111e78f3c5c93a2b3264b [2017-03-19 23:54:31]: Command [shutdown]
+2eee224a0cd111e78f3c5c93a2b3264b [2017-03-19 23:54:41]: Command [shutdown --help]
+2eee224a0cd111e78f3c5c93a2b3264b [2017-03-19 23:55:11]: Command [shutdown -f]
+2eee224a0cd111e78f3c5c93a2b3264b [2017-03-20 00:22:43]: Connection lost
+58d16bea0cd511e78f3c5c93a2b3264b [2017-03-20 00:23:31]: New connection: 200.200.200.2:49199
+58d16bea0cd511e78f3c5c93a2b3264b [2017-03-20 00:23:31]: Client version: [SSH-2.0-JuiceSSH]
+58d16bea0cd511e78f3c5c93a2b3264b [2017-03-20 00:23:33]: Login succeeded [root/root]
+58d16bea0cd511e78f3c5c93a2b3264b [2017-03-20 00:23:33]: Terminal size: 80x24
+58d16bea0cd511e78f3c5c93a2b3264b [2017-03-20 00:23:37]: Unknown command [mk]
+58d16bea0cd511e78f3c5c93a2b3264b [2017-03-20 01:02:03]: Connection lost

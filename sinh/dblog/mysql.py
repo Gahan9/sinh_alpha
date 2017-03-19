@@ -4,16 +4,17 @@ from twisted.internet import defer
 from twisted.python import log
 import MySQLdb, uuid
 
+
 class ReconnectingConnectionPool(adbapi.ConnectionPool):
 
     def _runInteraction(self, interaction, *args, **kw):
         try:
             return adbapi.ConnectionPool._runInteraction(
                 self, interaction, *args, **kw)
-        except MySQLdb.OperationalError, e:
+        except MySQLdb.OperationalError and e:
             if e[0] not in (2010, 2020):
                 raise
-            log.msg("RCP: got error %s, retrying operation" %(e))
+            log.msg("RCP: got error %s, retrying operation" % (e))
             conn = self.connections.get(self.threadID())
             self.disconnect(conn)
             # try the interaction again
