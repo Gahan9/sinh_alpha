@@ -1,15 +1,16 @@
 import re, time, socket
 
+
 class DBLogger(object):
+    """Customizing detailed text log file stored in directory log/sinh.log"""
+
     def __init__(self, cfg):
         self.cfg = cfg
         self.sessions = {}
         self.ttylogs = {}
         self.re_connected = re.compile(
-            '^New connection: ([0-9.]+):([0-9]+) \(([0-9.]+):([0-9]+)\) ' + \
-            '\[session: ([0-9]+)\]$')
-        self.re_sessionlog = re.compile(
-            '.*HoneyPotTransport,([0-9]+),[0-9.]+$')
+            '^New connection: ([0-9.]+):([0-9]+) \(([0-9.]+):([0-9]+)\) ' + '\[session: ([0-9]+)\]$')
+        self.re_sessionlog = re.compile('.*HoneyPotTransport,([0-9]+),[0-9.]+$')
 
         # :dispatch: means the message has been delivered directly via
         # logDispatch, instead of relying on the twisted logging, which breaks
@@ -51,13 +52,16 @@ class DBLogger(object):
         pass
 
     def getSensor(self):
+        """ Get Name of current logging sensor or
+            IP address if not given name in configuration file"""
         if self.cfg.has_option('honeypot', 'sensor_name'):
             return self.cfg.get('honeypot', 'sensor_name')
         return None
 
     def nowUnix(self):
-        """return the current UTC time as an UNIX timestamp"""
-        return int(time.mktime(time.gmtime()[:-1] + (-1,)))
+        """return the current UTC time as an UNIX timestamp
+            Change time.gmttime() to time.localtime() to get local time"""
+        return int(time.mktime(time.localtime()[:-1] + (-1,)))
 
     def emit(self, ev):
         if not len(ev['message']):
