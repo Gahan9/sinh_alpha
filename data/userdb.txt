@@ -1,4 +1,6 @@
 root:0:root
 admin:0:admin
 user:0:user
+gahan:0:gahan
+batman:0:oracle
 indra:0:indra123
