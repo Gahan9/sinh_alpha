@@ -10,7 +10,9 @@ from sinh import core
 
 import pickle
 
+
 class HoneyPotCommand(object):
+    """ Handles command/keyboard events"""
     def __init__(self, honeypot, *args):
         self.honeypot = honeypot
         self.args = args
@@ -43,6 +45,7 @@ class HoneyPotCommand(object):
 
     def handle_TAB(self):
         pass
+
 
 class HoneyPotShell(object):
     def __init__(self, honeypot, interactive = True):
@@ -84,8 +87,8 @@ class HoneyPotShell(object):
         try:
             cmdAndArgs = shlex.split(line)
         except:
-            self.honeypot.writeln(
-                'bash: syntax error: unexpected end of file')
+            """Terminate execution for non defined commands"""
+            self.honeypot.writeln('bash: syntax error: unexpected end of file')
             # could run runCommand here, but i'll just clear the list instead
             self.cmdpending = []
             self.showPrompt()
@@ -153,8 +156,8 @@ class HoneyPotShell(object):
         elif len(path) > (homelen+1) and \
                 path[:(homelen+1)] == self.honeypot.user.home + '/':
             path = '~' + path[homelen:]
-        # Uncomment the three lines below for a 'better' CenOS look.
-        # Rather than '[root@svr03 /var/log]#' is shows '[root@svr03 log]#'.
+        # Uncomment the three lines below for a 'better' look.
+        # Rather than '[root@jarvis /var/log]#' is shows '[root@jarvis log]#'.
         #path = path.rsplit('/', 1)[-1]
         #if not path:
         #    path = '/'
@@ -241,16 +244,14 @@ class HoneyPotShell(object):
         self.honeypot.lineBufferIndex = len(self.honeypot.lineBuffer)
         self.honeypot.terminal.write(newbuf)
 
+
 class HoneyPotEnvironment(object):
+    """Load fs.pickle"""
     def __init__(self):
         self.cfg = config()
         self.commands = {}
         import sinh.commands
         for c in sinh.commands.__all__:
-            module = __import__('sinh.commands.%s' % c,
-                globals(), locals(), ['commands'])
+            module = __import__('sinh.commands.%s' % c, globals(), locals(), ['commands'])
             self.commands.update(module.commands)
-        self.fs = pickle.load(file(
-            self.cfg.get('honeypot', 'filesystem_file'), 'rb'))
-
-# vim: set sw=4 et:
+        self.fs = pickle.load(file(self.cfg.get('honeypot', 'filesystem_file'), 'rb'))

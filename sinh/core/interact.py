@@ -3,8 +3,10 @@ from twisted.conch import telnet, recvline
 from sinh.core import ttylog
 import time
 
-class Interact(telnet.Telnet):
 
+class Interact(telnet.Telnet):
+    """Handle interaction with attacker
+        connection and other related interaction support related to connection"""
     def connectionMade(self):
         self.interacting = None
         self.cmdbuf = ''
@@ -144,10 +146,9 @@ class Interact(telnet.Telnet):
     def cmd_exit(self, args = ''):
         self.transport.loseConnection()
 
+
 def makeInteractFactory(honeypotFactory):
     ifactory = protocol.Factory()
     ifactory.protocol = Interact
     ifactory.honeypotFactory = honeypotFactory
     return ifactory
-
-# vim: set sw=4 et:

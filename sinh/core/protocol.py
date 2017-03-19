@@ -15,7 +15,9 @@ from sinh.core import exceptions
 import sinh.core.honeypot
 from sinh import core
 
+
 class HoneyPotBaseProtocol(insults.TerminalProtocol):
+    """Manipulating with terminal view which appear to attacker..."""
     def __init__(self, user, env):
         self.user = user
         self.env = env
@@ -128,8 +130,9 @@ class HoneyPotBaseProtocol(insults.TerminalProtocol):
             transport.factory.starttime = reset
         return r
 
-class HoneyPotExecProtocol(HoneyPotBaseProtocol):
 
+class HoneyPotExecProtocol(HoneyPotBaseProtocol):
+    """Handles terminal view on executable commands"""
     def __init__(self, user, env, execcmd):
         self.execcmd = execcmd
         HoneyPotBaseProtocol.__init__(self, user, env)
@@ -141,6 +144,7 @@ class HoneyPotExecProtocol(HoneyPotBaseProtocol):
 
         print 'Running exec command "%s"' % self.execcmd
         self.cmdstack[0].lineReceived(self.execcmd)
+
 
 class HoneyPotInteractiveProtocol(HoneyPotBaseProtocol, recvline.HistoricRecvLine):
 
@@ -218,6 +222,7 @@ class HoneyPotInteractiveProtocol(HoneyPotBaseProtocol, recvline.HistoricRecvLin
     def handle_TAB(self):
         self.cmdstack[-1].handle_TAB()
 
+
 class LoggingServerProtocol(insults.ServerProtocol):
     def connectionMade(self):
         transport = self.transport.session.conn.transport
@@ -246,5 +251,3 @@ class LoggingServerProtocol(insults.ServerProtocol):
     # HoneyPotTransport.connectionLost instead
     def connectionLost(self, reason):
         insults.ServerProtocol.connectionLost(self, reason)
-
-# vim: set sw=4 et:

@@ -145,5 +145,3 @@ class DBLogger(object):
     # args has: url, outfile
     def handleFileDownload(self, session, args):
         pass
-
-# vim: set sw=4 et:

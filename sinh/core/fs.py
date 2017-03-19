@@ -1,4 +1,6 @@
-import os, time, fnmatch
+import os
+import time
+import fnmatch
 from sinh.core.config import config
 
 A_NAME, \
@@ -19,13 +21,17 @@ T_LINK, \
     T_SOCK, \
     T_FIFO = range(0, 7)
 
+
 class TooManyLevels(Exception):
     pass
+
 
 class FileNotFound(Exception):
     pass
 
+
 class HoneyPotFilesystem(object):
+    """Handle attacker in virtual fake system"""
     def __init__(self, fs):
         self.fs = fs
 
@@ -61,6 +67,7 @@ class HoneyPotFilesystem(object):
         else:
             cwd, pieces = [], pieces[1:]
         found = []
+
         def foo(p, cwd):
             if not len(p):
                 found.append('/%s' % '/'.join(cwd))
@@ -128,12 +135,11 @@ class HoneyPotFilesystem(object):
         if f[A_TYPE] == T_LINK:
             return self.file_contents(f[A_TARGET], count + 1)
 
-        realfile = self.realfile(f, '%s/%s' % \
-            (config().get('honeypot', 'contents_path'), path))
+        realfile = self.realfile(f, '%s/%s' % (config().get('honeypot', 'contents_path'), path))
         if realfile:
             return file(realfile, 'rb').read()
 
-    def mkfile(self, path, uid, gid, size, mode, ctime = None):
+    def mkfile(self, path, uid, gid, size, mode, ctime=None):
         if self.newcount > 10000:
             return False
         if ctime is None:
@@ -142,8 +148,7 @@ class HoneyPotFilesystem(object):
         outfile = os.path.basename(path)
         if outfile in [x[A_NAME] for x in dir]:
             dir.remove([x for x in dir if x[A_NAME] == outfile][0])
-        dir.append([outfile, T_FILE, uid, gid, size, mode, ctime, [],
-            None, None])
+        dir.append([outfile, T_FILE, uid, gid, size, mode, ctime, [], None, None])
         self.newcount += 1
         return True
 
