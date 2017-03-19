@@ -1,4 +1,6 @@
-﻿import string
+﻿from __future__ import print_function
+
+import string
 
 import twisted
 from twisted.cred import checkers, credentials, error
@@ -9,8 +11,7 @@ from sinh.core.config import config
 
 from zope.interface import implementer
 
-from twisted.cred.credentials import IUsernamePassword, \
-    ICredentials
+from twisted.cred.credentials import IUsernamePassword, ICredentials
 
 class UserDB(object):
 
@@ -19,23 +20,20 @@ class UserDB(object):
         self.load()
 
     def load(self):
-        '''load the user db'''
+        """ load the user db file which is custom credentials
+            created and stored in data/userdb.txt """
 
-        userdb_file = '%s/userdb.txt' % \
-            (config().get('honeypot', 'data_path'),)
+        userdb_file = '%s/userdb.txt' % (config().get('honeypot', 'data_path'),)
 
         f = open(userdb_file, 'r')
         while True:
             line = f.readline()
             if not line:
                 break
-
             line = string.strip(line)
             if not line:
                 continue
-
             (login, uid_str, passwd) = line.split(':', 2)
-
             uid = 0
             try:
                 uid = int(uid_str)
@@ -47,20 +45,19 @@ class UserDB(object):
         f.close()
 
     def save(self):
-        '''save the user db'''
+        """ save the user db """
 
         userdb_file = '%s/userdb.txt' % \
             (config().get('honeypot', 'data_path'),)
 
-        # Note: this is subject to races between kippo instances, but hey ...
         f = open(userdb_file, 'w')
         for (login, uid, passwd) in self.userdb:
             f.write('%s:%d:%s\n' % (login, uid, passwd))
         f.close()
 
     def checklogin(self, thelogin, thepasswd):
-        '''check entered username/password against database'''
-        '''note that it allows multiple passwords for a single username'''
+        """ check entered username/password against database
+            note : it allows multiple passwords for a single username """
 
         for (login, uid, passwd) in self.userdb:
             if login == thelogin and passwd in (thepasswd, '*'):
@@ -86,7 +83,7 @@ class UserDB(object):
         return 1001
 
     def allocUID(self):
-        '''allocate the next UID'''
+        """ allocate the next UID """
 
         min_uid = 0
         for (login, uid, passwd) in self.userdb:
@@ -101,10 +98,11 @@ class UserDB(object):
         self.save()
 
 class HoneypotPasswordChecker:
+    """ Implemented to check SSH credentials and throw
+        any error if occur regarding authentication """
     implements(checkers.ICredentialsChecker)
-    from sinh.core import credentials
     credentialInterfaces = (credentials.IUsernamePassword, credentials.IPluggableAuthenticationModulesIP)
-    #credentialInterfaces = (IUsernamePassword, IPluggableAuthenticationModulesIP)
+
     def requestAvatarId(self, credentials):
         if hasattr(credentials, 'password'):
             if self.checkUserPass(credentials.username, credentials.password):
@@ -127,11 +125,10 @@ class HoneypotPasswordChecker:
         return defer.fail(error.UnauthorizedLogin())
 
     def checkUserPass(self, username, password):
+        """ Throw attack attempt status in log by checking credentials """
         if UserDB().checklogin(username, password):
-            print 'login attempt [%s/%s] succeeded' % (username, password)
+            print('login attempt [%s/%s] succeeded' % (username, password))
             return True
         else:
-            print 'login attempt [%s/%s] failed' % (username, password)
+            print('login attempt [%s/%s] failed' % (username, password))
             return False
-
-# vim: set sw=4 et:
