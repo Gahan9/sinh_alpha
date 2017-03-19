@@ -1,0 +1,5 @@
+[client]
+database = sinh
+user = sinh
+password = sinhpass
+default-character-set = utf8

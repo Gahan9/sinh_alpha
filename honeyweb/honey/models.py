@@ -5,8 +5,27 @@ from django.db import models
 
 
 @python_2_unicode_compatible
+class Sessions(models.Model):
+    id = models.CharField(primary_key=True, max_length=32)
+    starttime = models.DateTimeField()
+    endtime = models.DateTimeField(blank=True, null=True)
+    sensor = models.IntegerField()
+    ip = models.CharField(max_length=15, )
+    termsize = models.CharField(max_length=7, blank=True, null=True)
+    client = models.IntegerField(blank=True, null=True)
+
+    def __str__(self):
+        return self.id
+
+    class Meta:
+        managed = False
+        db_table = 'sessions'
+
+
+@python_2_unicode_compatible
 class Auth(models.Model):
     session = models.CharField(max_length=32)
+    # session = models.ForeignKey(Sessions, related_name='session_auth')
     success = models.BooleanField()
     username = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
@@ -14,7 +33,7 @@ class Auth(models.Model):
     # ip = models.ForeignKey(Sessions)
 
     def __str__(self):
-        return self.session
+        return self.username
 
     class Meta:
         managed = False
@@ -169,20 +188,6 @@ class Input(models.Model):
     class Meta:
         managed = False
         db_table = 'input'
-
-
-class Sessions(models.Model):
-    id = models.CharField(primary_key=True, max_length=32)
-    starttime = models.DateTimeField()
-    endtime = models.DateTimeField(blank=True, null=True)
-    sensor = models.IntegerField()
-    ip = models.CharField(max_length=15)
-    termsize = models.CharField(max_length=7, blank=True, null=True)
-    client = models.IntegerField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'sessions'
 
 
 class Sensors(models.Model):

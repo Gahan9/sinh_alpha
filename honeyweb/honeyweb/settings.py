@@ -57,7 +57,7 @@ ROOT_URLCONF = 'honeyweb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,"templates")],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,13 +77,26 @@ WSGI_APPLICATION = 'honeyweb.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'sinh',
+    #     'USER': 'sinh',
+    #     'PASSWORD': 'sinhpass',
+    #     'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+    #     'PORT': '3306',
+    # },
+    # 'sinh_db':
+    #     {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #     'USER' : 'root',
+    #     'PASS' : 'root',
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'sinh',
-        'USER': 'sinh',
-        'PASSWORD': 'sinhpass',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': os.path.join(BASE_DIR, 'mysql.cnf'),
+        },
     }
 }
 
@@ -120,6 +133,14 @@ USE_L10N = True
 
 USE_TZ = True
 
+#Session expiry
+# SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+# SESSION_COOKIE_AGE = 15 * 60
+# SESSION_IDLE_TIMEOUT = 3
+PASSWORD_RESET_TIMEOUT_DAYS = 1
+# AUTH_PROFILE_MODULE = 'accounts.UserProfile'
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
@@ -127,4 +148,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # STATIC_ROOT = '/assets/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),]
+    os.path.join(BASE_DIR, "static")]
