@@ -24,12 +24,8 @@ def input_page(request):
 @login_required(login_url="login/")
 def auth_page(request):
     auth_data = Auth.objects.all()
-    ip_data = []
-    for row in auth_data:
-        ans = Sessions.objects.get(id=row.session)
-        ip_data.append(ans.ip)
     template = "auth_page.html"
-    context = {"auth_data": auth_data, "ip_data": zip(ip_data)}
+    context = {"auth_data": auth_data}
     return render(request, template, context)
 
 
