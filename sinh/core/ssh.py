@@ -19,12 +19,15 @@ import sinh.core.protocol
 from sinh import core
 
 from twisted.conch.ssh.common import NS, getNS
+
+
 class HoneyPotSSHUserAuthServer(userauth.SSHUserAuthServer):
     def serviceStarted(self):
         userauth.SSHUserAuthServer.serviceStarted(self)
         self.bannerSent = False
 
     def sendBanner(self):
+        """Implemented to show pop up banner when attacker logged in."""
         if self.bannerSent:
             return
         cfg = config()
@@ -39,20 +42,20 @@ class HoneyPotSSHUserAuthServer(userauth.SSHUserAuthServer):
         if not data or not len(data.strip()):
             return
         data = '\r\n'.join(data.splitlines() + [''])
-        self.transport.sendPacket(
-            userauth.MSG_USERAUTH_BANNER, NS(data) + NS('en'))
+        self.transport.sendPacket(userauth.MSG_USERAUTH_BANNER, NS(data) + NS('en'))
         self.bannerSent = True
 
     def ssh_USERAUTH_REQUEST(self, packet):
         self.sendBanner()
         return userauth.SSHUserAuthServer.ssh_USERAUTH_REQUEST(self, packet)
 
+
 # As implemented by Kojoney
 class HoneyPotSSHFactory(factory.SSHFactory):
-    services={
+    services = {
         'ssh-userauth': HoneyPotSSHUserAuthServer,
         'ssh-connection': connection.SSHConnection,
-	}
+    }
 
     # Special delivery to the loggers to avoid scope problems
     def logDispatch(self, sessionid, msg):
@@ -82,9 +85,8 @@ class HoneyPotSSHFactory(factory.SSHFactory):
             lcfg.add_section('honeypot')
             for i in cfg.options('honeypot'):
                 lcfg.set('honeypot', i, cfg.get('honeypot', i))
-            print 'Loading dblog engine: %s' % (engine,)
-            dblogger = __import__(
-                'sinh.dblog.%s' % (engine,),
+            print 'Starting Database Logging engine: %s' % (engine,)
+            dblogger = __import__('sinh.dblog.%s' % (engine,),
                 globals(), locals(), ['dblog']).DBLogger(lcfg)
             log.startLoggingWithObserver(dblogger.emit, setStdout=False)
             self.dbloggers.append(dblogger)
@@ -108,7 +110,7 @@ class HoneyPotSSHFactory(factory.SSHFactory):
         t = HoneyPotTransport()
 
         if cfg.has_option('honeypot', 'ssh_version_string'):
-            t.ourVersionString = cfg.get('honeypot','ssh_version_string')
+            t.ourVersionString = cfg.get('honeypot', 'ssh_version_string')
         else:
             t.ourVersionString = "SSH-2.0-OpenSSH_5.1p1 Debian-5"
 
@@ -129,6 +131,7 @@ class HoneyPotSSHFactory(factory.SSHFactory):
         t.factory = self
         return t
 
+
 class HoneyPotRealm:
     implements(portal.IRealm)
 
@@ -138,10 +141,10 @@ class HoneyPotRealm:
 
     def requestAvatar(self, avatarId, mind, *interfaces):
         if conchinterfaces.IConchUser in interfaces:
-            return interfaces[0], \
-                HoneyPotAvatar(avatarId, self.env), lambda: None
+            return interfaces[0], HoneyPotAvatar(avatarId, self.env), lambda: None
         else:
             raise Exception, "No supported interfaces found."
+
 
 class HoneyPotTransport(transport.SSHServerTransport):
 
@@ -182,8 +185,7 @@ class HoneyPotTransport(transport.SSHServerTransport):
             time.localtime(time.time()))
         duration = utils.durationHuman(time.time() - self.logintime)
         clientIP = self.transport.getPeer().host
-        utils.addToLastlog('root\tpts/0\t%s\t%s - %s (%s)' % \
-            (clientIP, starttime, endtime, duration))
+        utils.addToLastlog('root\tpts/0\t%s\t%s - %s (%s)' % (clientIP, starttime, endtime, duration))
 
     # this seems to be the only reliable place of catching lost connection
     def connectionLost(self, reason):
@@ -273,7 +275,9 @@ class HoneyPotAvatar(avatar.ConchUser):
     def windowChanged(self, windowSize):
         self.windowSize = windowSize
 
+
 def getRSAKeys():
+    """Generating or fetching RSA key pair..."""
     cfg = config()
     public_key = cfg.get('honeypot', 'rsa_public_key')
     private_key = cfg.get('honeypot', 'rsa_private_key')
@@ -297,7 +301,9 @@ def getRSAKeys():
             privateKeyString = f.read()
     return publicKeyString, privateKeyString
 
+
 def getDSAKeys():
+    """Get or generate DSA key pair"""
     cfg = config()
     public_key = cfg.get('honeypot', 'dsa_public_key')
     private_key = cfg.get('honeypot', 'dsa_private_key')
@@ -320,5 +326,3 @@ def getDSAKeys():
         with file(private_key) as f:
             privateKeyString = f.read()
     return publicKeyString, privateKeyString
-
-# vim: set et sw=4 et:
