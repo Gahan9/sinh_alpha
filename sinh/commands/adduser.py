@@ -1,11 +1,13 @@
 from twisted.internet import reactor, defer
 from twisted.internet.defer import inlineCallbacks
 from sinh.core.honeypot import HoneyPotCommand
-import random, re
+import random
+import re
 
 commands = {}
 
 O_O, O_Q, O_P = 1, 2, 3
+
 
 class command_adduser(HoneyPotCommand):
     def start(self):
@@ -87,5 +89,3 @@ class command_adduser(HoneyPotCommand):
         self.honeypot.password_input = False
 commands['/usr/sbin/adduser'] = command_adduser
 commands['/usr/sbin/useradd'] = command_adduser
-
-# vim: set sw=4 et tw=0:

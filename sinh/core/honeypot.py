@@ -138,11 +138,11 @@ class HoneyPotShell(object):
     def showPrompt(self):
         if not self.interactive:
             return
-        # Example: srv03:~#
+        # Example: gahan:~#
         #prompt = '%s:%%(path)s' % self.honeypot.hostname
-        # Example: root@svr03:~#     (More of a "Debianu" feel)
+        # Example: root@gahan:~#     (More of a "Debian" feel)
         prompt = '%s@%s:%%(path)s' % (self.honeypot.user.username, self.honeypot.hostname,)
-        # Example: [root@svr03 ~]#   (More of a "CentOS" feel)
+        # Example: [root@gahan ~]#   (More of a "CentOS" feel)
         #prompt = '[%s@%s %%(path)s]' % (self.honeypot.user.username, self.honeypot.hostname,)
         if not self.honeypot.user.uid:
             prompt += '# '    # "Root" user
@@ -213,8 +213,7 @@ class HoneyPotShell(object):
 
         newbuf = ''
         if len(files) == 1:
-            newbuf = ' '.join(l.split()[:-1] + \
-                ['%s%s' % (basedir, files[0][fs.A_NAME])])
+            newbuf = ' '.join(l.split()[:-1] + ['%s%s' % (basedir, files[0][fs.A_NAME])])
             if files[0][fs.A_TYPE] == fs.T_DIR:
                 newbuf += '/'
             else:

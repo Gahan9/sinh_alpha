@@ -2,7 +2,8 @@ from sinh.core import dblog
 from twisted.enterprise import adbapi
 from twisted.internet import defer
 from twisted.python import log
-import MySQLdb, uuid
+import MySQLdb
+import uuid
 
 
 class ReconnectingConnectionPool(adbapi.ConnectionPool):
@@ -21,23 +22,21 @@ class ReconnectingConnectionPool(adbapi.ConnectionPool):
             return adbapi.ConnectionPool._runInteraction(
                 self, interaction, *args, **kw)
 
+
 class DBLogger(dblog.DBLogger):
+    """ Logging Service"""
     def start(self, cfg):
+        """Start logging into mysql"""
         if cfg.has_option('database_mysql', 'port'):
             port = int(cfg.get('database_mysql', 'port'))
         else:
             port = 3306
-        self.db = ReconnectingConnectionPool('MySQLdb',
-            host = cfg.get('database_mysql', 'host'),
-            db = cfg.get('database_mysql', 'database'),
-            user = cfg.get('database_mysql', 'username'),
-            passwd = cfg.get('database_mysql', 'password'),
-            port = port,
-            cp_min = 1,
-            cp_max = 1)
+        self.db = ReconnectingConnectionPool('MySQLdb', host=cfg.get('database_mysql', 'host'),
+            db=cfg.get('database_mysql', 'database'), user=cfg.get('database_mysql', 'username'),
+            passwd=cfg.get('database_mysql', 'password'), port=port, cp_min=1, cp_max=1)
 
     def sqlerror(self, error):
-        print 'SQL Error:', error.value
+        print 'Ooops!!! MySQL Error:', error.value
 
     def simpleQuery(self, sql, args):
         """ Just run a deferred sql query, only care about errors """

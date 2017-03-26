@@ -1,12 +1,16 @@
 import time, anydbm
 from sinh.core.config import config
 
+
 def addToLastlog(message):
+    """add entry in last log"""
     f = file('%s/lastlog.txt' % config().get('honeypot', 'data_path'), 'a')
     f.write('%s\n' % (message,))
     f.close()
 
+
 def durationHuman(seconds):
+
     seconds = long(round(seconds))
     minutes, seconds = divmod(seconds, 60)
     hours, minutes = divmod(minutes, 60)
@@ -34,6 +38,7 @@ def durationHuman(seconds):
 
     return ''.join(duration)
 
+
 # From http://stackoverflow.com/questions/136168/get-last-n-lines-of-a-file-with-python-similar-to-tail
 def tail(the_file, lines_2find=20):
     the_file.seek(0, 2)                         #go to end of file
@@ -47,35 +52,39 @@ def tail(the_file, lines_2find=20):
     the_file.seek(-total_bytes_scanned, 2)
     line_list = list(the_file.readlines())
     return line_list[-lines_2find:]
-    #we read at least 21 line breaks from the bottom, block by block for speed
-    #21 to ensure we don't get a half line
+    # we read at least 21 line breaks from the bottom, block by block for speed
+    # 21 to ensure we don't get a half line
 
-# Gives a human-readable uptime string
-# Thanks to http://thesmithfam.org/blog/2005/11/19/python-uptime-script/
-# (modified to look like the real uptime command)
+
+
 def uptime(total_seconds):
-     total_seconds = float(total_seconds)
+    """
+    Gives a human-readable uptime string
+    Thanks to http://thesmithfam.org/blog/2005/11/19/python-uptime-script/
+    (modified to look like the real uptime command)
+    """
+    total_seconds = float(total_seconds)
 
-     # Helper vars:
-     MINUTE  = 60
-     HOUR    = MINUTE * 60
-     DAY     = HOUR * 24
+    # Helper vars:
+    MINUTE = 60
+    HOUR = MINUTE * 60
+    DAY = HOUR * 24
 
-     # Get the days, hours, etc:
-     days    = int(total_seconds / DAY)
-     hours   = int((total_seconds % DAY) / HOUR)
-     minutes = int((total_seconds % HOUR) / MINUTE)
+    # Get the days, hours, etc:
+    days = int(total_seconds / DAY)
+    hours = int((total_seconds % DAY) / HOUR)
+    minutes = int((total_seconds % HOUR) / MINUTE)
 
-     # 14 days,  3:53
-     # 11 min
+    # 14 days,  3:53
+    # 11 min
 
-     s = ''
-     if days > 0:
-         s += str(days) + " " + (days == 1 and "day" or "days" ) + ", "
-     if len(s) > 0 or hours > 0:
-         s += '%s:%s' % (str(hours).rjust(2), str(minutes).rjust(2, '0'))
-     else:
-         s += '%s min' % (str(minutes))
-     return s
+    s = ''
+    if days > 0:
+        s += str(days) + " " + (days == 1 and "day" or "days") + ", "
+    if len(s) > 0 or hours > 0:
+        s += '%s:%s' % (str(hours).rjust(2), str(minutes).rjust(2, '0'))
+    else:
+        s += '%s min' % (str(minutes))
+    return s
 
 # vim: set sw=4 et:

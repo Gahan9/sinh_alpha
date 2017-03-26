@@ -14,6 +14,7 @@ import getopt
 
 commands = {}
 
+
 def tdiff(seconds):
     t = seconds
     days = int(t / (24 * 60 * 60))

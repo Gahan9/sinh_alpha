@@ -1,3 +1,4 @@
+"""Major linux utility commands included"""
 __all__ = [
     'base',
     'ls',

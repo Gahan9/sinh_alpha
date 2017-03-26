@@ -30,7 +30,6 @@ class HoneyPotSSHUserAuthServer(userauth.SSHUserAuthServer):
         self._pamDeferred = None
         userauth.SSHUserAuthServer.serviceStarted(self)
 
-
     def sendBanner(self):
         """
         Display contents of <honeyfs>/etc/issue.net
@@ -49,24 +48,21 @@ class HoneyPotSSHUserAuthServer(userauth.SSHUserAuthServer):
         self.transport.sendPacket(
             userauth.MSG_USERAUTH_BANNER, NS(data) + NS('en'))
 
-
     def ssh_USERAUTH_REQUEST(self, packet):
         """
         """
         self.sendBanner()
         return userauth.SSHUserAuthServer.ssh_USERAUTH_REQUEST(self, packet)
 
-
     def auth_publickey(self, packet):
         """
-        We subclass to intercept non-dsa/rsa keys, or Conch will crash on ecdsa..
+        We subclass to intercept non-dsa/rsa keys, or Conch will crash..
         """
         algName, blob, rest = getNS(packet[1:], 2)
         if not algName in ('ssh-rsa', 'ssh-dsa'):
-            log.msg( "Attempted public key authentication with %s algorithm" % (algName,))
+            log.msg("Attempted public key authentication with %s algorithm" % (algName,))
             return defer.fail(error.ConchError("Incorrect signature"))
         return userauth.SSHUserAuthServer.auth_publickey(self, packet)
-
 
     def auth_none(self, packet):
         """
@@ -75,7 +71,6 @@ class HoneyPotSSHUserAuthServer(userauth.SSHUserAuthServer):
         c = credentials.Username(self.user)
         srcIp = self.transport.transport.getPeer().host
         return self.portal.login(c, srcIp, IConchUser)
-
 
     def auth_password(self, packet):
         """
@@ -87,7 +82,6 @@ class HoneyPotSSHUserAuthServer(userauth.SSHUserAuthServer):
         return self.portal.login(c, srcIp,
             IConchUser).addErrback(self._ebPassword)
 
-
     def auth_keyboard_interactive(self, packet):
         """
         Keyboard interactive authentication.  No payload.  We create a
@@ -97,16 +91,13 @@ class HoneyPotSSHUserAuthServer(userauth.SSHUserAuthServer):
         Overridden to pass src_ip to credentials.PluggableAuthenticationModulesIP
         """
         if self._pamDeferred is not None:
-            self.transport.sendDisconnect(
-                    transport.DISCONNECT_PROTOCOL_ERROR,
-                    "only one keyboard interactive attempt at a time")
+            self.transport.sendDisconnect(transport.DISCONNECT_PROTOCOL_ERROR,"only one keyboard interactive attempt at a time")
             return defer.fail(error.IgnoreAuthentication())
         src_ip = self.transport.transport.getPeer().host
         c = credentials.PluggableAuthenticationModulesIP(self.user,
             self._pamConv, src_ip)
         return self.portal.login(c, src_ip,
             IConchUser).addErrback(self._ebPassword)
-
 
     def _pamConv(self, items):
         """
@@ -139,7 +130,6 @@ class HoneyPotSSHUserAuthServer(userauth.SSHUserAuthServer):
         self.transport.sendPacket(userauth.MSG_USERAUTH_INFO_REQUEST, packet)
         self._pamDeferred = defer.Deferred()
         return self._pamDeferred
-
 
     def ssh_USERAUTH_INFO_RESPONSE(self, packet):
         """
