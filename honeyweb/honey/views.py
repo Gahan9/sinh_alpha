@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
-
+from django.db.models import F
 from .models import Auth, Input, Clients, Downloads, Sensors, Sessions
 
 
@@ -14,7 +14,7 @@ def home(request):
 @login_required(login_url="login/")
 def input_page(request):
     """show input table"""
-    input_data = Input.objects.all()
+    input_data = Input.objects.all().order_by('id')
     # template = "input_page.html"
     # context = {"input_data" : input_data}
     # return render(request , template, context)
@@ -23,7 +23,8 @@ def input_page(request):
 
 @login_required(login_url="login/")
 def auth_page(request):
-    auth_data = Auth.objects.all()
+    auth_data = Auth.objects.all().order_by('-timestamp')
+    # ip_address = Sessions.objects.filter(auth__session=auth_data.)
     template = "auth_page.html"
     context = {"auth_data": auth_data}
     return render(request, template, context)

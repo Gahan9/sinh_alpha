@@ -15,14 +15,13 @@ class Sessions(models.Model):
     client = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
-        return self.ip
+        return '%s , %s' % (self.id, self.ip)
 
     class Meta:
         # managed = False
         db_table = 'sessions'
 
 
-@python_2_unicode_compatible
 class Auth(models.Model):
     session = models.CharField(max_length=32)
     # session = models.ForeignKey(Sessions, related_name='session_auth')
@@ -30,11 +29,12 @@ class Auth(models.Model):
     username = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
     timestamp = models.DateTimeField()
+    ip = models.ForeignKey(Sessions, blank=True, null=True)
 
     def get_ip_from_session(self):
-        obj_session = Sessions.objects.filter('')
+        obj_session = Sessions.objects.filter(id=Auth.objects.all().values('session').get()['session'])
 
-    def __str__(self):
+    def __unicode__(self):
         return self.username
 
     class Meta:
@@ -110,6 +110,9 @@ class Auth(models.Model):
 
 class Clients(models.Model):
     version = models.CharField(max_length=50)
+
+    def __unicode__(self):
+        return self.version
 
     class Meta:
     #     # managed = False
