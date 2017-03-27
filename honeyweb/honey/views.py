@@ -25,8 +25,9 @@ def input_page(request):
 def auth_page(request):
     auth_data = Auth.objects.all().order_by('-timestamp')
     # ip_address = Sessions.objects.filter(auth__session=auth_data.)
+    ips =2
     template = "auth_page.html"
-    context = {"auth_data": auth_data}
+    context = {"auth_data": auth_data, "ip": ips}
     return render(request, template, context)
 
 
@@ -72,14 +73,13 @@ def search_auth(request):
            "ip": request.GET.get('ip', None)
           }
 
-    req_data = dict(filter(lambda x: x[1], ls.items()))
+    req_data = dict(filter(lambda x: x[1], auth_filter.items()))
 
     id_ = request.GET.get('id', None)
 
     if req_data:
-        books = book.objects.filter(**req_data)
-        return render(request, 'results.html', {'books': books},
-                      {'query': id_})
+        refined_search = Auth.objects.filter(**req_data)
+        return render(request, 'results.html', {'refined_search': refined_search}, {'query': id_})
     else:
         error = 'No match found'
-        return render(request, 'error.html', {'error': error})
+        return HttpResponse(error)

@@ -15,7 +15,8 @@ class Sessions(models.Model):
     client = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
-        return '%s , %s' % (self.id, self.ip)
+        # return '%s , %s' % (self.id, self.ip)
+        return self.ip
 
     class Meta:
         # managed = False
@@ -31,8 +32,10 @@ class Auth(models.Model):
     timestamp = models.DateTimeField()
     ip = models.ForeignKey(Sessions, blank=True, null=True)
 
+    @property
     def get_ip_from_session(self):
-        obj_session = Sessions.objects.filter(id=Auth.objects.all().values('session').get()['session'])
+        obj_session = Sessions.objects.filter(id=Auth.objects.all()[0].session)
+        return obj_session[0].ip
 
     def __unicode__(self):
         return self.username
