@@ -42,4 +42,4 @@ twistd -y sinh.tac -l log/sinh.log --pidfile SINH.pid
 echo "Honeypot Started Monitoring your device"
 
 echo "Starting Django Service"
-python ./honeyweb/manage.py runserver 0.0.0.0:8888
+python3 ./honeyweb/manage.py runserver 0.0.0.0:8888
