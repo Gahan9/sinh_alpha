@@ -1735,3 +1735,8 @@
 2017-03-21 09:58:25+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f0bc822c440>
 2017-03-21 09:58:25+0530 [-] Main loop terminated.
 2017-03-21 09:58:25+0530 [-] Server Shut Down.
+2017-03-25 23:00:34+0530 [-] Log opened.
+2017-03-25 23:00:34+0530 [-] twistd 12.0.0 (/usr/bin/python 2.7.12) starting up.
+2017-03-25 23:00:34+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
+2017-03-25 23:00:34+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-03-25 23:00:34+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f43889eb290>
