@@ -1,16 +1,33 @@
 {% extends 'base.html' %}
 
 {% block body %}
-
-<p>Welcome, {{ user.username }}.</p>
-
-			<ul>
-				<li><a href="/auth">Authentication Table</a></li>
-				<li><a href="/input">Input Table</a></li>
-				<li><a href="/client">Client Table</a></li>
-				<li><a href="/sensor">Sensor Table</a></li>
-				<li><a href="/session">Session Table</a></li>
-				<li><a href="/downloads">Downloads Table</a></li>
-			</ul>
-
+<div class="jumbotron">
+<h1>Welcome, {{ user.username }}</h1>
+</div>
+    <div class="list-group">
+        <a class="list-group-item" href="/auth">
+            <h4 class="list-group-item-heading">Authentication Table</h4>
+            <p class="list-group-item-text">Log table of success or failure authentication</p>
+        </a>
+        <a class="list-group-item" href="/input">
+             <h4 class="list-group-item-heading">Input Table</h4>
+            <p class="list-group-item-text">All input commands entered by attacker with success status</p>
+        </a>
+        <a class="list-group-item" href="/client">
+             <h4 class="list-group-item-heading">Client Table</h4>
+            <p class="list-group-item-text">details of SSH client used by attacker</p>
+        </a>
+        <a class="list-group-item" href="/sensor">
+            <h4 class="list-group-item-heading">Sensor Table</h4>
+            <p class="list-group-item-text">Name or ip address of honeypot sensor which captured the log</p>
+        </a>
+        <a class="list-group-item" href="/session">
+            <h4 class="list-group-item-heading">Session Table</h4>
+            <p class="list-group-item-text">Time consumed by attacker during SSH session</p>
+        </a>
+        <a class="list-group-item" href="/downloads">
+            <h4 class="list-group-item-heading">Downloads Table</h4>
+            <p class="list-group-item-text">file downloaded by attacker</p>
+        </a>
+    </div>
 {% endblock %}

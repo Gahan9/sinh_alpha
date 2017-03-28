@@ -37,7 +37,7 @@ class Auth(models.Model):
         obj_session = Sessions.objects.filter(id=Auth.objects.all()[0].session)
         return obj_session[0].ip
 
-    def __unicode__(self):
+    def __str__(self):
         return self.username
 
     class Meta:

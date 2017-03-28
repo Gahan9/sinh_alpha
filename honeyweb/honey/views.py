@@ -1,14 +1,31 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponseRedirect, HttpResponse, Http404, request, JsonResponse
 from django.contrib.auth.decorators import login_required
-from django.db.models import F
+from django.contrib.auth.models import User
+
 from .models import Auth, Input, Clients, Downloads, Sensors, Sessions
+from .forms import ChangePassword
 
 
 @login_required(login_url="login/")
 def home(request):
     """Rendering home page"""
     return render(request, "home.html")
+
+
+@login_required(login_url="login/")
+def change_password(request):
+    if request.method == 'POST':
+        current_user = request.user.username
+        reset_form = ChangePassword(request.POST, user=request.user)
+        if reset_form.is_valid():
+            u = User.objects.get(username__exact=current_user)
+            u.set_password(reset_form.cleaned_data['password2'])
+            u.save()
+            return HttpResponseRedirect('/')
+    else:
+        reset_form = ChangePassword(user=request.user.username)
+    return render(request, 'change_password.html', {'reset_form': reset_form})
 
 
 @login_required(login_url="login/")
@@ -24,10 +41,8 @@ def input_page(request):
 @login_required(login_url="login/")
 def auth_page(request):
     auth_data = Auth.objects.all().order_by('-timestamp')
-    # ip_address = Sessions.objects.filter(auth__session=auth_data.)
-    ips =2
     template = "auth_page.html"
-    context = {"auth_data": auth_data, "ip": ips}
+    context = {"auth_data": auth_data}
     return render(request, template, context)
 
 

@@ -1,59 +1,58 @@
-{% extends 'base.html' %}
+{% load static %}
+{#{% extends 'base.html' %}#}
 
-{% block body %}
-    {% if form.errors %}
-        <p>Your username and password didn't match. Please try again.</p>
-{% endif %}
-
-{% if next %}
-    {% if user.is_authenticated %}
-    <p>Your account doesn't have access to this page. To proceed,
-    please login with an account that has access.</p>
-    {% else %}
-    <p>Please login to see this page.</p>
-    {% endif %}
-{% endif %}
-
+{% block content %}
+    <head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/demo.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate-custom.css' %}" />
+</head>
+<body>
 <div class="container">
-    <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-            <div class="login-panel panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Please Sign In</h3>
-                </div>
-                <div class="panel-body">
-                    <form method="post" action="{% url 'login' %}">
+    <header>
+        <h1>Login to continue <span></span></h1>
+        <nav class="codrops-demos">
+            <span><strong></strong></span>
+        </nav>
+    </header>
+    <section>
+    <div id="container_demo" >
+        <a class="hiddenanchor" id="toregister"></a>
+        <a class="hiddenanchor" id="tologin"></a>
+        <div id="wrapper">
+            <div id="login" class="animate form">
+                <form  action="{% url 'login' %}" autocomplete="on" method="post">
+
                     {% csrf_token %}
-                    <p class="bs-component">
-                        <table>
-                            <tr>
-                                <td>{{ form.username.label_tag }}</td>
-                                <td>{{ form.username }}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ form.password.label_tag }}</td>
-                                <td>{{ form.password }}</td>
-                            </tr>
-                        </table>
+
+                    <h1>Log in</h1>
+                    <p>
+                        <label for="username" class="uname" data-icon="u" > Your Username </label>
+                        {{ form.username }}
+                    {% if form.errors %}
+                        <p style="color: #4464A2"><small>Note:Username and password is case sensitive</small></p>
+                    {% endif %}
                     </p>
-                    <p class="bs-component">
-                    <center><input class="btn btn-success btn-sm" type="submit" value="login" /></center>
+                    <p>
+                        <label for="password" class="youpasswd" data-icon="p"> Your Password </label>
+                        {{ form.password }}
                     </p>
-                    <input type="hidden" name="next" value="{{ next }}" />
-                    </form>
-                </div>
+                    {% if form.errors %}
+                        <p style="color: red"><strong>Username with this Password Combination does not exist</strong></p>
+                    {% endif %}
+                    <p class="login button">
+                        <input type="submit" value="Login" />
+                    </p>
+                    <p class="change_link">
+                        Not a member yet ?
+                        <a href="/register" class="to_register">Register</a>
+                    </p>
+                </form>
             </div>
         </div>
     </div>
+    </section>
 </div>
-{% endblock %}
-
-{% block javascript %}
-
-<script>
-    {% if not user.is_authenticated %}
-    $("ul.nav.navbar-nav.navbar-right").css("display","none");
-{% endif %}
-</script>
-
+</body>
 {% endblock %}

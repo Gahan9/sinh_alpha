@@ -1,7 +1,8 @@
 {% include 'head.html' %}
 
-<div class="tbl-header">
-    <table id="example" class="sortable" cellspacing="0" width="100%">
+<div class="container-fluid">
+{#    <table id="example" class="sortable" cellspacing="0" width="100%">#}
+    <table class="table">
       <thead>
 		<tr>
 			<th>ID</th>
@@ -29,7 +30,11 @@
 </table>
 </div>
 <script>
-    $('td').onmouseover(function () {
+    $(document).ready(function () {
+            $('td').onmouseover(function () {
         $('td').css("overflow","auto");
     });
+
+    })
+
 </script>
