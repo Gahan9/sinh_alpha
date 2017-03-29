@@ -10,11 +10,15 @@
 {% block extrajs %}
     <script>
         $(document).ready(function () {
-          console.log("in js");
+            $("td").hover(
+              function () {
+                $(this).addClass("scroll");
+              },
+              function () {
+                $(this).removeClass("scroll");
+              }
+            );
+        });
 
-            $("td").on('click', function() {
-                $(this).css("overflow-x","scroll")
-            });
-        })
     </script>
 {% endblock %}
