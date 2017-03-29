@@ -25,12 +25,11 @@ class Sessions(models.Model):
 
 class Auth(models.Model):
     session = models.CharField(max_length=32)
-    # session = models.ForeignKey(Sessions, related_name='session_auth')
     success = models.BooleanField()
     username = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
     timestamp = models.DateTimeField()
-    ip = models.ForeignKey(Sessions, blank=True, null=True)
+    # ip_key = models.ForeignKey(Sessions, blank=True, null=True, default='')
 
     @property
     def get_ip_from_session(self):

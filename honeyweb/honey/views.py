@@ -32,9 +32,7 @@ def change_password(request):
 def input_page(request):
     """show input table"""
     input_data = Input.objects.all().order_by('id')
-    # template = "input_page.html"
-    # context = {"input_data" : input_data}
-    # return render(request , template, context)
+
     return render(request, "input_page.html", {"input_data": input_data})
 
 
