@@ -8,14 +8,13 @@
 {% endblock %}
 
 {% block extrajs %}
+    <script>
+        $(document).ready(function () {
+          console.log("in js");
 
-<script>
-$(document).ready(function () {
-  console.log("in js");
-
-    $("td").on('click', function() {
-        $(this).css("background-color","red")
-    });
-})
-</script>
+            $("td").on('click', function() {
+                $(this).css("overflow-x","scroll")
+            });
+        })
+    </script>
 {% endblock %}

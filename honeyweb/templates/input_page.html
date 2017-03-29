@@ -5,3 +5,16 @@
 {% include "input_table.html" %}
 
 {% endblock %}
+
+
+{% block extrajs %}
+    <script>
+        $(document).ready(function () {
+          console.log("in js");
+
+            $("td").on('click', function() {
+                $(this).css("overflow-x","scroll")
+            });
+        })
+    </script>
+{% endblock %}
