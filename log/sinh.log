@@ -2165,3 +2165,46 @@
 2017-03-29 10:01:19+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.3] getting shell
 2017-03-29 10:01:19+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.3] Opening TTY log: log/tty/20170329-100119-2280.log
 2017-03-29 10:01:19+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.3] /etc/motd resolved into /etc/motd
+2017-03-29 10:07:46+0530 [-] Received SIGTERM, shutting down.
+2017-03-29 10:07:46+0530 [-] (TCP Port 2222 Closed)
+2017-03-29 10:07:46+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f41743f04d0>
+2017-03-29 10:07:46+0530 [HoneyPotTransport,1,200.200.200.3] connection lost
+2017-03-29 22:38:28+0530 [-] Log opened.
+2017-03-29 22:38:28+0530 [-] twistd 12.0.0 (/usr/bin/python 2.7.12) starting up.
+2017-03-29 22:38:28+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
+2017-03-29 22:38:28+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-03-29 22:38:28+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f25c05dc4d0>
+2017-03-29 22:40:22+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:48218 (200.200.200.9:2222) [session: 0]
+2017-03-29 22:40:22+0530 [HoneyPotTransport,0,200.200.200.3] Remote SSH version: SSH-2.0-JuiceSSH
+2017-03-29 22:40:22+0530 [HoneyPotTransport,0,200.200.200.3] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-03-29 22:40:22+0530 [HoneyPotTransport,0,200.200.200.3] outgoing: aes128-ctr hmac-md5 zlib
+2017-03-29 22:40:22+0530 [HoneyPotTransport,0,200.200.200.3] incoming: aes128-ctr hmac-md5 zlib
+2017-03-29 22:40:23+0530 [HoneyPotTransport,0,200.200.200.3] NEW KEYS
+2017-03-29 22:40:23+0530 [HoneyPotTransport,0,200.200.200.3] starting service ssh-userauth
+2017-03-29 22:40:23+0530 [SSHService ssh-userauth on HoneyPotTransport,0,200.200.200.3] root trying auth none
+2017-03-29 22:40:23+0530 [SSHService ssh-userauth on HoneyPotTransport,0,200.200.200.3] root trying auth password
+2017-03-29 22:40:23+0530 [SSHService ssh-userauth on HoneyPotTransport,0,200.200.200.3] login attempt [root/root] succeeded
+2017-03-29 22:40:23+0530 [SSHService ssh-userauth on HoneyPotTransport,0,200.200.200.3] root authenticated with password
+2017-03-29 22:40:23+0530 [SSHService ssh-userauth on HoneyPotTransport,0,200.200.200.3] starting service ssh-connection
+2017-03-29 22:40:23+0530 [SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] got channel session request
+2017-03-29 22:40:23+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] channel open
+2017-03-29 22:40:23+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] unhandled request for auth-agent-req@openssh.com
+2017-03-29 22:40:23+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] pty request: linux (24, 80, 640, 480)
+2017-03-29 22:40:23+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] Terminal size: 24 80
+2017-03-29 22:40:23+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] getting shell
+2017-03-29 22:40:23+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] Opening TTY log: log/tty/20170329-224023-100.log
+2017-03-29 22:40:23+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] /etc/motd resolved into /etc/motd
+2017-03-29 22:43:35+0530 [SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] got global keepalive@jcraft.com request
+2017-03-29 22:54:09+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] remote close
+2017-03-29 22:54:09+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] sending close 0
+2017-03-29 22:54:09+0530 [HoneyPotTransport,0,200.200.200.3] connection lost
+2017-03-30 00:31:25+0530 [-] Received SIGTERM, shutting down.
+2017-03-30 00:31:27+0530 [-] (TCP Port 2222 Closed)
+2017-03-30 00:31:27+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f25c05dc4d0>
+2017-03-30 00:31:27+0530 [-] Main loop terminated.
+2017-03-30 00:31:28+0530 [-] Server Shut Down.
+2017-03-30 00:31:32+0530 [-] Log opened.
+2017-03-30 00:31:32+0530 [-] twistd 12.0.0 (/usr/bin/python 2.7.12) starting up.
+2017-03-30 00:31:32+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
+2017-03-30 00:31:32+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-03-30 00:31:32+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7fafb4b404d0>
