@@ -48,7 +48,8 @@ th{
 td{
     width: 80%;
     padding: 15px;
-    overflow-y: auto;
+    /*overflow-y: auto;*/
+    overflow: hidden;
     text-align: left;
     vertical-align:middle;
     font-weight: 300;

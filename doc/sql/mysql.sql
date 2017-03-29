@@ -5,7 +5,9 @@ CREATE TABLE `auth` (
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `timestamp` datetime NOT NULL,
+#   `ip` varchar(15) NOT NULL default '', #extra
   PRIMARY KEY  (`id`)
+#   KEY `ip` (`ip`) #extra
 ) ;
 
 CREATE TABLE `clients` (

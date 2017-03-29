@@ -133,7 +133,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-#Session expiry
+# Session expiry
 # SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 # SESSION_COOKIE_AGE = 15 * 60
@@ -148,6 +148,9 @@ PASSWORD_RESET_TIMEOUT_DAYS = 1
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "media")
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = '/assets/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+
+STATIC_ROOT = '/assets/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+
+
