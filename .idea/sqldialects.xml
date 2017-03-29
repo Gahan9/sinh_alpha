@@ -2,5 +2,9 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/doc/sql/mysql.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/doc/sql/update2.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/doc/sql/update3.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/doc/sql/update5.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/doc/sql/update7.sql" dialect="MySQL" />
   </component>
 </project>
