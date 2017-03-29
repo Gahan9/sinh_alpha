@@ -7,6 +7,8 @@ CREATE DATABASE sinh;
 GRANT ALL ON sinh.* TO 'sinh'@'localhost' IDENTIFIED BY 'sinhpass';
 exit
 
+>>> Run migrate command from django instead.
+
 mysql -u sinh -p
 
 mysql>
