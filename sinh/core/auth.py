@@ -97,6 +97,7 @@ class UserDB(object):
         self.userdb.append((login, uid, passwd))
         self.save()
 
+
 class HoneypotPasswordChecker:
     """ Implemented to check SSH credentials and throw
         any error if occur regarding authentication """

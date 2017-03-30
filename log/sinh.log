@@ -2208,3 +2208,9 @@
 2017-03-30 00:31:32+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
 2017-03-30 00:31:32+0530 [-] HoneyPotSSHFactory starting on 2222
 2017-03-30 00:31:32+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7fafb4b404d0>
+2017-03-30 01:40:44+0530 [-] Received SIGTERM, shutting down.
+2017-03-30 12:20:08+0530 [-] Log opened.
+2017-03-30 12:20:08+0530 [-] twistd 12.0.0 (/usr/bin/python 2.7.12) starting up.
+2017-03-30 12:20:08+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
+2017-03-30 12:20:08+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-03-30 12:20:08+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f2cdf3f44d0>
