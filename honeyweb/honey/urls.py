@@ -11,4 +11,5 @@ urlpatterns = [
     url(r'^downloads$', views.downloads_page, name='downloads_page'),
     url(r'^session$', views.session_page, name='session_page'),
     url(r'^sensor$', views.sensor_page, name='sensor_page'),
+    url(r'^sortedRequest', views.sortedRequest, name='sorted')
 ]

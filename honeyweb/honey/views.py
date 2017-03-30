@@ -22,9 +22,11 @@ def change_password(request):
             u = User.objects.get(username__exact=current_user)
             u.set_password(reset_form.cleaned_data['password2'])
             u.save()
-            return HttpResponseRedirect('/')
+            return JsonResponse('Password Changed')
+        else:
+            return JsonResponse("Error!")
     else:
-        reset_form = ChangePassword(user=request.user.username)
+        reset_form = ChangePassword(request.POST, user=request.user)
     return render(request, 'change_password.html', {'reset_form': reset_form})
 
 
@@ -36,8 +38,18 @@ def input_page(request):
     return render(request, "input_page.html", {"input_data": input_data})
 
 
+def sortedRequest(request):
+    """handle ajax request for sorting"""
+    if request.is_ajax():
+        sortedResponse = Auth.objects.all().order_by('-timestamp')
+        return JsonResponse(sortedResponse)
+    else:
+        JsonResponse("Error!")
+
+
 @login_required(login_url="login/")
 def auth_page(request):
+
     auth_data = Auth.objects.all().order_by('-timestamp')
     template = "auth_page.html"
     context = {"auth_data": auth_data}

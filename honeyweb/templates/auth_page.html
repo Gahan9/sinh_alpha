@@ -19,14 +19,17 @@
               }
             );
     $('th').on('click', function() {
+        var cls = $(this).prop('className');
+        console.log(cls);
         debugger;
         $.ajax({
             'method': 'GET',  // defaults to GET. Set POST if you like, but be aware of the CSRF token submission too!
             'url': '.',  // submit to the same url
-            'data': {},  // pass here any data to the server. You can omit it.
-            success: function(dataReturned) {
+            'data': {'field': cls},  // pass here any data to the server. You can omit it.
+            success: function(sortedResponse) {
                 // This function will run when server returns data
-                $('#my-placeholder').replaceWith(dataReturned);
+                $('.sortable').replaceWith(sortedResponse);
+
             }
         });
     });
