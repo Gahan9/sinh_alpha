@@ -1,24 +1,23 @@
 {% extends "base.html" %}
 
-{% block body %}
-
-{% include "input_table.html" %}
-
+{% block navbar %}
+    <div class="btn-group btn-group-justified" role="group">
+        <ol class="nav nav-pills nav-justified">
+            <li role="presentation"><a href="/auth">Authentication Table</a></li>
+            <li role="presentation"><a href="/input">Input Table</a></li>
+            <li role="presentation"><a href="/client">Client Table</a></li>
+            <li role="presentation"><a href="/sensor">Sensor Table</a></li>
+            <li role="presentation"><a href="/session">Session Table</a></li>
+            <li role="presentation"><a href="/downloads">Downloads Table</a></li>
+        </ol>
+    </div>
 {% endblock %}
 
-
-{% block extrajs %}
-    <script>
-        $(document).ready(function () {
-            $("td").hover(
-              function () {
-                $(this).addClass("scroll");
-              },
-              function () {
-                $(this).removeClass("scroll");
-              }
-            );
-        });
-
-    </script>
+{% block body %}
+{% load render_table from django_tables2 %}
+<div class="container-fluid">
+        {% for table in tables %}
+            {% render_table table %}
+        {% endfor %}
+</div>
 {% endblock %}
