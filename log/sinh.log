@@ -2347,3 +2347,8 @@
 2017-04-02 15:27:16+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
 2017-04-02 15:27:16+0530 [-] HoneyPotSSHFactory starting on 2222
 2017-04-02 15:27:16+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f06f68154d0>
+2017-04-02 16:07:05+0530 [-] Received SIGTERM, shutting down.
+2017-04-02 16:07:05+0530 [-] (TCP Port 2222 Closed)
+2017-04-02 16:07:05+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f06f68154d0>
+2017-04-02 16:07:05+0530 [-] Main loop terminated.
+2017-04-02 16:07:05+0530 [-] Server Shut Down.
