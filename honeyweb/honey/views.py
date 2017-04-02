@@ -1,10 +1,18 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponse, Http404, request, JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.urls import reverse_lazy
+from django.views.generic import ListView
+from django.views.generic import TemplateView
+from django_tables2 import MultiTableMixin
+from django_tables2 import RequestConfig
+from django_tables2 import SingleTableMixin
+from django_tables2 import SingleTableView
 
-from .models import Auth, Input, Clients, Downloads, Sensors, Sessions
-from .forms import ChangePassword
+from .models import *
+from .forms import *
 
 
 @login_required(login_url="login/")
@@ -30,18 +38,23 @@ def change_password(request):
     return render(request, 'change_password.html', {'reset_form': reset_form})
 
 
-@login_required(login_url="login/")
-def input_page(request):
-    """show input table"""
-    input_data = Input.objects.all().order_by('id')
-
-    return render(request, "input_page.html", {"input_data": input_data})
-
+class InputPageView(LoginRequiredMixin, MultiTableMixin, TemplateView):
+    """ Show all input commands entered by attacker """
+    login_url = reverse_lazy('login')
+    table_class = InputTable
+    # model = Input
+    template_name = 'input_page.html'
+    tables = [InputTable(Input.objects.all())]
+    table_pagination = {
+        'per_page' : 15
+    }
 
 def sortedRequest(request):
-    """handle ajax request for sorting"""
+    """ handle ajax request for sorting """
     if request.is_ajax():
-        sortedResponse = Auth.objects.all().order_by('-timestamp')
+        field_to_sort = request.GET.get('field')
+        print(field_to_sort, type(field_to_sort), sep=" ***** ")
+        sortedResponse = Auth.objects.all().order_by('-'+field_to_sort)
         return JsonResponse(sortedResponse)
     else:
         JsonResponse("Error!")
