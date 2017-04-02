@@ -41,5 +41,5 @@ sudo iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-port 2222
 twistd -y sinh.tac -l log/sinh.log --pidfile SINH.pid
 echo "Honeypot Started Monitoring your Network"
 
-echo "Enabling Web Framework to view log....."
+echo "Enabling Web Framework to view log."
 python3 ./honeyweb/manage.py runserver 0.0.0.0:8888
