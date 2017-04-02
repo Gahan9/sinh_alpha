@@ -32,3 +32,10 @@ pip install virtualenv
 
 Django 1.10.6
 pip install django
+
+Django Sorting Bootstrap
+pip install django-sorting-bootstrap==1.1.1
+
+Django_Tables2
+pip install django-tables2==1.4.2
+
