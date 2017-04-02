@@ -21,39 +21,21 @@ def home(request):
     return render(request, "home.html")
 
 
-@login_required(login_url="login/")
-def change_password(request):
-    if request.method == 'POST':
-        current_user = request.user.username
-        reset_form = ChangePassword(request.POST, user=request.user)
-        if reset_form.is_valid():
-            u = User.objects.get(username__exact=current_user)
-            u.set_password(reset_form.cleaned_data['password2'])
-            u.save()
-            return JsonResponse('Password Changed')
-        else:
-            return JsonResponse("Error!")
-    else:
-        reset_form = ChangePassword(request.POST, user=request.user)
-    return render(request, 'change_password.html', {'reset_form': reset_form})
-
-
 class InputPageView(LoginRequiredMixin, MultiTableMixin, TemplateView):
     """ Show all input commands entered by attacker """
     login_url = reverse_lazy('login')
     table_class = InputTable
-    # model = Input
     template_name = 'input_page.html'
     tables = [InputTable(Input.objects.all())]
     table_pagination = {
-        'per_page' : 15
+        'per_page': 15
     }
+
 
 def sortedRequest(request):
     """ handle ajax request for sorting """
     if request.is_ajax():
         field_to_sort = request.GET.get('field')
-        print(field_to_sort, type(field_to_sort), sep=" ***** ")
         sortedResponse = Auth.objects.all().order_by('-'+field_to_sort)
         return JsonResponse(sortedResponse)
     else:
