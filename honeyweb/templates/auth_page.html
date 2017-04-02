@@ -24,11 +24,12 @@
         debugger;
         $.ajax({
             'method': 'GET',  // defaults to GET. Set POST if you like, but be aware of the CSRF token submission too!
-            'url': '.',  // submit to the same url
+            'url': '/sortedRequest/',  // submit to the same url
             'data': {'field': cls},  // pass here any data to the server. You can omit it.
             success: function(sortedResponse) {
                 // This function will run when server returns data
                 $('.sortable').replaceWith(sortedResponse);
+                toastr.success("Filter applied");
 
             }
         });
