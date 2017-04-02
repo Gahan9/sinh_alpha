@@ -685,3 +685,21 @@ d5e96502143611e7a9ef5c93a2b3264b [2017-03-29 09:50:11]: Connection lost
 97d3e7ee14a211e7b0385c93a2b3264b [2017-03-29 22:40:23]: Login succeeded [root/root]
 97d3e7ee14a211e7b0385c93a2b3264b [2017-03-29 22:40:23]: Terminal size: 80x24
 97d3e7ee14a211e7b0385c93a2b3264b [2017-03-29 22:54:09]: Connection lost
+8579feee176811e78c2c5c93a2b3264b [2017-04-02 11:22:14]: New connection: 200.200.200.3:37754
+8579feee176811e78c2c5c93a2b3264b [2017-04-02 11:22:14]: Client version: [SSH-2.0-JuiceSSH]
+8579feee176811e78c2c5c93a2b3264b [2017-04-02 11:22:15]: Login succeeded [root/root]
+8579feee176811e78c2c5c93a2b3264b [2017-04-02 11:22:15]: Terminal size: 80x24
+8579feee176811e78c2c5c93a2b3264b [2017-04-02 11:22:26]: Unknown command [sudo]
+8579feee176811e78c2c5c93a2b3264b [2017-04-02 11:22:34]: Unknown command [audo -s]
+8579feee176811e78c2c5c93a2b3264b [2017-04-02 11:22:39]: Unknown command [audo -s]
+8579feee176811e78c2c5c93a2b3264b [2017-04-02 11:22:45]: Unknown command [sudo -s]
+8579feee176811e78c2c5c93a2b3264b [2017-04-02 11:22:47]: Command [top]
+8579feee176811e78c2c5c93a2b3264b [2017-04-02 11:23:12]: Command [wget github.io/user.git]
+8579feee176811e78c2c5c93a2b3264b [2017-04-02 11:23:43]: Connection lost
+bb89988c176811e78c2c5c93a2b3264b [2017-04-02 11:23:44]: New connection: 200.200.200.3:43430
+bb89988c176811e78c2c5c93a2b3264b [2017-04-02 11:23:45]: Client version: [SSH-2.0-JuiceSSH]
+bb89988c176811e78c2c5c93a2b3264b [2017-04-02 11:23:45]: Login succeeded [root/root]
+bb89988c176811e78c2c5c93a2b3264b [2017-04-02 11:23:45]: Terminal size: 80x24
+bb89988c176811e78c2c5c93a2b3264b [2017-04-02 11:24:13]: Command [wget wizard.io/a.txt]
+bb89988c176811e78c2c5c93a2b3264b [2017-04-02 11:24:16]: File download: [http://wizard.io/a.txt] -> dl/20170402112413_http___wizard_io_a_txt
+bb89988c176811e78c2c5c93a2b3264b [2017-04-02 12:30:23]: Connection lost

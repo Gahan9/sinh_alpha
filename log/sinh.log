@@ -2214,3 +2214,116 @@
 2017-03-30 12:20:08+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
 2017-03-30 12:20:08+0530 [-] HoneyPotSSHFactory starting on 2222
 2017-03-30 12:20:08+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f2cdf3f44d0>
+2017-03-31 01:19:18+0530 [-] Log opened.
+2017-03-31 01:19:18+0530 [-] twistd 12.0.0 (/usr/bin/python 2.7.12) starting up.
+2017-03-31 01:19:18+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
+2017-03-31 01:19:18+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-03-31 01:19:18+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f0178de48c0>
+2017-03-31 01:45:39+0530 [-] Received SIGTERM, shutting down.
+2017-03-31 01:45:39+0530 [-] (TCP Port 2222 Closed)
+2017-03-31 01:45:39+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f0178de48c0>
+2017-04-02 10:27:37+0530 [-] Log opened.
+2017-04-02 10:27:37+0530 [-] twistd 12.0.0 (/usr/bin/python 2.7.12) starting up.
+2017-04-02 10:27:37+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
+2017-04-02 10:27:37+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-04-02 10:27:37+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f13745dd4d0>
+2017-04-02 11:22:14+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:37754 (200.200.200.9:2222) [session: 0]
+2017-04-02 11:22:14+0530 [HoneyPotTransport,0,200.200.200.3] Remote SSH version: SSH-2.0-JuiceSSH
+2017-04-02 11:22:14+0530 [HoneyPotTransport,0,200.200.200.3] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-02 11:22:14+0530 [HoneyPotTransport,0,200.200.200.3] outgoing: aes128-ctr hmac-md5 zlib
+2017-04-02 11:22:14+0530 [HoneyPotTransport,0,200.200.200.3] incoming: aes128-ctr hmac-md5 zlib
+2017-04-02 11:22:14+0530 [HoneyPotTransport,0,200.200.200.3] NEW KEYS
+2017-04-02 11:22:14+0530 [HoneyPotTransport,0,200.200.200.3] starting service ssh-userauth
+2017-04-02 11:22:15+0530 [SSHService ssh-userauth on HoneyPotTransport,0,200.200.200.3] root trying auth none
+2017-04-02 11:22:15+0530 [SSHService ssh-userauth on HoneyPotTransport,0,200.200.200.3] root trying auth password
+2017-04-02 11:22:15+0530 [SSHService ssh-userauth on HoneyPotTransport,0,200.200.200.3] login attempt [root/root] succeeded
+2017-04-02 11:22:15+0530 [SSHService ssh-userauth on HoneyPotTransport,0,200.200.200.3] root authenticated with password
+2017-04-02 11:22:15+0530 [SSHService ssh-userauth on HoneyPotTransport,0,200.200.200.3] starting service ssh-connection
+2017-04-02 11:22:15+0530 [SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] got channel session request
+2017-04-02 11:22:15+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] channel open
+2017-04-02 11:22:15+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] unhandled request for auth-agent-req@openssh.com
+2017-04-02 11:22:15+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] pty request: linux (24, 80, 640, 480)
+2017-04-02 11:22:15+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] Terminal size: 24 80
+2017-04-02 11:22:15+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] getting shell
+2017-04-02 11:22:15+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] Opening TTY log: log/tty/20170402-112215-3539.log
+2017-04-02 11:22:15+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] /etc/motd resolved into /etc/motd
+2017-04-02 11:22:26+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] CMD: sudo
+2017-04-02 11:22:26+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] Command not found: sudo
+2017-04-02 11:22:34+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] CMD: audo -s
+2017-04-02 11:22:34+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] Command not found: audo -s
+2017-04-02 11:22:39+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] CMD: audo -s
+2017-04-02 11:22:39+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] Command not found: audo -s
+2017-04-02 11:22:45+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] CMD: sudo -s
+2017-04-02 11:22:45+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] Command not found: sudo -s
+2017-04-02 11:22:47+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] CMD: top
+2017-04-02 11:22:47+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] Command found: top
+2017-04-02 11:22:47+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] Reading txtcmd from "/home/jarvis/honeypot/sinh/txtcmds/usr/bin/top"
+2017-04-02 11:23:12+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] CMD: wget github.io/user.git
+2017-04-02 11:23:12+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] Command found: wget github.io/user.git
+2017-04-02 11:23:12+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] Starting factory <HTTPProgressDownloader: http://github.io/user.git>
+2017-04-02 11:23:12+0530 [HTTPPageDownloader,client] Unhandled Error
+	Traceback (most recent call last):
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/python/log.py", line 84, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/python/log.py", line 69, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/python/context.py", line 118, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/python/context.py", line 81, in callWithContext
+	    return func(*args,**kw)
+	--- <exception caught here> ---
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/internet/posixbase.py", line 586, in _doReadOrWrite
+	    why = selectable.doRead()
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/internet/tcp.py", line 199, in doRead
+	    rval = self.protocol.dataReceived(data)
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/protocols/basic.py", line 564, in dataReceived
+	    why = self.lineReceived(line)
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/web/http.py", line 437, in lineReceived
+	    self.handleEndHeaders()
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/web/client.py", line 115, in handleEndHeaders
+	    m()
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/web/client.py", line 151, in handleStatus_301
+	    from twisted.internet import ssl
+	  File "/usr/local/lib/python2.7/dist-packages/twisted/internet/ssl.py", line 23, in <module>
+	    from OpenSSL import SSL
+	exceptions.ImportError: No module named OpenSSL
+	
+2017-04-02 11:23:12+0530 [HTTPPageDownloader,client] Stopping factory <HTTPProgressDownloader: https://pages.github.com/>
+2017-04-02 11:23:21+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] INPUT: 
+2017-04-02 11:23:26+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] Received unhandled keyID: [PGDN]
+2017-04-02 11:23:30+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] INPUT: 
+2017-04-02 11:23:36+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] INPUT: aaaa
+2017-04-02 11:23:36+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] INPUT: 
+2017-04-02 11:23:37+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] INPUT: 
+2017-04-02 11:23:41+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] INPUT: exit
+2017-04-02 11:23:43+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] remote close
+2017-04-02 11:23:43+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,200.200.200.3] sending close 0
+2017-04-02 11:23:43+0530 [HoneyPotTransport,0,200.200.200.3] connection lost
+2017-04-02 11:23:44+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 200.200.200.3:43430 (200.200.200.9:2222) [session: 1]
+2017-04-02 11:23:45+0530 [HoneyPotTransport,1,200.200.200.3] Remote SSH version: SSH-2.0-JuiceSSH
+2017-04-02 11:23:45+0530 [HoneyPotTransport,1,200.200.200.3] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-02 11:23:45+0530 [HoneyPotTransport,1,200.200.200.3] outgoing: aes128-ctr hmac-md5 zlib
+2017-04-02 11:23:45+0530 [HoneyPotTransport,1,200.200.200.3] incoming: aes128-ctr hmac-md5 zlib
+2017-04-02 11:23:45+0530 [HoneyPotTransport,1,200.200.200.3] NEW KEYS
+2017-04-02 11:23:45+0530 [HoneyPotTransport,1,200.200.200.3] starting service ssh-userauth
+2017-04-02 11:23:45+0530 [SSHService ssh-userauth on HoneyPotTransport,1,200.200.200.3] root trying auth none
+2017-04-02 11:23:45+0530 [SSHService ssh-userauth on HoneyPotTransport,1,200.200.200.3] root trying auth password
+2017-04-02 11:23:45+0530 [SSHService ssh-userauth on HoneyPotTransport,1,200.200.200.3] login attempt [root/root] succeeded
+2017-04-02 11:23:45+0530 [SSHService ssh-userauth on HoneyPotTransport,1,200.200.200.3] root authenticated with password
+2017-04-02 11:23:45+0530 [SSHService ssh-userauth on HoneyPotTransport,1,200.200.200.3] starting service ssh-connection
+2017-04-02 11:23:45+0530 [SSHService ssh-connection on HoneyPotTransport,1,200.200.200.3] got channel session request
+2017-04-02 11:23:45+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.3] channel open
+2017-04-02 11:23:45+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.3] unhandled request for auth-agent-req@openssh.com
+2017-04-02 11:23:45+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.3] pty request: linux (24, 80, 640, 480)
+2017-04-02 11:23:45+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.3] Terminal size: 24 80
+2017-04-02 11:23:45+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.3] getting shell
+2017-04-02 11:23:45+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.3] Opening TTY log: log/tty/20170402-112345-5694.log
+2017-04-02 11:23:46+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.3] /etc/motd resolved into /etc/motd
+2017-04-02 11:24:13+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.3] CMD: wget wizard.io/a.txt
+2017-04-02 11:24:13+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.3] Command found: wget wizard.io/a.txt
+2017-04-02 11:24:13+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,200.200.200.3] Starting factory <HTTPProgressDownloader: http://wizard.io/a.txt>
+2017-04-02 11:24:16+0530 [HTTPPageDownloader,client] Saving URL (http://wizard.io/a.txt) to dl/20170402112413_http___wizard_io_a_txt
+2017-04-02 11:24:27+0530 [HTTPPageDownloader,client] Updating realfile to dl/20170402112413_http___wizard_io_a_txt
+2017-04-02 11:24:27+0530 [HTTPPageDownloader,client] Stopping factory <HTTPProgressDownloader: /a.txt>
+2017-04-02 11:49:21+0530 [SSHService ssh-connection on HoneyPotTransport,1,200.200.200.3] got global keepalive@jcraft.com request
+2017-04-02 12:30:23+0530 [HoneyPotTransport,1,200.200.200.3] connection lost
