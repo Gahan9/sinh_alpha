@@ -7,17 +7,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Honeypot</title>
-
+<title>S.I.N.H.</title>
 <!-- Core CSS - Include with every page -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-toggle.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/toastr.css' %}" >
     <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-datepicker.css' %}" />
-{#    <link rel="stylesheet" href="{% static 'django_tables2/themes/paleblue/css/screen.css' %}" />#}
-{#    <link href="{% static 'css/table.css' %}" rel="stylesheet">#}
 
+    {% block extra_css %}
+    {% endblock %}
 </head>
 
 <body>
@@ -32,12 +31,8 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hey, {{ user.username }} <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="/auth">Authentication Table</a></li>
-                    <li><a href="/input">Input Table</a></li>
-                    <li><a href="/client">Client Table</a></li>
-                    <li><a href="/sensor">Sensor Table</a></li>
-                    <li><a href="/session">Session Table</a></li>
-                    <li><a href="/downloads">Downloads Table</a></li>
+                      <li><a href="{% static 'core_log.log' %}">Core text log </a> </li>
+                      <li><a href="{% static 'refined_log.log' %}">Refined text log </a> </li>
                     <li role="separator" class="divider"></li>
                     <li><a class="navbar-link" href="/logout">Logout</a></li>
                   </ul>
@@ -52,32 +47,14 @@
 
 {% block javascript %}
 <!-- Core Scripts - Include with every page -->
-
     <script type='text/javascript' src="{% static 'js/jquery.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/bootstrap-toggle.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/toastr.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/bootstrap-datepicker.js' %}"></script>
-
-{#    <script type="text/javascript" src= "{% static 'js/sortTable.js' %}"></script>#}
-
 {% endblock %}
 
 {% block extrajs %}
-    <script>
-        $(document).ready(function () {
-            $("td").hover(
-              function () {
-                $(this).addClass("scroll");
-
-              },
-              function () {
-                $(this).removeClass("scroll");
-              }
-            );
-        });
-
-    </script>
 {% endblock %}
 
 </body>
