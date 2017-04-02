@@ -6,6 +6,7 @@ from django.db import models
 
 @python_2_unicode_compatible
 class Sessions(models.Model):
+    """ MySql table which stores session start and end """
     id = models.CharField(primary_key=True, max_length=32)
     starttime = models.DateTimeField()
     endtime = models.DateTimeField(blank=True, null=True)
@@ -18,16 +19,25 @@ class Sessions(models.Model):
         return self.ip
 
     class Meta:
-        db_table = 'sessions'
+        db_table = 'sessions'  # override table name honey.sessions to sessions in MySql Database
+
+
+class SessionsTable(tables.Table):
+    """ Created Table to show in template tag """
+    class Meta:
+        model = Sessions
+        attrs = {'class': 'table table-hover'}  # adds attribute class to load bootstrap3 CSS
 
 
 class Auth(models.Model):
+    """ MySql table which stores credentials through which attacker got access """
     session = models.CharField(max_length=32)
     success = models.BooleanField()
     username = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
     timestamp = models.DateTimeField()
 
+    # property defined to retrive Ip address of attacker stored in sessions' table
     @property
     def get_ip_from_session(self):
         obj_session = Sessions.objects.filter(id=Auth.objects.all()[0].session)
@@ -37,17 +47,32 @@ class Auth(models.Model):
         return self.username
 
     class Meta:
-        db_table = 'auth'
+        db_table = 'auth'  # override table name honey.auth to auth in MySql Database
+
+
+class AuthTable(tables.Table):
+    """ Created Table to show in template tag """
+    class Meta:
+        model = Auth
+        attrs = {'class': 'table table-hover'}  # adds attribute class to load bootstrap3 CSS
 
 
 class Clients(models.Model):
+    """ MySql table - stores attacker's SSH client version """
     version = models.CharField(max_length=50)
 
     def __unicode__(self):
         return self.version
 
     class Meta:
-        db_table = 'clients'
+        db_table = 'clients'   # override table name honey.clients to clients in MySql Database
+
+
+class ClientsTable(tables.Table):
+    """ Created Table to show in template tag """
+    class Meta:
+        model = Clients
+        attrs = {'class': 'table table-hover'}  # adds attribute class to load bootstrap3 CSS
 
 
 class Downloads(models.Model):
@@ -57,10 +82,18 @@ class Downloads(models.Model):
     outfile = models.TextField()
 
     class Meta:
-        db_table = 'downloads'
+        db_table = 'downloads'   # override table name
+
+
+class DownloadsTable(tables.Table):
+    """ Created Table to show in template tag """
+    class Meta:
+        model = Downloads
+        attrs = {'class': 'table table-hover'}  # adds attribute class to load bootstrap3 CSS
 
 
 class Input(models.Model):
+    """ MySql table stores every executed/non-executed commands from attacker """
     session = models.CharField(max_length=32)
     timestamp = models.DateTimeField()
     realm = models.CharField(max_length=50, blank=True, null=True)
@@ -68,26 +101,44 @@ class Input(models.Model):
     input = models.TextField()
 
     class Meta:
-        db_table = 'input'
+        db_table = 'input'   # override table name
 
 
 class InputTable(tables.Table):
+    """ Created Table to show in template tag """
     class Meta:
         model = Input
         exclude = ['realm']
-        attrs = {'class': 'table table-hover'}
+        attrs = {'class': 'table table-hover'}  # adds attribute class to load bootstrap3 CSS
 
 
 class Sensors(models.Model):
+    """ Honeypot sensor table (Own IP) """
     ip = models.CharField(max_length=15)
 
     class Meta:
-        db_table = 'sensors'
+        db_table = 'sensors'   # override table name
+
+
+class SensorsTable(tables.Table):
+    """ Created Table to show in template tag """
+    class Meta:
+        model = Sensors
+        attrs = {'class': 'table table-hover'}  # adds attribute class to load bootstrap3 CSS
 
 
 class Ttylog(models.Model):
+    """ Binary log table """
     session = models.CharField(max_length=32)
     ttylog = models.TextField()
 
     class Meta:
-        db_table = 'ttylog'
+        db_table = 'ttylog'   # override table name
+
+
+class TtylogTable(tables.Table):
+    """ Created Table to show in template tag """
+    class Meta:
+        model = Ttylog
+        attrs = {'class': 'table table-hover'}  # adds attribute class to load bootstrap3 CSS
+
