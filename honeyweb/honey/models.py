@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 from django.utils.encoding import python_2_unicode_compatible
-
+import django_tables2 as tables
 from django.db import models
 
 
@@ -193,15 +193,19 @@ class Input(models.Model):
     input = models.TextField()
 
     class Meta:
-    #     # managed = False
         db_table = 'input'
+
+
+class InputTable(tables.Table):
+    class Meta:
+        model = Input
+        attrs = {'class': 'table table-hover'}
 
 
 class Sensors(models.Model):
     ip = models.CharField(max_length=15)
 
     class Meta:
-    #     # managed = False
         db_table = 'sensors'
 
 
@@ -210,5 +214,4 @@ class Ttylog(models.Model):
     ttylog = models.TextField()
 
     class Meta:
-    #     # managed = False
         db_table = 'ttylog'
