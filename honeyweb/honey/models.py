@@ -4,7 +4,6 @@ import django_tables2 as tables
 from django.db import models
 
 
-@python_2_unicode_compatible
 class Sessions(models.Model):
     """ MySql table which stores session start and end """
     id = models.CharField(primary_key=True, max_length=32)
@@ -24,8 +23,15 @@ class Sessions(models.Model):
 
 class SessionsTable(tables.Table):
     """ Created Table to show in template tag """
+    starttime = tables.Column('Session Started at')
+    endtime = tables.Column('Session Ended at')
+    sensor = tables.Column('Sensor ID')
+    ip = tables.Column('IP Address')
+    client = tables.Column('Client ID')
+
     class Meta:
         model = Sessions
+        exclude = ['termsize']
         attrs = {'class': 'table table-hover'}  # adds attribute class to load bootstrap3 CSS
 
 
@@ -52,6 +58,10 @@ class Auth(models.Model):
 
 class AuthTable(tables.Table):
     """ Created Table to show in template tag """
+    get_ip_from_session = tables.Column('IP address')
+    success = tables.BooleanColumn('Status', yesno='Access Granted, Access Denied')
+    timestamp = tables.Column('Timestamp')
+
     class Meta:
         model = Auth
         attrs = {'class': 'table table-hover'}  # adds attribute class to load bootstrap3 CSS
@@ -87,6 +97,10 @@ class Downloads(models.Model):
 
 class DownloadsTable(tables.Table):
     """ Created Table to show in template tag """
+    url = tables.Column('URL')
+    timestamp = tables.Column('Timestamp')
+    outfile = tables.Column('File path')
+
     class Meta:
         model = Downloads
         attrs = {'class': 'table table-hover'}  # adds attribute class to load bootstrap3 CSS
@@ -106,6 +120,9 @@ class Input(models.Model):
 
 class InputTable(tables.Table):
     """ Created Table to show in template tag """
+    success = tables.BooleanColumn('Command Executed?', yesno='Yes,No')
+    timestamp = tables.Column('Timestamp')
+
     class Meta:
         model = Input
         exclude = ['realm']
@@ -122,6 +139,8 @@ class Sensors(models.Model):
 
 class SensorsTable(tables.Table):
     """ Created Table to show in template tag """
+    ip = tables.Column("IP Address of  Honeypot  Server")
+
     class Meta:
         model = Sensors
         attrs = {'class': 'table table-hover'}  # adds attribute class to load bootstrap3 CSS
