@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'honey'
+    'honey',
+    'django_tables2',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -141,6 +142,8 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 PASSWORD_RESET_TIMEOUT_DAYS = 1
 # AUTH_PROFILE_MODULE = 'accounts.UserProfile'
 
+# date time format for django_tables2
+# SHORT_DATE_TIME = '%Y-%m-%d %H:%M:%S'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
