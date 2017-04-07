@@ -5,8 +5,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.urls import reverse_lazy
 from django.views import View
-from django.views.generic import ListView
-from django.views.generic import TemplateView
+from django.views.generic import ListView, TemplateView, DetailView
+from django.views.generic.detail import SingleObjectMixin
+
 from django_tables2 import MultiTableMixin
 from django_tables2 import RequestConfig
 from django_tables2 import SingleTableMixin
@@ -40,8 +41,14 @@ class AuthPageView(LoginRequiredMixin, MultiTableMixin, TemplateView):
     template_name = 'table_show.html'
     tables = [AuthTable(Auth.objects.all())]
     table_pagination = {
-        'per_page': 15
+        'per_page': 10
     }
+
+    # def get_context_data(self, **kwargs):
+    #     kwargs['form'] = self.get_form()
+    #     context = {'ip': 'Add New Book'}
+    #     context.update(kwargs)
+    #     return super(SingleObjectMixin, self).get_context_data(**context)
 
 
 class ClientPageView(LoginRequiredMixin, MultiTableMixin, TemplateView):
