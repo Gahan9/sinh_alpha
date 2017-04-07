@@ -148,12 +148,11 @@ PASSWORD_RESET_TIMEOUT_DAYS = 1
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "media")
+MEDIA_ROOT = [os.path.join(BASE_DIR, "static"), os.path.join(BASE_DIR, "media")]
 
+print(MEDIA_ROOT)
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 STATIC_ROOT = '/assets/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
-
-
