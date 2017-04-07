@@ -58,7 +58,7 @@ class Auth(models.Model):
 
 class AuthTable(tables.Table):
     """ Created Table to show in template tag """
-    get_ip_from_session = tables.Column('IP address')
+    # get_ip_from_session = tables.Column('IP address')
     success = tables.BooleanColumn('Status', yesno='Access Granted, Access Denied')
     timestamp = tables.Column('Timestamp')
 
