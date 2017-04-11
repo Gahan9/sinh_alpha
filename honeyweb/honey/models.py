@@ -2,6 +2,10 @@ from __future__ import unicode_literals
 from django.utils.encoding import python_2_unicode_compatible
 import django_tables2 as tables
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from honey import tasks
+from honey.singnals import state_audit_signal
 
 
 class Sessions(models.Model):
@@ -42,6 +46,10 @@ class Auth(models.Model):
     username = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
     timestamp = models.DateTimeField()
+
+    @receiver(post_save, sender=tasks)
+    def queue_task(sender, instance, created, **kwargs):
+        tasks.foo.delay(object=instance)
 
     # property defined to retrive Ip address of attacker stored in sessions' table
     @property
