@@ -1,3 +1,6 @@
 *.pyc
 .idea/
+SINH.pid
+venv.sh
 !.gitignore
+.gitignore
