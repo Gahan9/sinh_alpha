@@ -37,12 +37,13 @@ fi
 toilet -f bigmono9 -F gay -F border:gay S.I.N.H.
 #echo "--------------- S.I.N.H v0.1---------------"
 toilet -f slant "S.I.N.H v0.1" | boxes -d whirly | lolcat
-echo "Initializing ...." | cowsay -f tux | lolcat
+#echo "Initializing ...." | cowsay -f tux | lolcat
+echo "Initializing ...."
 
-echo "Forwarding port...." | cowsay -f tux | lolcat
+echo "Forwarding port...."
 sudo iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-port 2222
 twistd -y sinh.tac -l log/sinh.log --pidfile SINH.pid
-echo "Started Monitoring your Network...." cowsay -f tux | lolcat
+echo "Started Monitoring Service" | cowsay -f tux | lolcat
 
 #toilet -f bigmono9 -F metal S.I.N.H. UI
 toilet -f slant "S.I.N.H UI" | boxes -d columns | lolcat
