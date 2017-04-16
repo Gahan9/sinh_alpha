@@ -4616,3 +4616,647 @@
 2017-04-11 08:21:51+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
 2017-04-11 08:21:51+0530 [-] HoneyPotSSHFactory starting on 2222
 2017-04-11 08:21:51+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f73e29783f8>
+2017-04-11 08:37:13+0530 [-] Received SIGTERM, shutting down.
+2017-04-11 08:37:13+0530 [-] (TCP Port 2222 Closed)
+2017-04-11 08:37:13+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f73e29783f8>
+2017-04-11 08:37:13+0530 [-] Main loop terminated.
+2017-04-12 10:01:11+0530 [-] Log opened.
+2017-04-12 10:01:11+0530 [-] twistd 12.0.0 (/usr/bin/python 2.7.12) starting up.
+2017-04-12 10:01:11+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
+2017-04-12 10:01:11+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-04-12 10:01:11+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f2e43a233f8>
+2017-04-12 10:06:04+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:58842 (192.168.43.156:2222) [session: 0]
+2017-04-12 10:06:04+0530 [HoneyPotTransport,0,192.168.43.200] Remote SSH version: SSH-2.0-OpenSSH_7.4p1 Debian-5
+2017-04-12 10:06:04+0530 [HoneyPotTransport,0,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:06:04+0530 [HoneyPotTransport,0,192.168.43.200] outgoing: aes128-ctr hmac-sha1 none
+2017-04-12 10:06:04+0530 [HoneyPotTransport,0,192.168.43.200] incoming: aes128-ctr hmac-sha1 none
+2017-04-12 10:06:09+0530 [HoneyPotTransport,0,192.168.43.200] NEW KEYS
+2017-04-12 10:06:09+0530 [HoneyPotTransport,0,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:06:09+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.43.200] admin trying auth none
+2017-04-12 10:06:16+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.43.200] admin trying auth password
+2017-04-12 10:06:16+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.43.200] login attempt [admin/admin] succeeded
+2017-04-12 10:06:16+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.43.200] admin authenticated with password
+2017-04-12 10:06:16+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.43.200] starting service ssh-connection
+2017-04-12 10:06:16+0530 [SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] got channel session request
+2017-04-12 10:06:16+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] channel open
+2017-04-12 10:06:16+0530 [SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] got global no-more-sessions@openssh.com request
+2017-04-12 10:06:16+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] pty request: xterm-256color (24, 80, 0, 0)
+2017-04-12 10:06:16+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Terminal size: 24 80
+2017-04-12 10:06:16+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] request_env: '\x00\x00\x00\x04LANG\x00\x00\x00\x0ben_US.UTF-8'
+2017-04-12 10:06:16+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] getting shell
+2017-04-12 10:06:16+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Opening TTY log: log/tty/20170412-100616-5188.log
+2017-04-12 10:06:16+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] /etc/motd resolved into /etc/motd
+2017-04-12 10:06:31+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: ls
+2017-04-12 10:06:31+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: ls
+2017-04-12 10:06:35+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: cd /
+2017-04-12 10:06:35+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: cd /
+2017-04-12 10:40:28+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:43397 (192.168.43.156:2222) [session: 1]
+2017-04-12 10:40:28+0530 [HoneyPotTransport,1,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:28+0530 [HoneyPotTransport,1,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:28+0530 [HoneyPotTransport,1,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:28+0530 [HoneyPotTransport,1,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:28+0530 [HoneyPotTransport,1,192.168.43.200] NEW KEYS
+2017-04-12 10:40:28+0530 [HoneyPotTransport,1,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:28+0530 [SSHService ssh-userauth on HoneyPotTransport,1,192.168.43.200] root trying auth password
+2017-04-12 10:40:28+0530 [SSHService ssh-userauth on HoneyPotTransport,1,192.168.43.200] login attempt [root/toor] failed
+2017-04-12 10:40:29+0530 [-] root failed auth password
+2017-04-12 10:40:29+0530 [-] unauthorized login: 
+2017-04-12 10:40:30+0530 [HoneyPotTransport,1,192.168.43.200] connection lost
+2017-04-12 10:40:30+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:34349 (192.168.43.156:2222) [session: 2]
+2017-04-12 10:40:30+0530 [HoneyPotTransport,2,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:30+0530 [HoneyPotTransport,2,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:30+0530 [HoneyPotTransport,2,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:30+0530 [HoneyPotTransport,2,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:30+0530 [HoneyPotTransport,2,192.168.43.200] NEW KEYS
+2017-04-12 10:40:30+0530 [HoneyPotTransport,2,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:30+0530 [SSHService ssh-userauth on HoneyPotTransport,2,192.168.43.200] jarvis trying auth password
+2017-04-12 10:40:30+0530 [SSHService ssh-userauth on HoneyPotTransport,2,192.168.43.200] login attempt [jarvis/root] failed
+2017-04-12 10:40:31+0530 [-] jarvis failed auth password
+2017-04-12 10:40:31+0530 [-] unauthorized login: 
+2017-04-12 10:40:31+0530 [HoneyPotTransport,2,192.168.43.200] connection lost
+2017-04-12 10:40:31+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:37793 (192.168.43.156:2222) [session: 3]
+2017-04-12 10:40:31+0530 [HoneyPotTransport,3,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:31+0530 [HoneyPotTransport,3,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:31+0530 [HoneyPotTransport,3,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:31+0530 [HoneyPotTransport,3,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:31+0530 [HoneyPotTransport,3,192.168.43.200] NEW KEYS
+2017-04-12 10:40:31+0530 [HoneyPotTransport,3,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:31+0530 [SSHService ssh-userauth on HoneyPotTransport,3,192.168.43.200] root trying auth password
+2017-04-12 10:40:31+0530 [SSHService ssh-userauth on HoneyPotTransport,3,192.168.43.200] login attempt [root/root@123] failed
+2017-04-12 10:40:32+0530 [-] root failed auth password
+2017-04-12 10:40:32+0530 [-] unauthorized login: 
+2017-04-12 10:40:33+0530 [HoneyPotTransport,3,192.168.43.200] connection lost
+2017-04-12 10:40:33+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:39691 (192.168.43.156:2222) [session: 4]
+2017-04-12 10:40:33+0530 [HoneyPotTransport,4,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:33+0530 [HoneyPotTransport,4,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:33+0530 [HoneyPotTransport,4,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:33+0530 [HoneyPotTransport,4,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:33+0530 [HoneyPotTransport,4,192.168.43.200] NEW KEYS
+2017-04-12 10:40:33+0530 [HoneyPotTransport,4,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:33+0530 [SSHService ssh-userauth on HoneyPotTransport,4,192.168.43.200] root trying auth password
+2017-04-12 10:40:33+0530 [SSHService ssh-userauth on HoneyPotTransport,4,192.168.43.200] login attempt [root/] failed
+2017-04-12 10:40:34+0530 [-] root failed auth password
+2017-04-12 10:40:34+0530 [-] unauthorized login: 
+2017-04-12 10:40:34+0530 [HoneyPotTransport,4,192.168.43.200] connection lost
+2017-04-12 10:40:34+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:42713 (192.168.43.156:2222) [session: 5]
+2017-04-12 10:40:34+0530 [HoneyPotTransport,5,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:34+0530 [HoneyPotTransport,5,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:34+0530 [HoneyPotTransport,5,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:34+0530 [HoneyPotTransport,5,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:34+0530 [HoneyPotTransport,5,192.168.43.200] NEW KEYS
+2017-04-12 10:40:34+0530 [HoneyPotTransport,5,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:34+0530 [SSHService ssh-userauth on HoneyPotTransport,5,192.168.43.200] root trying auth password
+2017-04-12 10:40:34+0530 [SSHService ssh-userauth on HoneyPotTransport,5,192.168.43.200] login attempt [root/!root] failed
+2017-04-12 10:40:35+0530 [-] root failed auth password
+2017-04-12 10:40:35+0530 [-] unauthorized login: 
+2017-04-12 10:40:36+0530 [HoneyPotTransport,5,192.168.43.200] connection lost
+2017-04-12 10:40:36+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:41487 (192.168.43.156:2222) [session: 6]
+2017-04-12 10:40:36+0530 [HoneyPotTransport,6,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:36+0530 [HoneyPotTransport,6,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:36+0530 [HoneyPotTransport,6,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:36+0530 [HoneyPotTransport,6,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:36+0530 [HoneyPotTransport,6,192.168.43.200] NEW KEYS
+2017-04-12 10:40:36+0530 [HoneyPotTransport,6,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:36+0530 [SSHService ssh-userauth on HoneyPotTransport,6,192.168.43.200] root trying auth password
+2017-04-12 10:40:36+0530 [SSHService ssh-userauth on HoneyPotTransport,6,192.168.43.200] login attempt [root/Cisco] failed
+2017-04-12 10:40:37+0530 [-] root failed auth password
+2017-04-12 10:40:37+0530 [-] unauthorized login: 
+2017-04-12 10:40:37+0530 [HoneyPotTransport,6,192.168.43.200] connection lost
+2017-04-12 10:40:37+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:39005 (192.168.43.156:2222) [session: 7]
+2017-04-12 10:40:37+0530 [HoneyPotTransport,7,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:37+0530 [HoneyPotTransport,7,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:37+0530 [HoneyPotTransport,7,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:37+0530 [HoneyPotTransport,7,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:37+0530 [HoneyPotTransport,7,192.168.43.200] NEW KEYS
+2017-04-12 10:40:37+0530 [HoneyPotTransport,7,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:37+0530 [SSHService ssh-userauth on HoneyPotTransport,7,192.168.43.200] root trying auth password
+2017-04-12 10:40:37+0530 [SSHService ssh-userauth on HoneyPotTransport,7,192.168.43.200] login attempt [root/NeXT] failed
+2017-04-12 10:40:38+0530 [-] root failed auth password
+2017-04-12 10:40:38+0530 [-] unauthorized login: 
+2017-04-12 10:40:38+0530 [HoneyPotTransport,7,192.168.43.200] connection lost
+2017-04-12 10:40:38+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:36853 (192.168.43.156:2222) [session: 8]
+2017-04-12 10:40:38+0530 [HoneyPotTransport,8,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:38+0530 [HoneyPotTransport,8,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:38+0530 [HoneyPotTransport,8,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:38+0530 [HoneyPotTransport,8,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:38+0530 [HoneyPotTransport,8,192.168.43.200] NEW KEYS
+2017-04-12 10:40:38+0530 [HoneyPotTransport,8,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:38+0530 [SSHService ssh-userauth on HoneyPotTransport,8,192.168.43.200] root trying auth password
+2017-04-12 10:40:38+0530 [SSHService ssh-userauth on HoneyPotTransport,8,192.168.43.200] login attempt [root/QNX] failed
+2017-04-12 10:40:39+0530 [-] root failed auth password
+2017-04-12 10:40:39+0530 [-] unauthorized login: 
+2017-04-12 10:40:39+0530 [HoneyPotTransport,8,192.168.43.200] connection lost
+2017-04-12 10:40:39+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:43421 (192.168.43.156:2222) [session: 9]
+2017-04-12 10:40:39+0530 [HoneyPotTransport,9,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:39+0530 [HoneyPotTransport,9,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:39+0530 [HoneyPotTransport,9,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:39+0530 [HoneyPotTransport,9,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:39+0530 [HoneyPotTransport,9,192.168.43.200] NEW KEYS
+2017-04-12 10:40:39+0530 [HoneyPotTransport,9,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:39+0530 [SSHService ssh-userauth on HoneyPotTransport,9,192.168.43.200] root trying auth password
+2017-04-12 10:40:39+0530 [SSHService ssh-userauth on HoneyPotTransport,9,192.168.43.200] login attempt [root/admin] failed
+2017-04-12 10:40:40+0530 [-] root failed auth password
+2017-04-12 10:40:40+0530 [-] unauthorized login: 
+2017-04-12 10:40:40+0530 [HoneyPotTransport,9,192.168.43.200] connection lost
+2017-04-12 10:40:40+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:38057 (192.168.43.156:2222) [session: 10]
+2017-04-12 10:40:40+0530 [HoneyPotTransport,10,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:40+0530 [HoneyPotTransport,10,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:40+0530 [HoneyPotTransport,10,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:40+0530 [HoneyPotTransport,10,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:41+0530 [HoneyPotTransport,10,192.168.43.200] NEW KEYS
+2017-04-12 10:40:41+0530 [HoneyPotTransport,10,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:41+0530 [SSHService ssh-userauth on HoneyPotTransport,10,192.168.43.200] root trying auth password
+2017-04-12 10:40:41+0530 [SSHService ssh-userauth on HoneyPotTransport,10,192.168.43.200] login attempt [root/attack] failed
+2017-04-12 10:40:42+0530 [-] root failed auth password
+2017-04-12 10:40:42+0530 [-] unauthorized login: 
+2017-04-12 10:40:42+0530 [HoneyPotTransport,10,192.168.43.200] connection lost
+2017-04-12 10:40:42+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:38327 (192.168.43.156:2222) [session: 11]
+2017-04-12 10:40:42+0530 [HoneyPotTransport,11,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:42+0530 [HoneyPotTransport,11,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:42+0530 [HoneyPotTransport,11,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:42+0530 [HoneyPotTransport,11,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:42+0530 [HoneyPotTransport,11,192.168.43.200] NEW KEYS
+2017-04-12 10:40:42+0530 [HoneyPotTransport,11,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:42+0530 [SSHService ssh-userauth on HoneyPotTransport,11,192.168.43.200] root trying auth password
+2017-04-12 10:40:42+0530 [SSHService ssh-userauth on HoneyPotTransport,11,192.168.43.200] login attempt [root/ax400] failed
+2017-04-12 10:40:43+0530 [-] root failed auth password
+2017-04-12 10:40:43+0530 [-] unauthorized login: 
+2017-04-12 10:40:43+0530 [HoneyPotTransport,11,192.168.43.200] connection lost
+2017-04-12 10:40:43+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:41187 (192.168.43.156:2222) [session: 12]
+2017-04-12 10:40:43+0530 [HoneyPotTransport,12,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:43+0530 [HoneyPotTransport,12,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:43+0530 [HoneyPotTransport,12,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:43+0530 [HoneyPotTransport,12,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:43+0530 [HoneyPotTransport,12,192.168.43.200] NEW KEYS
+2017-04-12 10:40:43+0530 [HoneyPotTransport,12,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:43+0530 [SSHService ssh-userauth on HoneyPotTransport,12,192.168.43.200] root trying auth password
+2017-04-12 10:40:43+0530 [SSHService ssh-userauth on HoneyPotTransport,12,192.168.43.200] login attempt [root/bagabu] failed
+2017-04-12 10:40:44+0530 [-] root failed auth password
+2017-04-12 10:40:44+0530 [-] unauthorized login: 
+2017-04-12 10:40:44+0530 [HoneyPotTransport,12,192.168.43.200] connection lost
+2017-04-12 10:40:44+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:45071 (192.168.43.156:2222) [session: 13]
+2017-04-12 10:40:44+0530 [HoneyPotTransport,13,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:44+0530 [HoneyPotTransport,13,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:44+0530 [HoneyPotTransport,13,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:44+0530 [HoneyPotTransport,13,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:44+0530 [HoneyPotTransport,13,192.168.43.200] NEW KEYS
+2017-04-12 10:40:44+0530 [HoneyPotTransport,13,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:44+0530 [SSHService ssh-userauth on HoneyPotTransport,13,192.168.43.200] root trying auth password
+2017-04-12 10:40:44+0530 [SSHService ssh-userauth on HoneyPotTransport,13,192.168.43.200] login attempt [root/blablabla] failed
+2017-04-12 10:40:45+0530 [-] root failed auth password
+2017-04-12 10:40:45+0530 [-] unauthorized login: 
+2017-04-12 10:40:45+0530 [HoneyPotTransport,13,192.168.43.200] connection lost
+2017-04-12 10:40:45+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:38627 (192.168.43.156:2222) [session: 14]
+2017-04-12 10:40:45+0530 [HoneyPotTransport,14,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:45+0530 [HoneyPotTransport,14,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:45+0530 [HoneyPotTransport,14,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:45+0530 [HoneyPotTransport,14,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:45+0530 [HoneyPotTransport,14,192.168.43.200] NEW KEYS
+2017-04-12 10:40:46+0530 [HoneyPotTransport,14,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:46+0530 [SSHService ssh-userauth on HoneyPotTransport,14,192.168.43.200] admin trying auth password
+2017-04-12 10:40:46+0530 [SSHService ssh-userauth on HoneyPotTransport,14,192.168.43.200] login attempt [admin/1234] failed
+2017-04-12 10:40:47+0530 [-] admin failed auth password
+2017-04-12 10:40:47+0530 [-] unauthorized login: 
+2017-04-12 10:40:47+0530 [HoneyPotTransport,14,192.168.43.200] connection lost
+2017-04-12 10:40:47+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:37879 (192.168.43.156:2222) [session: 15]
+2017-04-12 10:40:47+0530 [HoneyPotTransport,15,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:47+0530 [HoneyPotTransport,15,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:47+0530 [HoneyPotTransport,15,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:47+0530 [HoneyPotTransport,15,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:47+0530 [HoneyPotTransport,15,192.168.43.200] NEW KEYS
+2017-04-12 10:40:47+0530 [HoneyPotTransport,15,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:47+0530 [SSHService ssh-userauth on HoneyPotTransport,15,192.168.43.200] admin trying auth password
+2017-04-12 10:40:47+0530 [SSHService ssh-userauth on HoneyPotTransport,15,192.168.43.200] login attempt [admin/12345] failed
+2017-04-12 10:40:48+0530 [-] admin failed auth password
+2017-04-12 10:40:48+0530 [-] unauthorized login: 
+2017-04-12 10:40:48+0530 [HoneyPotTransport,15,192.168.43.200] connection lost
+2017-04-12 10:40:48+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:46051 (192.168.43.156:2222) [session: 16]
+2017-04-12 10:40:48+0530 [HoneyPotTransport,16,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:48+0530 [HoneyPotTransport,16,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:48+0530 [HoneyPotTransport,16,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:48+0530 [HoneyPotTransport,16,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:48+0530 [HoneyPotTransport,16,192.168.43.200] NEW KEYS
+2017-04-12 10:40:48+0530 [HoneyPotTransport,16,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:48+0530 [SSHService ssh-userauth on HoneyPotTransport,16,192.168.43.200] admin trying auth password
+2017-04-12 10:40:48+0530 [SSHService ssh-userauth on HoneyPotTransport,16,192.168.43.200] login attempt [admin/123456] failed
+2017-04-12 10:40:49+0530 [-] admin failed auth password
+2017-04-12 10:40:49+0530 [-] unauthorized login: 
+2017-04-12 10:40:49+0530 [HoneyPotTransport,16,192.168.43.200] connection lost
+2017-04-12 10:40:49+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:45513 (192.168.43.156:2222) [session: 17]
+2017-04-12 10:40:49+0530 [HoneyPotTransport,17,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:49+0530 [HoneyPotTransport,17,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:49+0530 [HoneyPotTransport,17,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:49+0530 [HoneyPotTransport,17,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:50+0530 [HoneyPotTransport,17,192.168.43.200] NEW KEYS
+2017-04-12 10:40:50+0530 [HoneyPotTransport,17,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:50+0530 [SSHService ssh-userauth on HoneyPotTransport,17,192.168.43.200] admin trying auth password
+2017-04-12 10:40:50+0530 [SSHService ssh-userauth on HoneyPotTransport,17,192.168.43.200] login attempt [admin/1234567] failed
+2017-04-12 10:40:51+0530 [-] admin failed auth password
+2017-04-12 10:40:51+0530 [-] unauthorized login: 
+2017-04-12 10:40:51+0530 [HoneyPotTransport,17,192.168.43.200] connection lost
+2017-04-12 10:40:51+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:40873 (192.168.43.156:2222) [session: 18]
+2017-04-12 10:40:51+0530 [HoneyPotTransport,18,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:51+0530 [HoneyPotTransport,18,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:51+0530 [HoneyPotTransport,18,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:51+0530 [HoneyPotTransport,18,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:51+0530 [HoneyPotTransport,18,192.168.43.200] NEW KEYS
+2017-04-12 10:40:51+0530 [HoneyPotTransport,18,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:51+0530 [SSHService ssh-userauth on HoneyPotTransport,18,192.168.43.200] admin trying auth password
+2017-04-12 10:40:51+0530 [SSHService ssh-userauth on HoneyPotTransport,18,192.168.43.200] login attempt [admin/12345678] failed
+2017-04-12 10:40:52+0530 [-] admin failed auth password
+2017-04-12 10:40:52+0530 [-] unauthorized login: 
+2017-04-12 10:40:52+0530 [HoneyPotTransport,18,192.168.43.200] connection lost
+2017-04-12 10:40:52+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:39529 (192.168.43.156:2222) [session: 19]
+2017-04-12 10:40:52+0530 [HoneyPotTransport,19,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:52+0530 [HoneyPotTransport,19,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:52+0530 [HoneyPotTransport,19,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:52+0530 [HoneyPotTransport,19,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:52+0530 [HoneyPotTransport,19,192.168.43.200] NEW KEYS
+2017-04-12 10:40:52+0530 [HoneyPotTransport,19,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:52+0530 [SSHService ssh-userauth on HoneyPotTransport,19,192.168.43.200] admin trying auth password
+2017-04-12 10:40:52+0530 [SSHService ssh-userauth on HoneyPotTransport,19,192.168.43.200] login attempt [admin/123456789] failed
+2017-04-12 10:40:53+0530 [-] admin failed auth password
+2017-04-12 10:40:53+0530 [-] unauthorized login: 
+2017-04-12 10:40:53+0530 [HoneyPotTransport,19,192.168.43.200] connection lost
+2017-04-12 10:40:53+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:44109 (192.168.43.156:2222) [session: 20]
+2017-04-12 10:40:53+0530 [HoneyPotTransport,20,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:53+0530 [HoneyPotTransport,20,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:53+0530 [HoneyPotTransport,20,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:53+0530 [HoneyPotTransport,20,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:53+0530 [HoneyPotTransport,20,192.168.43.200] NEW KEYS
+2017-04-12 10:40:53+0530 [HoneyPotTransport,20,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:53+0530 [SSHService ssh-userauth on HoneyPotTransport,20,192.168.43.200] root trying auth password
+2017-04-12 10:40:53+0530 [SSHService ssh-userauth on HoneyPotTransport,20,192.168.43.200] login attempt [root/root123] failed
+2017-04-12 10:40:54+0530 [-] root failed auth password
+2017-04-12 10:40:54+0530 [-] unauthorized login: 
+2017-04-12 10:40:54+0530 [HoneyPotTransport,20,192.168.43.200] connection lost
+2017-04-12 10:40:55+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:43213 (192.168.43.156:2222) [session: 21]
+2017-04-12 10:40:55+0530 [HoneyPotTransport,21,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:55+0530 [HoneyPotTransport,21,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:55+0530 [HoneyPotTransport,21,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:55+0530 [HoneyPotTransport,21,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:55+0530 [HoneyPotTransport,21,192.168.43.200] NEW KEYS
+2017-04-12 10:40:55+0530 [HoneyPotTransport,21,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:55+0530 [SSHService ssh-userauth on HoneyPotTransport,21,192.168.43.200] admin trying auth password
+2017-04-12 10:40:55+0530 [SSHService ssh-userauth on HoneyPotTransport,21,192.168.43.200] login attempt [admin/admin@123456] failed
+2017-04-12 10:40:56+0530 [-] admin failed auth password
+2017-04-12 10:40:56+0530 [-] unauthorized login: 
+2017-04-12 10:40:56+0530 [HoneyPotTransport,21,192.168.43.200] connection lost
+2017-04-12 10:40:56+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:33063 (192.168.43.156:2222) [session: 22]
+2017-04-12 10:40:56+0530 [HoneyPotTransport,22,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:56+0530 [HoneyPotTransport,22,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:56+0530 [HoneyPotTransport,22,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:56+0530 [HoneyPotTransport,22,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:57+0530 [HoneyPotTransport,22,192.168.43.200] NEW KEYS
+2017-04-12 10:40:57+0530 [HoneyPotTransport,22,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:57+0530 [SSHService ssh-userauth on HoneyPotTransport,22,192.168.43.200] project trying auth password
+2017-04-12 10:40:57+0530 [SSHService ssh-userauth on HoneyPotTransport,22,192.168.43.200] login attempt [project/prj] failed
+2017-04-12 10:40:58+0530 [-] project failed auth password
+2017-04-12 10:40:58+0530 [-] unauthorized login: 
+2017-04-12 10:40:58+0530 [HoneyPotTransport,22,192.168.43.200] connection lost
+2017-04-12 10:40:58+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:43085 (192.168.43.156:2222) [session: 23]
+2017-04-12 10:40:58+0530 [HoneyPotTransport,23,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:40:58+0530 [HoneyPotTransport,23,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:40:58+0530 [HoneyPotTransport,23,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:58+0530 [HoneyPotTransport,23,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:40:58+0530 [HoneyPotTransport,23,192.168.43.200] NEW KEYS
+2017-04-12 10:40:58+0530 [HoneyPotTransport,23,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:40:58+0530 [SSHService ssh-userauth on HoneyPotTransport,23,192.168.43.200] admin trying auth password
+2017-04-12 10:40:58+0530 [SSHService ssh-userauth on HoneyPotTransport,23,192.168.43.200] login attempt [admin/admin] succeeded
+2017-04-12 10:40:58+0530 [SSHService ssh-userauth on HoneyPotTransport,23,192.168.43.200] admin authenticated with password
+2017-04-12 10:40:58+0530 [SSHService ssh-userauth on HoneyPotTransport,23,192.168.43.200] starting service ssh-connection
+2017-04-12 10:40:58+0530 [SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] got channel session request
+2017-04-12 10:40:58+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] channel open
+2017-04-12 10:40:58+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] executing command "id
+	"
+2017-04-12 10:40:58+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] exec command: "id
+2017-04-12 10:40:58+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] "
+2017-04-12 10:40:58+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] Opening TTY log: log/tty/20170412-104058-5972.log
+2017-04-12 10:40:58+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] /etc/motd resolved into /etc/motd
+2017-04-12 10:40:58+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] Running exec command "id
+2017-04-12 10:40:58+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] "
+2017-04-12 10:40:58+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] CMD: id
+2017-04-12 10:40:58+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] 
+2017-04-12 10:40:58+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] Command found: id
+2017-04-12 10:40:58+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] sending close 0
+2017-04-12 10:40:58+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] remote close
+2017-04-12 10:40:58+0530 [SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] got channel session request
+2017-04-12 10:40:58+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] channel open
+2017-04-12 10:40:58+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] executing command "help
+	?
+	
+	
+	"
+2017-04-12 10:40:58+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] exec command: "help
+2017-04-12 10:40:58+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] ?
+2017-04-12 10:40:58+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] 
+2017-04-12 10:40:58+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] 
+2017-04-12 10:40:58+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] "
+2017-04-12 10:40:58+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] Opening TTY log: log/tty/20170412-104058-5142.log
+2017-04-12 10:40:59+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] /etc/motd resolved into /etc/motd
+2017-04-12 10:40:59+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] Running exec command "help
+2017-04-12 10:40:59+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] ?
+2017-04-12 10:40:59+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] 
+2017-04-12 10:40:59+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] 
+2017-04-12 10:40:59+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] "
+2017-04-12 10:40:59+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] CMD: help
+2017-04-12 10:40:59+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] ?
+2017-04-12 10:40:59+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] 
+2017-04-12 10:40:59+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] 
+2017-04-12 10:40:59+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] 
+2017-04-12 10:40:59+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] Command not found: help
+2017-04-12 10:40:59+0530 [SSHChannel session (1) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] ?
+2017-04-12 10:41:03+0530 [SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] got channel session request
+2017-04-12 10:41:03+0530 [SSHChannel session (2) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] channel open
+2017-04-12 10:41:03+0530 [SSHChannel session (2) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] executing command "/bin/sh"
+2017-04-12 10:41:03+0530 [SSHChannel session (2) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] exec command: "/bin/sh"
+2017-04-12 10:41:03+0530 [SSHChannel session (2) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] Opening TTY log: log/tty/20170412-104103-6922.log
+2017-04-12 10:41:03+0530 [SSHChannel session (2) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] /etc/motd resolved into /etc/motd
+2017-04-12 10:41:03+0530 [SSHChannel session (2) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] Running exec command "/bin/sh"
+2017-04-12 10:41:03+0530 [SSHChannel session (2) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] CMD: /bin/sh
+2017-04-12 10:41:03+0530 [SSHChannel session (2) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] Command found: /bin/sh
+2017-04-12 10:41:03+0530 [SSHChannel session (2) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] sending close 2
+2017-04-12 10:41:03+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:44335 (192.168.43.156:2222) [session: 24]
+2017-04-12 10:41:03+0530 [SSHChannel session (2) on SSHService ssh-connection on HoneyPotTransport,23,192.168.43.200] remote close
+2017-04-12 10:41:03+0530 [HoneyPotTransport,24,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:41:03+0530 [HoneyPotTransport,24,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:41:03+0530 [HoneyPotTransport,24,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:41:03+0530 [HoneyPotTransport,24,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:41:03+0530 [HoneyPotTransport,24,192.168.43.200] NEW KEYS
+2017-04-12 10:41:04+0530 [HoneyPotTransport,24,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:41:04+0530 [SSHService ssh-userauth on HoneyPotTransport,24,192.168.43.200] net trying auth password
+2017-04-12 10:41:04+0530 [SSHService ssh-userauth on HoneyPotTransport,24,192.168.43.200] login attempt [net/admin] failed
+2017-04-12 10:41:05+0530 [-] net failed auth password
+2017-04-12 10:41:05+0530 [-] unauthorized login: 
+2017-04-12 10:41:05+0530 [HoneyPotTransport,24,192.168.43.200] connection lost
+2017-04-12 10:41:05+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:43215 (192.168.43.156:2222) [session: 25]
+2017-04-12 10:41:05+0530 [HoneyPotTransport,25,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:41:05+0530 [HoneyPotTransport,25,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:41:05+0530 [HoneyPotTransport,25,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:41:05+0530 [HoneyPotTransport,25,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:41:05+0530 [HoneyPotTransport,25,192.168.43.200] NEW KEYS
+2017-04-12 10:41:05+0530 [HoneyPotTransport,25,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:41:05+0530 [SSHService ssh-userauth on HoneyPotTransport,25,192.168.43.200] network trying auth password
+2017-04-12 10:41:05+0530 [SSHService ssh-userauth on HoneyPotTransport,25,192.168.43.200] login attempt [network/manager] failed
+2017-04-12 10:41:06+0530 [-] network failed auth password
+2017-04-12 10:41:06+0530 [-] unauthorized login: 
+2017-04-12 10:41:06+0530 [HoneyPotTransport,25,192.168.43.200] connection lost
+2017-04-12 10:41:06+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:39695 (192.168.43.156:2222) [session: 26]
+2017-04-12 10:41:06+0530 [HoneyPotTransport,26,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:41:06+0530 [HoneyPotTransport,26,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:41:06+0530 [HoneyPotTransport,26,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:41:06+0530 [HoneyPotTransport,26,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:41:06+0530 [HoneyPotTransport,26,192.168.43.200] NEW KEYS
+2017-04-12 10:41:06+0530 [HoneyPotTransport,26,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:41:06+0530 [SSHService ssh-userauth on HoneyPotTransport,26,192.168.43.200] fun trying auth password
+2017-04-12 10:41:06+0530 [SSHService ssh-userauth on HoneyPotTransport,26,192.168.43.200] login attempt [fun/manager] failed
+2017-04-12 10:41:07+0530 [-] fun failed auth password
+2017-04-12 10:41:07+0530 [-] unauthorized login: 
+2017-04-12 10:41:07+0530 [HoneyPotTransport,26,192.168.43.200] connection lost
+2017-04-12 10:41:07+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:44593 (192.168.43.156:2222) [session: 27]
+2017-04-12 10:41:07+0530 [HoneyPotTransport,27,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:41:07+0530 [HoneyPotTransport,27,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:41:07+0530 [HoneyPotTransport,27,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:41:07+0530 [HoneyPotTransport,27,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:41:08+0530 [HoneyPotTransport,27,192.168.43.200] NEW KEYS
+2017-04-12 10:41:08+0530 [HoneyPotTransport,27,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:41:08+0530 [SSHService ssh-userauth on HoneyPotTransport,27,192.168.43.200] enterprise trying auth password
+2017-04-12 10:41:08+0530 [SSHService ssh-userauth on HoneyPotTransport,27,192.168.43.200] login attempt [enterprise/secure@1234] failed
+2017-04-12 10:41:09+0530 [-] enterprise failed auth password
+2017-04-12 10:41:09+0530 [-] unauthorized login: 
+2017-04-12 10:41:09+0530 [HoneyPotTransport,27,192.168.43.200] connection lost
+2017-04-12 10:41:09+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:39403 (192.168.43.156:2222) [session: 28]
+2017-04-12 10:41:09+0530 [HoneyPotTransport,28,192.168.43.200] Remote SSH version: SSH-2.0-Ruby/Net::SSH_4.0.1 x86_64-linux-gnu
+2017-04-12 10:41:09+0530 [HoneyPotTransport,28,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 10:41:09+0530 [HoneyPotTransport,28,192.168.43.200] outgoing: aes128-cbc hmac-sha1 none
+2017-04-12 10:41:09+0530 [HoneyPotTransport,28,192.168.43.200] incoming: aes128-cbc hmac-sha1 none
+2017-04-12 10:41:09+0530 [HoneyPotTransport,28,192.168.43.200] NEW KEYS
+2017-04-12 10:41:09+0530 [HoneyPotTransport,28,192.168.43.200] starting service ssh-userauth
+2017-04-12 10:41:09+0530 [SSHService ssh-userauth on HoneyPotTransport,28,192.168.43.200]  trying auth password
+2017-04-12 10:41:09+0530 [SSHService ssh-userauth on HoneyPotTransport,28,192.168.43.200] login attempt [/] failed
+2017-04-12 10:41:10+0530 [-]  failed auth password
+2017-04-12 10:41:10+0530 [-] unauthorized login: 
+2017-04-12 10:41:10+0530 [HoneyPotTransport,28,192.168.43.200] connection lost
+2017-04-12 12:30:41+0530 [-] Received SIGTERM, shutting down.
+2017-04-12 12:30:41+0530 [-] (TCP Port 2222 Closed)
+2017-04-12 12:30:41+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f2e43a233f8>
+2017-04-12 12:30:41+0530 [HoneyPotTransport,23,192.168.43.200] connection lost
+2017-04-12 12:30:41+0530 [HoneyPotTransport,0,192.168.43.200] connection lost
+2017-04-12 12:30:41+0530 [-] Main loop terminated.
+2017-04-12 12:30:41+0530 [-] Server Shut Down.
+2017-04-12 12:30:42+0530 [-] Log opened.
+2017-04-12 12:30:42+0530 [-] twistd 12.0.0 (/usr/bin/python 2.7.12) starting up.
+2017-04-12 12:30:42+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
+2017-04-12 12:30:42+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-04-12 12:30:42+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7fbd441ce3f8>
+2017-04-12 12:31:58+0530 [-] Received SIGTERM, shutting down.
+2017-04-12 12:31:58+0530 [-] (TCP Port 2222 Closed)
+2017-04-12 12:31:58+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7fbd441ce3f8>
+2017-04-12 12:31:58+0530 [-] Main loop terminated.
+2017-04-12 12:31:58+0530 [-] Server Shut Down.
+2017-04-12 12:31:59+0530 [-] Log opened.
+2017-04-12 12:31:59+0530 [-] twistd 12.0.0 (/usr/bin/python 2.7.12) starting up.
+2017-04-12 12:31:59+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
+2017-04-12 12:31:59+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-04-12 12:31:59+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7fb9928783f8>
+2017-04-12 12:32:52+0530 [-] Received SIGTERM, shutting down.
+2017-04-12 12:32:52+0530 [-] (TCP Port 2222 Closed)
+2017-04-12 12:32:52+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7fb9928783f8>
+2017-04-12 12:32:52+0530 [-] Main loop terminated.
+2017-04-12 12:32:52+0530 [-] Server Shut Down.
+2017-04-12 12:32:52+0530 [-] Log opened.
+2017-04-12 12:32:52+0530 [-] twistd 12.0.0 (/usr/bin/python 2.7.12) starting up.
+2017-04-12 12:32:52+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
+2017-04-12 12:32:52+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-04-12 12:32:52+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f6b8e6b63f8>
+2017-04-12 12:57:58+0530 [-] Received SIGTERM, shutting down.
+2017-04-12 12:57:58+0530 [-] (TCP Port 2222 Closed)
+2017-04-12 12:57:58+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f6b8e6b63f8>
+2017-04-12 12:57:58+0530 [-] Main loop terminated.
+2017-04-12 12:57:58+0530 [-] Server Shut Down.
+2017-04-12 12:57:59+0530 [-] Log opened.
+2017-04-12 12:57:59+0530 [-] twistd 12.0.0 (/usr/bin/python 2.7.12) starting up.
+2017-04-12 12:57:59+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
+2017-04-12 12:57:59+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-04-12 12:57:59+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f526468e3f8>
+2017-04-12 12:58:13+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:47338 (192.168.43.156:2222) [session: 0]
+2017-04-12 12:58:13+0530 [HoneyPotTransport,0,192.168.43.200] Remote SSH version: SSH-2.0-OpenSSH_7.4p1 Debian-5
+2017-04-12 12:58:13+0530 [HoneyPotTransport,0,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 12:58:13+0530 [HoneyPotTransport,0,192.168.43.200] outgoing: aes128-ctr hmac-sha1 none
+2017-04-12 12:58:13+0530 [HoneyPotTransport,0,192.168.43.200] incoming: aes128-ctr hmac-sha1 none
+2017-04-12 12:58:15+0530 [HoneyPotTransport,0,192.168.43.200] NEW KEYS
+2017-04-12 12:58:15+0530 [HoneyPotTransport,0,192.168.43.200] starting service ssh-userauth
+2017-04-12 12:58:15+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.43.200] admin trying auth none
+2017-04-12 12:58:18+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.43.200] admin trying auth password
+2017-04-12 12:58:18+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.43.200] login attempt [admin/admin] succeeded
+2017-04-12 12:58:18+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.43.200] admin authenticated with password
+2017-04-12 12:58:18+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.43.200] starting service ssh-connection
+2017-04-12 12:58:18+0530 [SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] got channel session request
+2017-04-12 12:58:18+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] channel open
+2017-04-12 12:58:18+0530 [SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] got global no-more-sessions@openssh.com request
+2017-04-12 12:58:18+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] pty request: xterm-256color (53, 211, 0, 0)
+2017-04-12 12:58:18+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Terminal size: 53 211
+2017-04-12 12:58:18+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] request_env: '\x00\x00\x00\x04LANG\x00\x00\x00\x0ben_US.UTF-8'
+2017-04-12 12:58:18+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] getting shell
+2017-04-12 12:58:18+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Opening TTY log: log/tty/20170412-125818-3986.log
+2017-04-12 12:58:18+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] /etc/motd resolved into /etc/motd
+2017-04-12 12:58:52+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: ifconfig
+2017-04-12 12:58:52+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: ifconfig
+2017-04-12 12:58:52+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Reading txtcmd from "/home/jarvis/honeypot/sinh/txtcmds/sbin/ifconfig"
+2017-04-12 13:00:02+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: top
+2017-04-12 13:00:02+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: top
+2017-04-12 13:00:02+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Reading txtcmd from "/home/jarvis/honeypot/sinh/txtcmds/usr/bin/top"
+2017-04-12 13:09:43+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: just now
+2017-04-12 13:09:43+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command not found: just now
+2017-04-12 13:15:00+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:51516 (192.168.43.156:2222) [session: 1]
+2017-04-12 13:15:00+0530 [HoneyPotTransport,1,192.168.43.200] Remote SSH version: SSH-2.0-OpenSSH_7.4p1 Debian-5
+2017-04-12 13:15:00+0530 [HoneyPotTransport,1,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 13:15:00+0530 [HoneyPotTransport,1,192.168.43.200] outgoing: aes128-ctr hmac-sha1 none
+2017-04-12 13:15:00+0530 [HoneyPotTransport,1,192.168.43.200] incoming: aes128-ctr hmac-sha1 none
+2017-04-12 13:15:02+0530 [HoneyPotTransport,1,192.168.43.200] NEW KEYS
+2017-04-12 13:15:02+0530 [HoneyPotTransport,1,192.168.43.200] starting service ssh-userauth
+2017-04-12 13:15:02+0530 [SSHService ssh-userauth on HoneyPotTransport,1,192.168.43.200] admin trying auth none
+2017-04-12 13:19:52+0530 [-] Received SIGTERM, shutting down.
+2017-04-12 13:19:52+0530 [-] (TCP Port 2222 Closed)
+2017-04-12 13:19:52+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7f526468e3f8>
+2017-04-12 13:19:52+0530 [HoneyPotTransport,1,192.168.43.200] connection lost
+2017-04-12 13:19:52+0530 [HoneyPotTransport,0,192.168.43.200] connection lost
+2017-04-12 13:19:52+0530 [-] Main loop terminated.
+2017-04-12 13:19:52+0530 [-] Server Shut Down.
+2017-04-12 13:19:55+0530 [-] Log opened.
+2017-04-12 13:19:55+0530 [-] twistd 12.0.0 (/usr/bin/python 2.7.12) starting up.
+2017-04-12 13:19:55+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
+2017-04-12 13:19:55+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-04-12 13:19:55+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7fd3eaf1f3f8>
+2017-04-12 13:21:25+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:53474 (192.168.43.156:2222) [session: 0]
+2017-04-12 13:21:25+0530 [HoneyPotTransport,0,192.168.43.200] Remote SSH version: SSH-2.0-OpenSSH_7.4p1 Debian-5
+2017-04-12 13:21:25+0530 [HoneyPotTransport,0,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 13:21:25+0530 [HoneyPotTransport,0,192.168.43.200] outgoing: aes128-ctr hmac-sha1 none
+2017-04-12 13:21:25+0530 [HoneyPotTransport,0,192.168.43.200] incoming: aes128-ctr hmac-sha1 none
+2017-04-12 13:21:28+0530 [HoneyPotTransport,0,192.168.43.200] NEW KEYS
+2017-04-12 13:21:28+0530 [HoneyPotTransport,0,192.168.43.200] starting service ssh-userauth
+2017-04-12 13:21:28+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.43.200] sai trying auth none
+2017-04-12 13:22:03+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.43.200] sai trying auth password
+2017-04-12 13:22:03+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.43.200] login attempt [sai/lopp] failed
+2017-04-12 13:22:04+0530 [-] sai failed auth password
+2017-04-12 13:22:04+0530 [-] unauthorized login: 
+2017-04-12 13:22:37+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.43.200] sai trying auth password
+2017-04-12 13:22:37+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.43.200] login attempt [sai/password] succeeded
+2017-04-12 13:22:37+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.43.200] sai authenticated with password
+2017-04-12 13:22:37+0530 [SSHService ssh-userauth on HoneyPotTransport,0,192.168.43.200] starting service ssh-connection
+2017-04-12 13:22:37+0530 [SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] got channel session request
+2017-04-12 13:22:37+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] channel open
+2017-04-12 13:22:37+0530 [SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] got global no-more-sessions@openssh.com request
+2017-04-12 13:22:37+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] pty request: xterm-256color (53, 211, 0, 0)
+2017-04-12 13:22:37+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Terminal size: 53 211
+2017-04-12 13:22:37+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] request_env: '\x00\x00\x00\x04LANG\x00\x00\x00\x0ben_US.UTF-8'
+2017-04-12 13:22:37+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] getting shell
+2017-04-12 13:22:37+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Opening TTY log: log/tty/20170412-132237-6381.log
+2017-04-12 13:22:37+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] /etc/motd resolved into /etc/motd
+2017-04-12 13:23:54+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: ls
+2017-04-12 13:23:54+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: ls
+2017-04-12 13:23:59+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: cd 
+2017-04-12 13:23:59+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: cd
+2017-04-12 13:24:02+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: cd /
+2017-04-12 13:24:02+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: cd /
+2017-04-12 13:24:07+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: ls
+2017-04-12 13:24:07+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: ls
+2017-04-12 13:24:28+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: rm boot
+2017-04-12 13:24:28+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: rm boot
+2017-04-12 13:24:36+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: rm *
+2017-04-12 13:24:36+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: rm *
+2017-04-12 13:24:43+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: cd home
+2017-04-12 13:24:43+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: cd home
+2017-04-12 13:24:44+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: ls
+2017-04-12 13:24:44+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: ls
+2017-04-12 13:24:49+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: rm ri*
+2017-04-12 13:24:49+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: rm ri*
+2017-04-12 13:24:55+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: cd richard
+2017-04-12 13:24:55+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: cd richard
+2017-04-12 13:24:56+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: ls
+2017-04-12 13:24:56+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: ls
+2017-04-12 13:25:04+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: rm * -rf
+2017-04-12 13:25:04+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: rm * -rf
+2017-04-12 13:25:07+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: cd 
+2017-04-12 13:25:07+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: cd
+2017-04-12 13:25:11+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: cd /
+2017-04-12 13:25:11+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: cd /
+2017-04-12 13:25:14+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: ls
+2017-04-12 13:25:14+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: ls
+2017-04-12 13:25:18+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: rm * -rf
+2017-04-12 13:25:18+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: rm * -rf
+2017-04-12 13:25:19+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: ls
+2017-04-12 13:25:19+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command not found: ls
+2017-04-12 14:19:16+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] CMD: exit
+2017-04-12 14:19:16+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,0,192.168.43.200] Command found: exit
+2017-04-12 14:19:19+0530 [HoneyPotTransport,0,192.168.43.200] Got remote error, code 11
+	reason: disconnected by user
+2017-04-12 14:19:19+0530 [HoneyPotTransport,0,192.168.43.200] connection lost
+2017-04-12 14:21:00+0530 [sinh.core.ssh.HoneyPotSSHFactory] New connection: 192.168.43.200:40192 (192.168.43.156:2222) [session: 1]
+2017-04-12 14:21:00+0530 [HoneyPotTransport,1,192.168.43.200] Remote SSH version: SSH-2.0-OpenSSH_7.4p1 Debian-5
+2017-04-12 14:21:00+0530 [HoneyPotTransport,1,192.168.43.200] kex alg, key alg: diffie-hellman-group-exchange-sha1 ssh-rsa
+2017-04-12 14:21:00+0530 [HoneyPotTransport,1,192.168.43.200] outgoing: aes128-ctr hmac-sha1 none
+2017-04-12 14:21:00+0530 [HoneyPotTransport,1,192.168.43.200] incoming: aes128-ctr hmac-sha1 none
+2017-04-12 14:21:03+0530 [HoneyPotTransport,1,192.168.43.200] NEW KEYS
+2017-04-12 14:21:03+0530 [HoneyPotTransport,1,192.168.43.200] starting service ssh-userauth
+2017-04-12 14:21:03+0530 [SSHService ssh-userauth on HoneyPotTransport,1,192.168.43.200] student trying auth none
+2017-04-12 14:21:17+0530 [SSHService ssh-userauth on HoneyPotTransport,1,192.168.43.200] student trying auth password
+2017-04-12 14:21:17+0530 [SSHService ssh-userauth on HoneyPotTransport,1,192.168.43.200] login attempt [student/student] succeeded
+2017-04-12 14:21:17+0530 [SSHService ssh-userauth on HoneyPotTransport,1,192.168.43.200] student authenticated with password
+2017-04-12 14:21:17+0530 [SSHService ssh-userauth on HoneyPotTransport,1,192.168.43.200] starting service ssh-connection
+2017-04-12 14:21:17+0530 [SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] got channel session request
+2017-04-12 14:21:17+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] channel open
+2017-04-12 14:21:17+0530 [SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] got global no-more-sessions@openssh.com request
+2017-04-12 14:21:17+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] pty request: xterm-256color (53, 211, 0, 0)
+2017-04-12 14:21:17+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] Terminal size: 53 211
+2017-04-12 14:21:17+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] request_env: '\x00\x00\x00\x04LANG\x00\x00\x00\x0ben_US.UTF-8'
+2017-04-12 14:21:17+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] getting shell
+2017-04-12 14:21:17+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] Opening TTY log: log/tty/20170412-142117-7544.log
+2017-04-12 14:21:18+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] /etc/motd resolved into /etc/motd
+2017-04-12 14:21:50+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] CMD: rm rm
+2017-04-12 14:21:50+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] Command found: rm rm
+2017-04-12 14:22:03+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] CMD: cd 
+2017-04-12 14:22:03+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] Command found: cd
+2017-04-12 14:22:06+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] CMD: cd 
+2017-04-12 14:22:06+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] Command found: cd
+2017-04-12 14:22:10+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] CMD: cd /
+2017-04-12 14:22:10+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] Command found: cd /
+2017-04-12 14:22:12+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] CMD: ls
+2017-04-12 14:22:12+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] Command found: ls
+2017-04-12 14:22:31+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] CMD: cat alap
+2017-04-12 14:22:31+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] Command found: cat alap
+2017-04-12 14:22:31+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] /alap resolved into /alap
+2017-04-12 14:22:49+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] CMD: ls
+2017-04-12 14:22:49+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] Command found: ls
+2017-04-12 14:23:10+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] CMD: ls
+2017-04-12 14:23:10+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] Command found: ls
+2017-04-12 14:23:25+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] CMD: vi taken.py
+2017-04-12 14:23:25+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] Command found: vi taken.py
+2017-04-12 14:23:25+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] Reading txtcmd from "/home/jarvis/honeypot/sinh/txtcmds/usr/bin/vi"
+2017-04-12 14:23:35+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] CMD: sudo
+2017-04-12 14:23:35+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] Command not found: sudo
+2017-04-12 14:24:30+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] CMD: exit
+2017-04-12 14:24:30+0530 [SSHChannel session (0) on SSHService ssh-connection on HoneyPotTransport,1,192.168.43.200] Command found: exit
+2017-04-12 14:29:57+0530 [HoneyPotTransport,1,192.168.43.200] Got remote error, code 11
+	reason: disconnected by user
+2017-04-12 14:29:57+0530 [HoneyPotTransport,1,192.168.43.200] connection lost
+2017-04-12 15:15:50+0530 [-] Received SIGTERM, shutting down.
+2017-04-12 15:15:50+0530 [-] (TCP Port 2222 Closed)
+2017-04-12 15:15:50+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7fd3eaf1f3f8>
+2017-04-12 15:15:50+0530 [-] Main loop terminated.
+2017-04-12 15:15:50+0530 [-] Server Shut Down.
+2017-04-12 15:15:51+0530 [-] Log opened.
+2017-04-12 15:15:51+0530 [-] twistd 12.0.0 (/usr/bin/python 2.7.12) starting up.
+2017-04-12 15:15:51+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
+2017-04-12 15:15:51+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-04-12 15:15:51+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7fd676dd03f8>
+2017-04-12 16:08:12+0530 [-] Received SIGTERM, shutting down.
+2017-04-12 16:08:12+0530 [-] (TCP Port 2222 Closed)
+2017-04-12 16:08:12+0530 [-] Stopping factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7fd676dd03f8>
+2017-04-12 16:08:12+0530 [-] Main loop terminated.
+2017-04-12 16:08:12+0530 [-] Server Shut Down.
+2017-04-16 12:01:55+0530 [-] Log opened.
+2017-04-16 12:01:55+0530 [-] twistd 12.0.0 (/usr/bin/python 2.7.12) starting up.
+2017-04-16 12:01:55+0530 [-] reactor class: twisted.internet.pollreactor.PollReactor.
+2017-04-16 12:01:55+0530 [-] HoneyPotSSHFactory starting on 2222
+2017-04-16 12:01:55+0530 [-] Starting factory <sinh.core.ssh.HoneyPotSSHFactory instance at 0x7fa60dbcc3f8>
