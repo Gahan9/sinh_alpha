@@ -39,3 +39,5 @@ pip3 install celery
 Django_Tables2
 pip3 install django-tables2==1.4.2
 
+Django ChartIt
+pip3 install django_chartit
