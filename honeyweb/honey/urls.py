@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+    url(r'^report$', views.breach_attempt_chart_view, name='breach_attempt_chart_view'),
     url(r'^input$', views.InputPageView.as_view(), name='input_page'),
     url(r'^auth$', views.AuthPageView.as_view(), name='auth_page'),
     url(r'^client$', views.ClientPageView.as_view(), name='client_page'),

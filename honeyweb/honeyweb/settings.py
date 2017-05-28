@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'honey',
     'django_tables2',
+    'chartit',
 ]
 
 MIDDLEWARE_CLASSES = [
