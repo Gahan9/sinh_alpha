@@ -1,0 +1,5 @@
+django==1.10.6
+celery
+django-tables2
+django_chartit
+mysqlclient

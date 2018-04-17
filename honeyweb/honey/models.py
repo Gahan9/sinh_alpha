@@ -4,8 +4,8 @@ import django_tables2 as tables
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from honey import tasks
-from honey.singnals import state_audit_signal
+from . import tasks
+from .singnals import state_audit_signal
 
 
 class Sessions(models.Model):
